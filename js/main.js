@@ -14,10 +14,21 @@
     all: ["All places", "✦"], food: ["Eat & drink", "◒"], work: ["Workspaces", "⌘"],
     public: ["Public spaces", "⌁"], events: ["Events", "✦"], services: ["Useful services", "＋"]
   };
+  const mapCategories = [
+    {id:"food", label:"Food", color:"#ef3340", filter:"food"},
+    {id:"housing", label:"Housing", color:"#10b981", filter:"housing"},
+    {id:"work", label:"Work Spots", color:"#0ea5e9", filter:"work"},
+    {id:"coffee", label:"Coffee", color:"#936037", filter:"food"},
+    {id:"accelerators", label:"Accelerators", color:"#f05a0a", filter:"accelerators"},
+    {id:"vcs", label:"VCs", color:"#6727d8", filter:"vcs"},
+    {id:"gym", label:"Gym", color:"#171827", filter:"gym"},
+    {id:"bars", label:"Bars", color:"#d44778", filter:"bars"},
+    {id:"grocery", label:"Grocery", color:"#2ca292", filter:"grocery"}
+  ];
   const state = {
     onboardingStep: 1, motives: ["explore"], role: "", locationMode: "area", neighbourhood: "Cyber City",
     coords: {lat: 28.4945, lng: 77.0894}, weather: {temp: 29, icon: "☼", label: "Clear skies · Good to be out"},
-    activeCategory: "all", query: "", price: "all", tags: [], saved: new Set(JSON.parse(localStorage.getItem("gc-saved") || "[]")), savedOnly: false
+    activeCategory: "all", mapCategory: "all", query: "", price: "all", tags: [], saved: new Set(JSON.parse(localStorage.getItem("gc-saved") || "[]")), savedOnly: false
   };
   const $ = (selector, root) => (root || document).querySelector(selector);
   const $$ = (selector, root) => Array.from((root || document).querySelectorAll(selector));
@@ -91,6 +102,11 @@
   function renderIntentFilters() {
     $("[data-intent-filters]").innerHTML = Object.entries(intentLabels).map(([id, item]) => '<button class="intent-chip ' + (state.activeCategory === id ? "is-active" : "") + '" type="button" data-category="' + id + '"><span>' + item[1] + '</span>' + item[0] + '</button>').join("");
   }
+  function renderMapCategoryRail() {
+    const rail = $("[data-map-category-rail]");
+    if (!rail) return;
+    rail.innerHTML = '<p class="map-category-rail__title">Explore by</p>' + mapCategories.map((category) => '<button class="map-category-item ' + (state.mapCategory === category.id ? "is-active" : "") + '" type="button" data-map-category="' + category.id + '" data-map-filter="' + category.filter + '"><span class="map-category-item__swatch" style="--category-color:' + category.color + '"></span><span>' + category.label + '</span></button>').join("");
+  }
   function renderCard(place) {
     const saved = state.saved.has(place.id);
     return '<article class="place-card" data-place-id="' + place.id + '"><div class="place-card__cover" style="--cover:' + place.accent + '"><span class="cover-word">' + place.cover.replace("\n", "<br>") + '</span><span class="cover-glyph">' + place.glyph + '</span><span class="status-badge">' + place.visit + '</span><button class="place-card__save ' + (saved ? "is-saved" : "") + '" type="button" data-save="' + place.id + '" aria-label="' + (saved ? "Remove" : "Save") + " " + place.name + '" aria-pressed="' + saved + '">' + (saved ? "♥" : "♡") + '</button></div><button class="place-card__body" type="button" data-open-place="' + place.id + '"><div class="place-card__head"><div><h3>' + place.name + '</h3><p class="place-card__area">' + place.area + " · " + distanceFor(place).toFixed(1) + ' km away</p></div><span class="price-tag ' + (place.priceValue === 0 ? "is-free" : "") + '">' + place.price + '</span></div><div class="place-card__tags">' + place.tags.slice(0, 3).map((tag) => "<span>" + tag + "</span>").join("") + '</div><div class="place-card__details"><span class="place-card__distance">' + place.categoryLabel + '</span><span class="place-card__open">' + place.open + '</span></div><div class="verified-line"><i></i> Last checked ' + place.verified + " · " + place.source + "</div></button></article>";
@@ -157,9 +173,12 @@
   }
   function renderApp() {
     renderIntentFilters();
+    renderMapCategoryRail();
     const items = visiblePlaces();
+    const selectedMapCategory = mapCategories.find((category) => category.id === state.mapCategory);
+    const categoryHeading = intentLabels[state.activeCategory] ? intentLabels[state.activeCategory][0] : (selectedMapCategory ? selectedMapCategory.label : "Made for your day");
     $$("[data-location-label]").forEach((node) => { node.textContent = state.neighbourhood; });
-    $("[data-result-heading]").textContent = state.savedOnly ? "Your saved edit" : state.activeCategory === "all" ? "Made for your day" : intentLabels[state.activeCategory][0];
+    $("[data-result-heading]").textContent = state.savedOnly ? "Your saved edit" : state.activeCategory === "all" ? "Made for your day" : categoryHeading;
     $("[data-result-count]").textContent = String(items.length);
     $("[data-place-list]").innerHTML = items.length ? items.map(renderCard).join("") : '<div class="empty-state"><strong>No exact matches yet.</strong><span>Try widening your search or clearing one filter.</span></div>';
     renderMapPins(items); renderActiveFilters();
@@ -218,6 +237,7 @@
   }
   function startApp() {
     state.activeCategory = categoryForMotives();
+    state.mapCategory = mapCategories.some((category) => category.id === state.activeCategory) ? state.activeCategory : "all";
     onboarding.hidden = true; app.hidden = false; document.title = "Gurugram Commons — your city, carefully curated";
     renderApp(); initMap(); updateWeather(); window.scrollTo({top:0, behavior:"instant"});
   }
@@ -235,7 +255,9 @@
       if (event.target.closest("[data-skip]")) startApp();
     });
     document.addEventListener("click", (event) => {
-      const category = event.target.closest("[data-category]"); if (category) { state.activeCategory = category.dataset.category; state.savedOnly = false; renderApp(); return; }
+      const mapCategory = event.target.closest("[data-map-category]");
+      if (mapCategory) { state.mapCategory = mapCategory.dataset.mapCategory; state.activeCategory = mapCategory.dataset.mapFilter; state.savedOnly = false; renderApp(); return; }
+      const category = event.target.closest("[data-category]"); if (category) { state.activeCategory = category.dataset.category; state.mapCategory = mapCategories.some((item) => item.id === category.dataset.category) ? category.dataset.category : "all"; state.savedOnly = false; renderApp(); return; }
       const save = event.target.closest("[data-save]"); if (save) { event.stopPropagation(); setSaved(save.dataset.save); return; }
       const open = event.target.closest("[data-open-place]"); if (open) { openPlace(open.dataset.openPlace); return; }
       const saveDrawer = event.target.closest("[data-save-drawer]"); if (saveDrawer) { setSaved(saveDrawer.dataset.saveDrawer); openPlace(saveDrawer.dataset.saveDrawer); return; }
@@ -246,7 +268,7 @@
       if (event.target.closest("[data-close-add]") || event.target === $("[data-add-modal]")) { closeModal("[data-add-modal]"); return; }
       const view = event.target.closest("[data-view]");
       if (view) { $$('[data-view]').forEach((button) => button.classList.toggle("is-active", button === view)); $("[data-place-list]").hidden = view.dataset.view !== "list"; $("[data-map-panel]").hidden = view.dataset.view !== "map"; if (view.dataset.view === "map" && liveMap) window.setTimeout(() => liveMap.resize(), 0); return; }
-      if (event.target.closest("[data-saved-button]")) { if (!state.saved.size) { announce("Save a place to build your personal edit."); return; } state.savedOnly = true; state.activeCategory = "all"; renderApp(); return; }
+      if (event.target.closest("[data-saved-button]")) { if (!state.saved.size) { announce("Save a place to build your personal edit."); return; } state.savedOnly = true; state.activeCategory = "all"; state.mapCategory = "all"; renderApp(); return; }
       if (event.target.closest("[data-location-button]")) { requestLocation(); return; }
       if (event.target.closest("[data-profile-button]")) { announce("Your preferences are stored for this demo. Profile editing is coming next."); return; }
       const price = event.target.closest("[data-price]");
