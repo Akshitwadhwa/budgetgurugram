@@ -30,9 +30,14 @@
     {area:"Golf Course Road", note:"Premium work & coffee"},
     {area:"Udyog Vihar", note:"Flexible workday bases"}
   ];
+  const profileStorageKey = "gc-profile";
+  const defaultCoords = {lat: 28.4945, lng: 77.0894};
+  let storedProfile = null;
+  try { storedProfile = JSON.parse(localStorage.getItem(profileStorageKey) || "null"); } catch (error) { storedProfile = null; }
+  const storedCoords = storedProfile && storedProfile.coords && Number.isFinite(storedProfile.coords.lat) && Number.isFinite(storedProfile.coords.lng) ? storedProfile.coords : defaultCoords;
   const state = {
-    onboardingStep: 1, motives: ["explore"], role: "", locationMode: "area", neighbourhood: "Cyber City",
-    coords: {lat: 28.4945, lng: 77.0894}, weather: {temp: 29, icon: "☼", label: "Clear skies · Good to be out"},
+    onboardingStep: 1, motives: storedProfile && Array.isArray(storedProfile.motives) && storedProfile.motives.length ? storedProfile.motives : ["explore"], role: storedProfile && typeof storedProfile.role === "string" ? storedProfile.role : "", locationMode: storedProfile && storedProfile.locationMode === "current" ? "current" : "area", neighbourhood: storedProfile && typeof storedProfile.neighbourhood === "string" ? storedProfile.neighbourhood : "Cyber City",
+    coords: storedCoords, weather: {temp: 29, icon: "☼", label: "Clear skies · Good to be out"},
     activeCategory: "all", mapCategory: "all", areaFilter: "all", query: "", price: "all", tags: [], saved: new Set(JSON.parse(localStorage.getItem("gc-saved") || "[]")), savedOnly: false
   };
   const $ = (selector, root) => (root || document).querySelector(selector);
@@ -88,6 +93,11 @@
   function categoryForMotives() {
     const match = state.motives.find((item) => Object.prototype.hasOwnProperty.call(intentLabels, item));
     return match || "all";
+  }
+  function saveProfile() {
+    try {
+      localStorage.setItem(profileStorageKey, JSON.stringify({motives: state.motives, role: state.role, locationMode: state.locationMode, neighbourhood: state.neighbourhood, coords: state.coords}));
+    } catch (error) { /* Storage can be unavailable in private browsing. */ }
   }
   function distanceFor(place) {
     if (state.locationMode !== "current") return place.distance;
@@ -264,6 +274,7 @@
     modal.hidden = false; document.body.classList.add("is-locked");
   }
   function startApp() {
+    saveProfile();
     state.activeCategory = categoryForMotives();
     state.mapCategory = mapCategories.some((category) => category.id === state.activeCategory) ? state.activeCategory : "all";
     onboarding.hidden = true; app.hidden = false; document.title = "Gurugram Commons — your city, carefully curated";
@@ -341,5 +352,6 @@
     const addForm = $("[data-add-form]"); if (addForm) addForm.addEventListener("submit", (event) => { event.preventDefault(); closeModal("[data-add-modal]"); event.target.reset(); announce("Thanks — your place has been sent to the Commons edit."); });
     document.addEventListener("keydown", (event) => { if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") { event.preventDefault(); $("#place-search")?.focus(); } if (event.key === "Escape") { closeModal("[data-modal-backdrop]"); closeModal("[data-filter-modal]"); closeModal("[data-add-modal]"); } });
   }
-  renderOnboarding(); bindEvents();
+  bindEvents();
+  if (storedProfile) startApp(); else renderOnboarding();
 })();
