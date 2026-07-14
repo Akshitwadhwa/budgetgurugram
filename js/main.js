@@ -267,7 +267,16 @@
     state.activeCategory = categoryForMotives();
     state.mapCategory = mapCategories.some((category) => category.id === state.activeCategory) ? state.activeCategory : "all";
     onboarding.hidden = true; app.hidden = false; document.title = "Gurugram Commons — your city, carefully curated";
+    setMainView("explore");
     renderApp(); initMap(); updateWeather(); window.scrollTo({top:0, behavior:"instant"});
+  }
+  function setMainView(view) {
+    const nearMode = view === "near";
+    $$("[data-explore-view]").forEach((section) => { section.hidden = nearMode; });
+    const nearView = $("[data-near-you-view]");
+    if (nearView) nearView.hidden = !nearMode;
+    $$("[data-explore-link], [data-near-you-link]").forEach((link) => link.classList.toggle("is-active", nearMode ? link.hasAttribute("data-near-you-link") : link.hasAttribute("data-explore-link")));
+    window.scrollTo({top:0, behavior:"smooth"});
   }
   function bindEvents() {
     onboarding.addEventListener("click", (event) => {
@@ -283,6 +292,10 @@
       if (event.target.closest("[data-skip]")) startApp();
     });
     document.addEventListener("click", (event) => {
+      const nearLink = event.target.closest("[data-near-you-link]");
+      if (nearLink) { event.preventDefault(); setMainView("near"); return; }
+      const exploreLink = event.target.closest("[data-explore-link]");
+      if (exploreLink) { event.preventDefault(); setMainView("explore"); return; }
       const areaCard = event.target.closest("[data-area-filter]");
       if (areaCard) {
         state.areaFilter = areaCard.dataset.areaFilter;
@@ -291,6 +304,7 @@
         state.activeCategory = "all";
         state.mapCategory = "all";
         state.savedOnly = false;
+        setMainView("explore");
         renderApp();
         $("#explore").scrollIntoView({behavior:"smooth", block:"start"});
         if (liveMap) {
