@@ -16,11 +16,8 @@
   };
   const mapCategories = [
     {id:"food", label:"Food", color:"#ef3340", filter:"food"},
-    {id:"housing", label:"Housing", color:"#10b981", filter:"housing"},
     {id:"work", label:"Work Spots", color:"#0ea5e9", filter:"work"},
     {id:"coffee", label:"Coffee", color:"#936037", filter:"food"},
-    {id:"accelerators", label:"Accelerators", color:"#f05a0a", filter:"accelerators"},
-    {id:"vcs", label:"VCs", color:"#6727d8", filter:"vcs"},
     {id:"gym", label:"Gym", color:"#171827", filter:"gym"},
     {id:"bars", label:"Bars", color:"#d44778", filter:"bars"},
     {id:"grocery", label:"Grocery", color:"#2ca292", filter:"grocery"}
