@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f1ea">
+    <meta
+      name="description"
+      content="Gurugram Commons is a trusted, local-first guide to places, communities and experiences in Gurugram."
+    >
+    <title>Gurugram Commons — the city, carefully curated</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    >
+    <link href="https://unpkg.com/maplibre-gl@5.12.0/dist/maplibre-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/places.js" defer></script>
+    <script src="https://unpkg.com/maplibre-gl@5.12.0/dist/maplibre-gl.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+    <section class="onboarding" data-onboarding aria-labelledby="onboarding-title">
+      <div class="onboarding__texture" aria-hidden="true"></div>
+      <div class="onboarding__intro">
+        <a class="brand brand--light" href="#" aria-label="Gurugram Commons home">
+          <span class="brand__mark">C</span>
+          <span>
+            <strong>Gurugram</strong>
+            <small>COMMONS</small>
+          </span>
+        </a>
+        <div class="onboarding__intro-copy">
+          <p class="eyebrow eyebrow--light">A local guide, with a point of view</p>
+          <h1>Find your<br><em>way</em> around.</h1>
+          <p class="onboarding__lede">
+            A carefully curated map of places, people and possibilities across Gurugram — shaped around what you need today.
+          </p>
+        </div>
+        <div class="onboarding__proof">
+          <span class="proof-dot"></span>
+          <span>Editorially curated · Community verified</span>
+        </div>
+      </div>
+
+      <div class="onboarding__panel">
+        <div class="onboarding__panel-top">
+          <span class="step-count" data-step-count>01 / 03</span>
+          <button class="text-button text-button--light" type="button" data-skip>Skip for now</button>
+        </div>
+        <div class="progress" aria-hidden="true"><span data-progress></span></div>
+        <div class="onboarding__form" data-onboarding-form></div>
+      </div>
+    </section>
+
+    <div class="app-shell" data-app hidden>
+      <header class="app-header">
+        <div class="container app-header__inner">
+          <a class="brand brand--dark" href="#top" aria-label="Gurugram Commons home">
+            <span class="brand__mark">C</span>
+            <span>
+              <strong>Gurugram</strong>
+              <small>COMMONS</small>
+            </span>
+          </a>
+          <nav class="main-nav" aria-label="Main navigation">
+            <a class="main-nav__link is-active" href="#explore">Explore</a>
+            <a class="main-nav__link" href="#events">Events</a>
+            <a class="main-nav__link" href="#guides">Guides</a>
+          </nav>
+          <div class="app-header__actions">
+            <button class="location-pill" type="button" data-location-button>
+              <span class="location-pin" aria-hidden="true">⌖</span>
+              <span data-location-label>Cyber City</span>
+              <span class="location-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <button class="saved-button" type="button" data-saved-button aria-label="Open saved places">
+              <span aria-hidden="true">♡</span><b data-saved-count>0</b>
+            </button>
+            <button class="avatar-button" type="button" data-profile-button aria-label="Open your profile">A</button>
+          </div>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="dashboard-hero" id="explore">
+          <div class="container dashboard-hero__inner">
+            <div>
+              <p class="eyebrow">Tuesday, 14 July · Gurugram</p>
+              <h1>Make the city<br><em>yours.</em></h1>
+              <p class="dashboard-hero__lede">Thoughtful places to eat, work, meet and pause — close to where you are.</p>
+            </div>
+            <div class="weather-card" data-weather-card>
+              <span class="weather-card__icon" data-weather-icon>☼</span>
+              <div>
+                <strong data-weather-temp>29°</strong>
+                <span data-weather-label>Clear skies · Good to be out</span>
+              </div>
+              <small data-weather-updated>Live weather</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="discovery-section">
+          <div class="container">
+            <div class="search-row">
+              <label class="search-box" for="place-search">
+                <span aria-hidden="true">⌕</span>
+                <input id="place-search" type="search" placeholder="Try “a quiet café under ₹300”" autocomplete="off">
+                <kbd>⌘ K</kbd>
+              </label>
+              <button class="add-place-button" type="button" data-add-place><span>＋</span> Add a place</button>
+            </div>
+
+            <div class="intent-row" data-intent-filters aria-label="Browse by intent"></div>
+
+            <div class="content-toolbar">
+              <div>
+                <p class="eyebrow">Near <span data-location-label>Cyber City</span></p>
+                <h2><span data-result-heading>Made for your day</span> <sup data-result-count>18</sup></h2>
+              </div>
+              <div class="view-controls">
+                <button class="view-button" type="button" data-view="list"><span aria-hidden="true">☷</span> List</button>
+                <button class="view-button is-active" type="button" data-view="map"><span aria-hidden="true">⌖</span> Map</button>
+                <button class="filter-button" type="button" data-filter-button><span aria-hidden="true">≡</span> Filters <i data-filter-count hidden>0</i></button>
+              </div>
+            </div>
+
+            <div class="active-filters" data-active-filters hidden></div>
+
+            <div class="discovery-grid">
+              <div class="place-list" data-place-list hidden></div>
+              <div class="map-panel" data-map-panel>
+                <div class="map-panel__topline"><span><i class="map-legend-dot"></i> Places near you</span><span>Approximate location</span></div>
+                <div class="map-canvas" data-map-canvas>
+                  <div id="real-map" aria-label="Interactive map of Gurugram"></div>
+                  <div class="map-fallback" data-map-fallback hidden><strong>The live map could not load.</strong><span>The list, filters and place details are still available in this demo.</span></div>
+                </div>
+                <div class="map-panel__footer"><span><i class="map-legend-dot map-legend-dot--gold"></i> Good to visit now</span><button type="button" data-location-button>Re-centre map</button></div>
+              </div>
+            </div>
+
+            <div class="data-note"><span class="data-note__icon">✦</span> Prototype listings are editorial samples for this demo. Each production listing will show its source and last verified date.</div>
+          </div>
+        </section>
+
+        <section class="editorial-section" id="events">
+          <div class="container editorial-grid">
+            <div class="editorial-copy">
+              <p class="eyebrow">The Commons edit</p>
+              <h2>Small discoveries.<br><em>Big city energy.</em></h2>
+              <p>From the best independent lunch counters to places that make a workday feel lighter, we collect the details locals usually text each other.</p>
+              <a class="arrow-link" href="#explore">Explore the edit <span>↗</span></a>
+            </div>
+            <div class="editorial-stats">
+              <div><strong>75+</strong><span>places to start with</span></div>
+              <div><strong>12</strong><span>neighbourhoods mapped</span></div>
+              <div><strong>100%</strong><span>clear price ranges</span></div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="app-footer" id="guides">
+        <div class="container app-footer__inner">
+          <span>Gurugram Commons</span>
+          <span>Built for the people who make the city move.</span>
+          <button type="button" data-add-place>Add a place ↗</button>
+        </div>
+      </footer>
+    </div>
+
+    <div class="modal-backdrop" data-modal-backdrop hidden>
+      <section class="place-drawer" data-place-drawer role="dialog" aria-modal="true" aria-labelledby="drawer-title" tabindex="-1"></section>
+    </div>
+
+    <div class="modal-backdrop" data-filter-modal hidden>
+      <section class="filter-modal" role="dialog" aria-modal="true" aria-labelledby="filter-title">
+        <div class="modal-heading"><div><p class="eyebrow">Refine your edit</p><h2 id="filter-title">Find your kind of place</h2></div><button class="close-button" type="button" data-close-filter aria-label="Close filters">×</button></div>
+        <div class="filter-group"><span>Budget</span><div class="filter-options" data-price-options></div></div>
+        <div class="filter-group"><span>Good for</span><div class="filter-options" data-tag-options></div></div>
+        <div class="filter-modal__actions"><button class="quiet-button" type="button" data-clear-filters>Clear all</button><button class="primary-button" type="button" data-apply-filters>Show places</button></div>
+      </section>
+    </div>
+
+    <div class="modal-backdrop" data-add-modal hidden>
+      <section class="form-modal" role="dialog" aria-modal="true" aria-labelledby="add-title">
+        <div class="modal-heading"><div><p class="eyebrow">Make the city better</p><h2 id="add-title">Add a place</h2></div><button class="close-button" type="button" data-close-add aria-label="Close form">×</button></div>
+        <p class="modal-copy">Know somewhere that deserves a little more attention? Share the details and our editors will take a look.</p>
+        <form data-add-form>
+          <label>Place name<input name="name" required placeholder="e.g. a favourite chai spot"></label>
+          <div class="form-row"><label>Neighbourhood<select name="area"><option>Cyber City</option><option>Sector 29</option><option>MG Road</option><option>Old Gurgaon</option><option>Golf Course Road</option><option>Udyog Vihar</option></select></label><label>Typical price<input name="price" placeholder="e.g. Free or ₹200–400"></label></div>
+          <label>Why should people know it?<textarea name="reason" rows="3" placeholder="A short note from a local..."></textarea></label>
+          <button class="primary-button" type="submit">Send to the Commons <span>↗</span></button>
+        </form>
+      </section>
+    </div>
+
+    <div class="sr-only" data-status-message aria-live="polite"></div>
+  </body>
+</html>
