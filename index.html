@@ -69,6 +69,7 @@
           </a>
           <nav class="main-nav" aria-label="Main navigation">
             <a class="main-nav__link is-active" href="#explore">Explore</a>
+            <a class="main-nav__link" href="#near-you" data-near-you-link>Near you</a>
             <a class="main-nav__link" href="#events">Events</a>
             <a class="main-nav__link" href="#guides">Guides</a>
           </nav>
@@ -146,6 +147,20 @@
             </div>
 
             <div class="data-note"><span class="data-note__icon">✦</span> Prototype listings are editorial samples for this demo. Each production listing will show its source and last verified date.</div>
+          </div>
+        </section>
+
+        <section class="near-you-section" id="near-you" aria-labelledby="near-you-title">
+          <div class="container">
+            <div class="near-you-heading">
+              <div>
+                <p class="eyebrow">A little closer to home</p>
+                <h2 id="near-you-title">Around <em data-near-you-location>Cyber City</em></h2>
+                <p>Neighbourhood shelves for the places locals actually recommend — choose an area to filter the map.</p>
+              </div>
+              <button class="quiet-button" type="button" data-reset-area>Show all areas</button>
+            </div>
+            <div class="area-grid" data-area-grid></div>
           </div>
         </section>
 

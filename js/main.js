@@ -22,10 +22,18 @@
     {id:"bars", label:"Bars", color:"#d44778", filter:"bars"},
     {id:"grocery", label:"Grocery", color:"#2ca292", filter:"grocery"}
   ];
+  const nearYouAreas = [
+    {area:"Cyber City", note:"Workdays, coffee & after-hours"},
+    {area:"Sector 29", note:"Parks, food & easy evenings"},
+    {area:"MG Road", note:"Metro-connected city stops"},
+    {area:"Old Gurgaon", note:"Everyday places with character"},
+    {area:"Golf Course Road", note:"Premium work & coffee"},
+    {area:"Udyog Vihar", note:"Flexible workday bases"}
+  ];
   const state = {
     onboardingStep: 1, motives: ["explore"], role: "", locationMode: "area", neighbourhood: "Cyber City",
     coords: {lat: 28.4945, lng: 77.0894}, weather: {temp: 29, icon: "☼", label: "Clear skies · Good to be out"},
-    activeCategory: "all", mapCategory: "all", query: "", price: "all", tags: [], saved: new Set(JSON.parse(localStorage.getItem("gc-saved") || "[]")), savedOnly: false
+    activeCategory: "all", mapCategory: "all", areaFilter: "all", query: "", price: "all", tags: [], saved: new Set(JSON.parse(localStorage.getItem("gc-saved") || "[]")), savedOnly: false
   };
   const $ = (selector, root) => (root || document).querySelector(selector);
   const $$ = (selector, root) => Array.from((root || document).querySelectorAll(selector));
@@ -93,7 +101,8 @@
       const categoryMatch = matchesCategory(place);
       const priceMatch = state.price === "all" || (state.price === "free" && place.priceValue === 0) || (state.price === "under300" && place.priceValue <= 300) || (state.price === "under700" && place.priceValue <= 700);
       const tagMatch = state.tags.length === 0 || state.tags.every((tag) => place.tags.includes(tag));
-      return queryMatch && categoryMatch && priceMatch && tagMatch && (!state.savedOnly || state.saved.has(place.id));
+      const areaMatch = state.areaFilter === "all" || place.area === state.areaFilter;
+      return queryMatch && categoryMatch && priceMatch && tagMatch && areaMatch && (!state.savedOnly || state.saved.has(place.id));
     }).sort((a, b) => distanceFor(a) - distanceFor(b));
   }
   function matchesCategory(place) {
@@ -114,6 +123,16 @@
     const rail = $("[data-map-category-rail]");
     if (!rail) return;
     rail.innerHTML = '<p class="map-category-rail__title">Explore by</p>' + mapCategories.map((category) => '<button class="map-category-item ' + (state.mapCategory === category.id ? "is-active" : "") + '" type="button" data-map-category="' + category.id + '" data-map-filter="' + category.filter + '"><span class="map-category-item__swatch" style="--category-color:' + category.color + '"></span><span>' + category.label + '</span></button>').join("");
+  }
+  function renderNearYou() {
+    const grid = $("[data-area-grid]");
+    if (!grid) return;
+    $("[data-near-you-location]").textContent = state.neighbourhood;
+    grid.innerHTML = nearYouAreas.map((item, index) => {
+      const areaPlaces = places.filter((place) => place.area === item.area);
+      const names = areaPlaces.slice(0, 2).map((place) => place.name).join(" · ");
+      return '<button class="area-card ' + (state.areaFilter === item.area ? "is-active" : "") + '" type="button" data-area-filter="' + item.area + '"><span class="area-card__top"><span class="area-card__number">' + String(index + 1).padStart(2, "0") + '</span><span class="area-card__arrow">↗</span></span><span><strong>' + item.area + '</strong><small>' + item.note + '</small></span><span class="area-card__places">' + (areaPlaces.length ? names : "New places coming soon") + '</span></button>';
+    }).join("");
   }
   function renderCard(place) {
     const saved = state.saved.has(place.id);
@@ -182,6 +201,7 @@
   function renderApp() {
     renderIntentFilters();
     renderMapCategoryRail();
+    renderNearYou();
     const items = visiblePlaces();
     const selectedMapCategory = mapCategories.find((category) => category.id === state.mapCategory);
     const categoryHeading = intentLabels[state.activeCategory] ? intentLabels[state.activeCategory][0] : (selectedMapCategory ? selectedMapCategory.label : "Made for your day");
@@ -263,6 +283,23 @@
       if (event.target.closest("[data-skip]")) startApp();
     });
     document.addEventListener("click", (event) => {
+      const areaCard = event.target.closest("[data-area-filter]");
+      if (areaCard) {
+        state.areaFilter = areaCard.dataset.areaFilter;
+        state.neighbourhood = state.areaFilter;
+        state.locationMode = "area";
+        state.activeCategory = "all";
+        state.mapCategory = "all";
+        state.savedOnly = false;
+        renderApp();
+        $("#explore").scrollIntoView({behavior:"smooth", block:"start"});
+        if (liveMap) {
+          const focusPlace = places.find((place) => place.area === state.areaFilter);
+          if (focusPlace && focusPlace.lng && focusPlace.lat) liveMap.flyTo({center:[focusPlace.lng, focusPlace.lat], zoom:13.5, essential:true});
+        }
+        return;
+      }
+      if (event.target.closest("[data-reset-area]")) { state.areaFilter = "all"; state.activeCategory = "all"; state.mapCategory = "all"; renderApp(); return; }
       const mapCategory = event.target.closest("[data-map-category]");
       if (mapCategory) { state.mapCategory = mapCategory.dataset.mapCategory; state.activeCategory = mapCategory.dataset.mapCategory; state.savedOnly = false; renderApp(); return; }
       const category = event.target.closest("[data-category]"); if (category) { state.activeCategory = category.dataset.category; state.mapCategory = mapCategories.some((item) => item.id === category.dataset.category) ? category.dataset.category : "all"; state.savedOnly = false; renderApp(); return; }
