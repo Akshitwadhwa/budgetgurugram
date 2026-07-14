@@ -93,11 +93,22 @@
     return places.filter((place) => {
       const searchable = [place.name, place.area, place.categoryLabel].concat(place.tags).join(" ").toLowerCase();
       const queryMatch = !query || searchable.includes(query) || (query.includes("free") && place.priceValue === 0) || (query.includes("quiet") && place.tags.includes("Quiet")) || (query.includes("work") && ["work", "food"].includes(place.category));
-      const categoryMatch = state.activeCategory === "all" || place.category === state.activeCategory;
+      const categoryMatch = matchesCategory(place);
       const priceMatch = state.price === "all" || (state.price === "free" && place.priceValue === 0) || (state.price === "under300" && place.priceValue <= 300) || (state.price === "under700" && place.priceValue <= 700);
       const tagMatch = state.tags.length === 0 || state.tags.every((tag) => place.tags.includes(tag));
       return queryMatch && categoryMatch && priceMatch && tagMatch && (!state.savedOnly || state.saved.has(place.id));
     }).sort((a, b) => distanceFor(a) - distanceFor(b));
+  }
+  function matchesCategory(place) {
+    const category = state.activeCategory;
+    if (category === "all") return true;
+    if (category === "food") return place.category === "food";
+    if (category === "work") return place.category === "work";
+    if (category === "coffee") return place.category === "food" && (/coffee|café|cafe/i.test(place.name) || place.tags.includes("Wi-Fi") || place.tags.includes("Laptop-friendly"));
+    if (category === "bars") return place.category === "events" && (place.tags.includes("Open late") || place.tags.includes("Live music") || /social/i.test(place.name));
+    if (category === "grocery") return place.category === "services" && (place.tags.includes("Everyday") || /bazaar|market/i.test(place.name));
+    if (category === "gym") return place.category === "public" && (place.tags.includes("Outdoor") || place.tags.includes("Walking"));
+    return place.category === category;
   }
   function renderIntentFilters() {
     $("[data-intent-filters]").innerHTML = Object.entries(intentLabels).map(([id, item]) => '<button class="intent-chip ' + (state.activeCategory === id ? "is-active" : "") + '" type="button" data-category="' + id + '"><span>' + item[1] + '</span>' + item[0] + '</button>').join("");
@@ -180,7 +191,7 @@
     $$("[data-location-label]").forEach((node) => { node.textContent = state.neighbourhood; });
     $("[data-result-heading]").textContent = state.savedOnly ? "Your saved edit" : state.activeCategory === "all" ? "Made for your day" : categoryHeading;
     $("[data-result-count]").textContent = String(items.length);
-    $("[data-place-list]").innerHTML = items.length ? items.map(renderCard).join("") : '<div class="empty-state"><strong>No exact matches yet.</strong><span>Try widening your search or clearing one filter.</span></div>';
+    $("[data-place-list]").innerHTML = items.length ? items.map(renderCard).join("") : '<div class="empty-state"><strong>No verified ' + categoryHeading.toLowerCase() + ' listings yet.</strong><span>Try another category, or add a place for the Commons edit.</span></div>';
     renderMapPins(items); renderActiveFilters();
     const filterCount = (state.price === "all" ? 0 : 1) + state.tags.length;
     $("[data-filter-count]").hidden = filterCount === 0; $("[data-filter-count]").textContent = String(filterCount);
@@ -256,7 +267,7 @@
     });
     document.addEventListener("click", (event) => {
       const mapCategory = event.target.closest("[data-map-category]");
-      if (mapCategory) { state.mapCategory = mapCategory.dataset.mapCategory; state.activeCategory = mapCategory.dataset.mapFilter; state.savedOnly = false; renderApp(); return; }
+      if (mapCategory) { state.mapCategory = mapCategory.dataset.mapCategory; state.activeCategory = mapCategory.dataset.mapCategory; state.savedOnly = false; renderApp(); return; }
       const category = event.target.closest("[data-category]"); if (category) { state.activeCategory = category.dataset.category; state.mapCategory = mapCategories.some((item) => item.id === category.dataset.category) ? category.dataset.category : "all"; state.savedOnly = false; renderApp(); return; }
       const save = event.target.closest("[data-save]"); if (save) { event.stopPropagation(); setSaved(save.dataset.save); return; }
       const open = event.target.closest("[data-open-place]"); if (open) { openPlace(open.dataset.openPlace); return; }
