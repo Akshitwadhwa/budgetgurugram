@@ -178,11 +178,12 @@
     userMarker = new maplibregl.Marker({element: element, anchor: "center"}).setLngLat([state.coords.lng, state.coords.lat]).addTo(liveMap);
   }
   function initMap() {
-    const container = $("#real-map"), fallback = $("[data-map-fallback]");
+    const container = $("#real-map"), fallback = $("[data-map-fallback]"), loadingNote = $("[data-map-loading-note]");
     if (!container) return;
     if (!window.maplibregl) {
       container.hidden = true;
       if (fallback) fallback.hidden = false;
+      if (loadingNote) loadingNote.hidden = true;
       return;
     }
     const center = state.locationMode === "current" ? [state.coords.lng, state.coords.lat] : [77.0894, 28.4952];
@@ -190,7 +191,7 @@
     liveMap = new maplibregl.Map({container: container, style: "https://tiles.openfreemap.org/styles/liberty", center: center, zoom: zoom, attributionControl: true});
     liveMap.addControl(new maplibregl.NavigationControl({showCompass: false}), "top-right");
     liveMap.addControl(new maplibregl.GeolocateControl({positionOptions: {enableHighAccuracy: false}, trackUserLocation: false, showUserLocation: true}), "top-right");
-    liveMap.on("load", () => { renderMapMarkers(visiblePlaces()); renderUserLocation(); liveMap.resize(); });
+    liveMap.on("load", () => { if (loadingNote) loadingNote.hidden = true; renderMapMarkers(visiblePlaces()); renderUserLocation(); liveMap.resize(); });
   }
   function focusMap(place) {
     if (!liveMap || !place.lat || !place.lng) return;
