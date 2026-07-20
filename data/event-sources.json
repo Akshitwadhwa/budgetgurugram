@@ -1,0 +1,9 @@
+[
+  {
+    "name": "CommunityMeetups India",
+    "url": "https://lu.ma/CommunityMeetups",
+    "cityKeywords": ["Gurugram", "Gurgaon", "DelhiNCR", "Delhi NCR"],
+    "techOnly": true,
+    "enabled": true
+  }
+]

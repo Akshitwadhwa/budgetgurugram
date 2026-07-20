@@ -18,6 +18,7 @@
     <link href="https://unpkg.com/maplibre-gl@5.12.0/dist/maplibre-gl.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/places.js" defer></script>
+    <script src="js/events.js" defer></script>
     <script src="https://unpkg.com/maplibre-gl@5.12.0/dist/maplibre-gl.js" defer></script>
     <script src="js/main.js" defer></script>
   </head>
@@ -70,7 +71,7 @@
           <nav class="main-nav" aria-label="Main navigation">
             <a class="main-nav__link is-active" href="#explore" data-explore-link>Explore</a>
             <a class="main-nav__link" href="#near-you" data-near-you-link>Near you</a>
-            <a class="main-nav__link" href="#events">Events</a>
+            <a class="main-nav__link" href="#events" data-events-link>Events</a>
             <a class="main-nav__link" href="#guides">Guides</a>
           </nav>
           <div class="app-header__actions">
@@ -165,7 +166,30 @@
           </div>
         </section>
 
-        <section class="editorial-section" id="events">
+        <section class="events-section" id="events" aria-labelledby="events-title">
+          <div class="container">
+            <div class="events-heading">
+              <div>
+                <p class="eyebrow">Live from public calendars</p>
+                <h2 id="events-title">Tech events<br><em>near you.</em></h2>
+                <p>Upcoming meetups, workshops and founder rooms surfaced from public Luma pages. Registration always happens on the original source.</p>
+              </div>
+              <div class="events-heading__aside">
+                <span class="events-status" data-events-status>Checking public event sources…</span>
+                <button class="quiet-button" type="button" data-events-refresh>Refresh events</button>
+              </div>
+            </div>
+            <div class="event-filters" role="group" aria-label="Filter events">
+              <button class="event-filter is-active" type="button" data-event-filter="all">All upcoming</button>
+              <button class="event-filter" type="button" data-event-filter="today">Today</button>
+              <button class="event-filter" type="button" data-event-filter="week">This week</button>
+              <button class="event-filter" type="button" data-event-filter="free">Free</button>
+            </div>
+            <div class="events-grid" data-events-grid></div>
+          </div>
+        </section>
+
+        <section class="editorial-section" id="guides">
           <div class="container editorial-grid">
             <div class="editorial-copy">
               <p class="eyebrow">The Commons edit</p>
@@ -182,7 +206,7 @@
         </section>
       </main>
 
-      <footer class="app-footer" id="guides">
+      <footer class="app-footer" id="site-footer">
         <div class="container app-footer__inner">
           <span>Gurugram Commons</span>
           <span>Built for the people who make the city move.</span>

@@ -38,7 +38,7 @@
   const state = {
     onboardingStep: 1, motives: storedProfile && Array.isArray(storedProfile.motives) && storedProfile.motives.length ? storedProfile.motives : ["explore"], role: storedProfile && typeof storedProfile.role === "string" ? storedProfile.role : "", locationMode: storedProfile && storedProfile.locationMode === "current" ? "current" : "area", neighbourhood: storedProfile && typeof storedProfile.neighbourhood === "string" ? storedProfile.neighbourhood : "Cyber City",
     coords: storedCoords, weather: {temp: 29, icon: "☼", label: "Clear skies · Good to be out"},
-    activeCategory: "all", mapCategory: "all", areaFilter: "all", query: "", price: "all", tags: [], saved: new Set(JSON.parse(localStorage.getItem("gc-saved") || "[]")), savedOnly: false
+    activeCategory: "all", mapCategory: "all", areaFilter: "all", eventFilter: "all", query: "", price: "all", tags: [], saved: new Set(JSON.parse(localStorage.getItem("gc-saved") || "[]")), savedOnly: false
   };
   const $ = (selector, root) => (root || document).querySelector(selector);
   const $$ = (selector, root) => Array.from((root || document).querySelectorAll(selector));
@@ -48,6 +48,8 @@
   let liveMap = null;
   let mapMarkers = [];
   let userMarker = null;
+  let liveEvents = Array.isArray(window.GC_EVENTS) ? window.GC_EVENTS : [];
+  let eventsMeta = {generatedAt:null, eventCount:liveEvents.length, error:false};
   let toastTimer;
 
   function announce(message) {
@@ -144,6 +146,62 @@
       return '<button class="area-card ' + (state.areaFilter === item.area ? "is-active" : "") + '" type="button" data-area-filter="' + item.area + '"><span class="area-card__top"><span class="area-card__number">' + String(index + 1).padStart(2, "0") + '</span><span class="area-card__arrow">↗</span></span><span><strong>' + item.area + '</strong><small>' + item.note + '</small></span><span class="area-card__places">' + (areaPlaces.length ? names : "New places coming soon") + '</span></button>';
     }).join("");
   }
+  function escapeHtml(value) {
+    return String(value || "").replace(/[&<>'"]/g, (character) => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[character]));
+  }
+  function formatEventDate(event) {
+    const date = new Date(event.start);
+    if (Number.isNaN(date.getTime())) return "Date to be confirmed";
+    return new Intl.DateTimeFormat("en-IN", {weekday:"short", day:"numeric", month:"short", hour:"numeric", minute:"2-digit"}).format(date);
+  }
+  function eventMatchesFilter(event) {
+    const date = new Date(event.start), now = new Date();
+    if (state.eventFilter === "free") return /free|₹0|0\b/i.test(event.price || "");
+    if (state.eventFilter === "today") return date.toDateString() === now.toDateString();
+    if (state.eventFilter === "week") return date >= now && date <= new Date(now.getTime() + 7 * 86400000);
+    return true;
+  }
+  function eventDistance(event) {
+    if (!Number.isFinite(event.lat) || !Number.isFinite(event.lng)) return "Location listed on Luma";
+    const latDelta = (event.lat - state.coords.lat) * 111;
+    const lngDelta = (event.lng - state.coords.lng) * 111 * Math.cos(state.coords.lat * Math.PI / 180);
+    return `${Math.max(.1, Math.sqrt(latDelta * latDelta + lngDelta * lngDelta)).toFixed(1)} km away`;
+  }
+  function renderEvents() {
+    const root = $("[data-events-grid]"), status = $("[data-events-status]");
+    if (!root) return;
+    const items = liveEvents.filter(eventMatchesFilter);
+    if (status) {
+      if (eventsMeta.error) status.textContent = "Event sync unavailable";
+      else if (eventsMeta.generatedAt) status.textContent = `${liveEvents.length} upcoming · Updated ${formatRelativeTime(eventsMeta.generatedAt)}`;
+      else status.textContent = "Waiting for the first public sync";
+    }
+    if (!items.length) {
+      root.innerHTML = `<div class="events-empty"><strong>${liveEvents.length ? "No events match this filter." : "No upcoming public tech events yet."}</strong><span>${eventsMeta.error ? "The last sync could not be read. Try refreshing in a moment." : "Add an approved public Luma calendar in data/event-sources.json, then run the sync workflow."}</span></div>`;
+      return;
+    }
+    root.innerHTML = items.map((event) => `<article class="event-card"><div class="event-card__top"><span class="event-card__source">${escapeHtml(event.source || "Luma")}</span><span class="event-card__date">${escapeHtml(formatEventDate(event))}</span></div><h3>${escapeHtml(event.title)}</h3><p class="event-card__location">⌖ ${escapeHtml(event.location || event.city || "Gurugram")} · ${escapeHtml(eventDistance(event))}</p>${event.description ? `<p class="event-card__description">${escapeHtml(event.description)}</p>` : ""}<div class="event-card__footer"><span class="event-card__price">${escapeHtml(event.price || "See Luma")}</span><a class="event-card__link" href="${escapeHtml(event.url)}" target="_blank" rel="noreferrer">View on Luma ↗</a></div></article>`).join("");
+  }
+  function formatRelativeTime(value) {
+    const date = new Date(value), minutes = Math.max(0, Math.round((Date.now() - date.getTime()) / 60000));
+    if (!Number.isFinite(date.getTime())) return "just now";
+    if (minutes < 2) return "just now";
+    if (minutes < 60) return `${minutes}m ago`;
+    return `${Math.round(minutes / 60)}h ago`;
+  }
+  async function loadEvents() {
+    try {
+      const response = await fetch(`data/events.json?ts=${Date.now()}`, {cache:"no-store"});
+      if (!response.ok) throw new Error("Event data unavailable");
+      const payload = await response.json();
+      liveEvents = Array.isArray(payload.events) ? payload.events : [];
+      eventsMeta = {generatedAt:payload.generatedAt, eventCount:payload.eventCount || liveEvents.length, error:false};
+    } catch (error) {
+      eventsMeta = {generatedAt:null, eventCount:liveEvents.length, error:true};
+    }
+    renderEvents();
+    if (liveMap) renderMapMarkers(visiblePlaces());
+  }
   function renderCard(place) {
     const saved = state.saved.has(place.id);
     return '<article class="place-card" data-place-id="' + place.id + '"><div class="place-card__cover" style="--cover:' + place.accent + '"><span class="cover-word">' + place.cover.replace("\n", "<br>") + '</span><span class="cover-glyph">' + place.glyph + '</span><span class="status-badge">' + place.visit + '</span><button class="place-card__save ' + (saved ? "is-saved" : "") + '" type="button" data-save="' + place.id + '" aria-label="' + (saved ? "Remove" : "Save") + " " + place.name + '" aria-pressed="' + saved + '">' + (saved ? "♥" : "♡") + '</button></div><button class="place-card__body" type="button" data-open-place="' + place.id + '"><div class="place-card__head"><div><h3>' + place.name + '</h3><p class="place-card__area">' + place.area + " · " + distanceFor(place).toFixed(1) + ' km away</p></div><span class="price-tag ' + (place.priceValue === 0 ? "is-free" : "") + '">' + place.price + '</span></div><div class="place-card__tags">' + place.tags.slice(0, 3).map((tag) => "<span>" + tag + "</span>").join("") + '</div><div class="place-card__details"><span class="place-card__distance">' + place.categoryLabel + '</span><span class="place-card__open">' + place.open + '</span></div><div class="verified-line"><i></i> Last checked ' + place.verified + " · " + place.source + "</div></button></article>";
@@ -157,15 +215,17 @@
   function renderMapMarkers(items) {
     if (!liveMap) return;
     mapMarkers.forEach((marker) => marker.remove());
-    mapMarkers = items.filter((place) => place.lat && place.lng).map((place) => {
+    const eventPins = liveEvents.filter((event) => event.lat && event.lng).map((event) => ({...event, name:event.title, area:event.city || event.location || "Gurugram", category:"events", glyph:"✦", price:event.price || "See Luma", visit:"View on Luma", isEvent:true}));
+    mapMarkers = items.concat(eventPins).filter((place) => place.lat && place.lng).map((place) => {
       const element = document.createElement("button");
       element.className = "premium-map-pin premium-map-pin--" + place.category;
       element.type = "button";
       element.innerHTML = "<span>" + place.glyph + "</span>";
       element.setAttribute("aria-label", "Open " + place.name);
-      const popup = new maplibregl.Popup({offset: 18, closeButton: true}).setHTML('<div class="map-popup"><strong>' + place.name + '</strong><span>' + place.area + " · " + place.price + '</span><small>' + place.visit + '</small></div>');
+      const popupContent = place.isEvent ? '<div class="map-popup"><strong>' + escapeHtml(place.name) + '</strong><span>' + escapeHtml(place.area) + " · " + escapeHtml(formatEventDate(place)) + '</span><small><a href="' + escapeHtml(place.url) + '" target="_blank" rel="noreferrer">View on Luma ↗</a></small></div>' : '<div class="map-popup"><strong>' + place.name + '</strong><span>' + place.area + " · " + place.price + '</span><small>' + place.visit + '</small></div>';
+      const popup = new maplibregl.Popup({offset: 18, closeButton: true}).setHTML(popupContent);
       const marker = new maplibregl.Marker({element: element, anchor: "bottom"}).setLngLat([place.lng, place.lat]).setPopup(popup).addTo(liveMap);
-      element.addEventListener("dblclick", () => openPlace(place.id));
+      element.addEventListener("dblclick", () => place.isEvent ? window.open(place.url, "_blank", "noopener,noreferrer") : openPlace(place.id));
       return marker;
     });
   }
@@ -280,7 +340,7 @@
     state.mapCategory = mapCategories.some((category) => category.id === state.activeCategory) ? state.activeCategory : "all";
     onboarding.hidden = true; app.hidden = false; document.title = "Gurugram Commons — your city, carefully curated";
     setMainView("explore");
-    renderApp(); initMap(); updateWeather(); window.scrollTo({top:0, behavior:"instant"});
+    renderApp(); renderEvents(); initMap(); loadEvents(); updateWeather(); window.scrollTo({top:0, behavior:"instant"});
   }
   function setMainView(view) {
     const nearMode = view === "near";
@@ -308,6 +368,9 @@
       if (nearLink) { event.preventDefault(); setMainView("near"); return; }
       const exploreLink = event.target.closest("[data-explore-link]");
       if (exploreLink) { event.preventDefault(); setMainView("explore"); return; }
+      const eventFilter = event.target.closest("[data-event-filter]");
+      if (eventFilter) { state.eventFilter = eventFilter.dataset.eventFilter; $$('[data-event-filter]').forEach((button) => button.classList.toggle("is-active", button === eventFilter)); renderEvents(); return; }
+      if (event.target.closest("[data-events-refresh]")) { loadEvents(); return; }
       const areaCard = event.target.closest("[data-area-filter]");
       if (areaCard) {
         state.areaFilter = areaCard.dataset.areaFilter;
