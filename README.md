@@ -21,6 +21,7 @@ Then open `http://localhost:4173` in a browser.
 - Weather-aware visit guidance
 - Saved places stored locally in the browser
 - Public Luma event section with direct registration links
+- Live Vercel endpoint and Vercel Cron refresh for the next 31 days
 - GitHub Actions sync that refreshes approved public event pages every three hours
 - Editorial sample data across food, workspaces, public spaces, events, and services
 
@@ -30,6 +31,6 @@ The current listings are prototype editorial samples. Before launch, replace the
 
 This project intentionally does not require a Luma API key. Add approved public Luma calendar or event pages to `data/event-sources.json`. The scraper reads public structured event metadata, keeps future tech events for Gurugram/Delhi NCR, removes duplicates and writes `data/events.json`.
 
-The workflow at `.github/workflows/sync-events.yml` runs every three hours on GitHub Actions and can also be started manually from the Actions tab. GitHub Actions needs repository write permissions enabled for the workflow to commit refreshed `data/events.json`; Vercel will redeploy the updated static data when connected to this repository.
+The frontend first calls `/api/luma-events`, which scrapes the public sources live on Vercel and returns upcoming events for the next 31 days. `vercel.json` schedules that endpoint every three hours in production. The GitHub workflow at `.github/workflows/sync-events.yml` is a durable static fallback and can also be started manually from the Actions tab; it refreshes `data/events.json` and Vercel redeploys the updated fallback when connected to this repository.
 
 Only use public sources you are allowed to index. Do not bypass sign-in, CAPTCHA, robots rules or rate limits. Add attribution and keep the original Luma link on every event card.

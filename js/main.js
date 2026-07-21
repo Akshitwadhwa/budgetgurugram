@@ -49,7 +49,7 @@
   let mapMarkers = [];
   let userMarker = null;
   let liveEvents = Array.isArray(window.GC_EVENTS) ? window.GC_EVENTS : [];
-  let eventsMeta = {generatedAt:null, eventCount:liveEvents.length, error:false};
+  let eventsMeta = {generatedAt:null, eventCount:liveEvents.length, error:false, live:false};
   let toastTimer;
 
   function announce(message) {
@@ -173,7 +173,7 @@
     const items = liveEvents.filter(eventMatchesFilter);
     if (status) {
       if (eventsMeta.error) status.textContent = "Event sync unavailable";
-      else if (eventsMeta.generatedAt) status.textContent = `${liveEvents.length} upcoming · Updated ${formatRelativeTime(eventsMeta.generatedAt)}`;
+      else if (eventsMeta.generatedAt) status.textContent = `${eventsMeta.live ? "Live · " : ""}${liveEvents.length} upcoming · Updated ${formatRelativeTime(eventsMeta.generatedAt)}`;
       else status.textContent = "Waiting for the first public sync";
     }
     if (!items.length) {
@@ -190,15 +190,20 @@
     return `${Math.round(minutes / 60)}h ago`;
   }
   async function loadEvents() {
-    try {
-      const response = await fetch(`data/events.json?ts=${Date.now()}`, {cache:"no-store"});
-      if (!response.ok) throw new Error("Event data unavailable");
-      const payload = await response.json();
-      liveEvents = Array.isArray(payload.events) ? payload.events : [];
-      eventsMeta = {generatedAt:payload.generatedAt, eventCount:payload.eventCount || liveEvents.length, error:false};
-    } catch (error) {
-      eventsMeta = {generatedAt:null, eventCount:liveEvents.length, error:true};
+    const endpoints = [`/api/luma-events?ts=${Date.now()}`, `data/events.json?ts=${Date.now()}`];
+    let loaded = false;
+    for (const endpoint of endpoints) {
+      try {
+        const response = await fetch(endpoint, {cache:"no-store"});
+        if (!response.ok) continue;
+        const payload = await response.json();
+        liveEvents = Array.isArray(payload.events) ? payload.events : [];
+        eventsMeta = {generatedAt:payload.generatedAt, eventCount:payload.eventCount || liveEvents.length, error:false, live:Boolean(payload.live)};
+        loaded = true;
+        break;
+      } catch (error) { /* Try the generated static fallback. */ }
     }
+    if (!loaded) eventsMeta = {generatedAt:null, eventCount:liveEvents.length, error:true, live:false};
     renderEvents();
     if (liveMap) renderMapMarkers(visiblePlaces());
   }
