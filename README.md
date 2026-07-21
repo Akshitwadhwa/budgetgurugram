@@ -16,6 +16,7 @@ Then open `http://localhost:4173` in a browser.
 
 - Three-step onboarding for motive, role, and location
 - Interactive MapLibre map with OpenFreeMap tiles
+- Live nearby place layer from OpenStreetMap/Overpass with source links and fetch timestamps
 - Gurugram place pins, popups, filters, search, and map/list views
 - Approximate user-location marker when permission is granted
 - Weather-aware visit guidance
@@ -26,6 +27,17 @@ Then open `http://localhost:4173` in a browser.
 - Editorial sample data across food, workspaces, public spaces, events, and services
 
 The current listings are prototype editorial samples. Before launch, replace them with source-backed records and verified coordinates.
+
+## Map data and trust model
+
+The map separates two kinds of records:
+
+- Live nearby pins are fetched through api/nearby-places.js from the read-only Overpass API and link back to their OpenStreetMap record. They are refreshed on page load or with “Refresh data” and cached by Vercel for up to 5 minutes.
+- Curated guide pins are the original editorial prototype records. They are hidden when live nearby data is available and can be revealed with “Show guide pins”. Their cards and drawers explicitly say to confirm hours, price and availability before travelling.
+
+OpenStreetMap is a current public map database, not a guarantee that a business is open or that its prices and hours are correct. The product should always show the source and freshness instead of claiming “absolute latest” or “open now”. For production-grade business status, add a licensed place-data provider or direct verification workflow and keep the original source link.
+
+The public OpenStreetMap services have usage limits and attribution requirements. The server endpoint uses a small radius, a bounded result set, a short cache and a descriptive user agent. See the [OpenStreetMap API usage policy](https://operations.osmfoundation.org/policies/api/) before increasing traffic.
 
 ## Public event sync
 

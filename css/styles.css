@@ -178,6 +178,7 @@ h1 em, h2 em { color: var(--gold); font-family: "Instrument Serif", Georgia, ser
 .map-panel__topline, .map-panel__footer { display: flex; align-items: center; justify-content: space-between; padding: 5px 6px 12px; color: #718076; font-size: 10px; }
 .map-panel__footer { padding: 12px 6px 5px; }
 .map-panel__footer button { padding: 0; color: var(--forest); background: transparent; border: 0; font-size: 10px; text-decoration: underline; text-underline-offset: 3px; }
+.map-panel__actions { display: flex; align-items: center; gap: 12px; }
 .map-legend-dot { display: inline-block; width: 7px; height: 7px; margin-right: 5px; background: var(--coral); border: 2px solid #fff; border-radius: 50%; box-shadow: 0 0 0 2px rgba(215,124,94,.2); }
 .map-legend-dot--gold { background: var(--gold); box-shadow: 0 0 0 2px rgba(217,159,67,.2); }
 .map-canvas { position: relative; height: min(69vh, 720px); min-height: 540px; overflow: hidden; background: #dfe8de; border-radius: 11px; isolation: isolate; }
@@ -188,15 +189,19 @@ h1 em, h2 em { color: var(--gold); font-family: "Instrument Serif", Georgia, ser
 .map-category-item:hover, .map-category-item.is-active { background: #f0f3ee; transform: translateX(2px); }
 .map-category-item.is-active { color: var(--forest); font-weight: 700; }
 .map-category-item__swatch { display: block; flex: 0 0 auto; width: 27px; height: 27px; background: var(--category-color); border-radius: 8px; box-shadow: 0 3px 7px color-mix(in srgb, var(--category-color) 24%, transparent); }
+.map-category-toggle { width: 100%; margin-top: 8px; padding: 9px 10px; color: var(--forest); background: #edf3ec; border: 1px solid #d6e2d5; border-radius: 8px; font-size: 10px; font-weight: 700; text-align: left; }
+.map-category-toggle:hover { background: #e3eee4; }
 .map-canvas #real-map { position: absolute; inset: 0; width: 100%; height: 100%; }
 .maplibregl-map { font-family: "DM Sans", Arial, sans-serif; }
 .maplibregl-ctrl-group { overflow: hidden; border: 1px solid rgba(200,201,194,.9) !important; border-radius: 8px !important; box-shadow: 0 5px 14px rgba(34,47,43,.12) !important; }
 .maplibregl-ctrl-group button { width: 31px !important; height: 31px !important; }
 .map-fallback { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 24px; color: var(--forest); background: linear-gradient(135deg, #dfe8de, #eef1e8); text-align: center; }
 .map-fallback strong { font-size: 14px; }.map-fallback span { max-width: 280px; color: var(--muted); font-size: 11px; }
+.map-data-empty { position: absolute; z-index: 6; top: 50%; left: 50%; display: flex; max-width: 250px; flex-direction: column; gap: 6px; padding: 16px 18px; color: var(--forest); background: rgba(255,253,250,.94); border: 1px solid rgba(255,255,255,.9); border-radius: 12px; box-shadow: 0 12px 28px rgba(34,47,43,.14); text-align: center; transform: translate(-50%, -50%); }
+.map-data-empty strong { font-size: 12px; }.map-data-empty span { color: var(--muted); font-size: 10px; line-height: 1.45; }
 .premium-map-pin { display: grid; width: 31px; height: 31px; place-items: center; padding: 0; color: white; background: var(--coral); border: 2px solid white; border-radius: 50% 50% 50% 3px; box-shadow: 0 5px 12px rgba(42,61,53,.26); cursor: pointer; transform: rotate(-45deg); transition: transform var(--ease), background var(--ease); }
 .premium-map-pin span { transform: rotate(45deg); font-family: "Instrument Serif", Georgia, serif; font-size: 15px; }.premium-map-pin:hover { background: var(--forest); transform: rotate(-45deg) scale(1.16); }
-.premium-map-pin--work { background: #5b847b; }.premium-map-pin--public { background: #789c68; }.premium-map-pin--events { background: #876b78; }.premium-map-pin--services { background: #6a8792; }
+.premium-map-pin--work { background: #5b847b; }.premium-map-pin--public { background: #789c68; }.premium-map-pin--events { background: #876b78; }.premium-map-pin--services { background: #6a8792; }.premium-map-pin--bars { background: #d44778; }.premium-map-pin--grocery { background: #2ca292; }.premium-map-pin--live { border-style: dashed; box-shadow: 0 0 0 3px rgba(39,137,109,.16), 0 5px 12px rgba(42,61,53,.26); }
 .live-user-marker { position: relative; width: 18px; height: 18px; background: var(--forest); border: 4px solid white; border-radius: 50%; box-shadow: 0 0 0 8px rgba(30,59,53,.17), 0 4px 10px rgba(30,59,53,.28); }
 .live-user-marker::after { position: absolute; top: 50%; left: 50%; width: 4px; height: 4px; content: ""; background: #e5bd6c; border-radius: 50%; transform: translate(-50%, -50%); }
 .maplibregl-popup-content { min-width: 160px; padding: 13px 14px !important; color: var(--forest); border-radius: 9px !important; box-shadow: 0 10px 28px rgba(30,59,53,.16) !important; }.map-popup strong, .map-popup span, .map-popup small { display: block; }.map-popup strong { font-size: 12px; }.map-popup span { margin-top: 3px; color: var(--muted); font-size: 10px; }.map-popup small { margin-top: 9px; color: var(--gold); font-size: 9px; font-weight: 700; }

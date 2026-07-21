@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#f5f1ea">
     <meta
       name="description"
-      content="Gurugram Commons is a trusted, local-first guide to places, communities and experiences in Gurugram."
+      content="Gurugram Commons is a source-labeled, local-first guide to places, communities and experiences in Gurugram."
     >
     <title>Gurugram Commons — the city, carefully curated</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +44,7 @@
         </div>
         <div class="onboarding__proof">
           <span class="proof-dot"></span>
-          <span>Editorially curated · Community verified</span>
+          <span>Source-labeled · Freshness visible</span>
         </div>
       </div>
 
@@ -92,7 +92,7 @@
         <section class="dashboard-hero" id="explore" data-explore-view>
           <div class="container dashboard-hero__inner">
             <div>
-              <p class="eyebrow">Tuesday, 14 July · Gurugram</p>
+              <p class="eyebrow" data-today-label>Today · Gurugram</p>
               <h1>Make the city<br><em>yours.</em></h1>
               <p class="dashboard-hero__lede">Thoughtful places to eat, work, meet and pause — close to where you are.</p>
             </div>
@@ -137,18 +137,19 @@
             <div class="discovery-grid">
               <div class="place-list" data-place-list hidden></div>
               <div class="map-panel" data-map-panel>
-                <div class="map-panel__topline"><span><i class="map-legend-dot"></i> Places near you</span><span>Approximate location</span></div>
+                <div class="map-panel__topline"><span><i class="map-legend-dot"></i> Places near you</span><span data-map-source-status>Loading public nearby map data…</span></div>
                 <div class="map-canvas" data-map-canvas>
                   <p class="map-loading-note" data-map-loading-note>Give us up to 10 seconds for the map to load</p>
                   <div id="real-map" aria-label="Interactive map of Gurugram"></div>
+                  <div class="map-data-empty" data-map-data-empty hidden><strong>Live place pins are unavailable</strong><span>Refresh the data or reveal the editorial guide pins below.</span></div>
                   <div class="map-fallback" data-map-fallback hidden><strong>The live map could not load.</strong><span>The list, filters and place details are still available in this demo.</span></div>
                   <aside class="map-category-rail" data-map-category-rail aria-label="Browse map categories"></aside>
                 </div>
-                <div class="map-panel__footer"><span><i class="map-legend-dot map-legend-dot--gold"></i> Good to visit now</span><button type="button" data-location-button>Re-centre map</button></div>
+                <div class="map-panel__footer"><span><i class="map-legend-dot map-legend-dot--gold"></i> Live pins are source-labeled</span><span class="map-panel__actions"><button type="button" data-map-refresh>Refresh data</button><button type="button" data-location-button>Re-centre map</button></span></div>
               </div>
             </div>
 
-            <div class="data-note"><span class="data-note__icon">✦</span> Prototype listings are editorial samples for this demo. Each production listing will show its source and last verified date.</div>
+            <div class="data-note"><span class="data-note__icon">✦</span><span data-data-status-text>Live nearby pins will show their source and fetch time. Curated pins are separate and should be confirmed before visiting.</span></div>
           </div>
         </section>
 

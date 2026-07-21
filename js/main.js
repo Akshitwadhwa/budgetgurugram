@@ -38,6 +38,7 @@
   const state = {
     onboardingStep: 1, motives: storedProfile && Array.isArray(storedProfile.motives) && storedProfile.motives.length ? storedProfile.motives : ["explore"], role: storedProfile && typeof storedProfile.role === "string" ? storedProfile.role : "", locationMode: storedProfile && storedProfile.locationMode === "current" ? "current" : "area", neighbourhood: storedProfile && typeof storedProfile.neighbourhood === "string" ? storedProfile.neighbourhood : "Cyber City",
     coords: storedCoords, weather: {temp: 29, icon: "☼", label: "Clear skies · Good to be out"},
+    showCuratedPins: false,
     activeCategory: "all", mapCategory: "all", areaFilter: "all", eventFilter: "all", query: "", price: "all", tags: [], saved: new Set(JSON.parse(localStorage.getItem("gc-saved") || "[]")), savedOnly: false
   };
   const $ = (selector, root) => (root || document).querySelector(selector);
@@ -50,6 +51,8 @@
   let userMarker = null;
   let liveEvents = Array.isArray(window.GC_EVENTS) ? window.GC_EVENTS : [];
   let eventsMeta = {generatedAt:null, eventCount:liveEvents.length, error:false, live:false};
+  let nearbyPlaces = [];
+  let nearbyMeta = {status:"idle", fetchedAt:null, count:0, error:false};
   let toastTimer;
 
   function announce(message) {
@@ -134,7 +137,7 @@
   function renderMapCategoryRail() {
     const rail = $("[data-map-category-rail]");
     if (!rail) return;
-    rail.innerHTML = '<p class="map-category-rail__title">Explore by</p>' + mapCategories.map((category) => '<button class="map-category-item ' + (state.mapCategory === category.id ? "is-active" : "") + '" type="button" data-map-category="' + category.id + '" data-map-filter="' + category.filter + '"><span class="map-category-item__swatch" style="--category-color:' + category.color + '"></span><span>' + category.label + '</span></button>').join("");
+    rail.innerHTML = '<p class="map-category-rail__title">Explore by</p>' + mapCategories.map((category) => '<button class="map-category-item ' + (state.mapCategory === category.id ? "is-active" : "") + '" type="button" data-map-category="' + category.id + '" data-map-filter="' + category.filter + '"><span class="map-category-item__swatch" style="--category-color:' + category.color + '"></span><span>' + category.label + '</span></button>').join("") + '<button class="map-category-toggle" type="button" data-toggle-curated-pins hidden>Show guide pins</button>';
   }
   function renderNearYou() {
     const grid = $("[data-area-grid]");
@@ -189,6 +192,39 @@
     if (minutes < 60) return `${minutes}m ago`;
     return `${Math.round(minutes / 60)}h ago`;
   }
+  function mapCategoryMatches(place) {
+    const category = state.mapCategory;
+    const searchable = [place.name, place.kind, place.categoryLabel, place.tags].join(" ").toLowerCase();
+    if (category === "all") return true;
+    if (category === "coffee") return place.category === "food" && /coffee|cafe|café|tea/.test(searchable);
+    if (category === "bars") return place.category === "bars" || (place.category === "events" && /bar|pub|social|late|music/.test(searchable));
+    if (category === "grocery") return place.category === "grocery" || (place.category === "services" && /grocery|market|supermarket|convenience|bazaar/.test(searchable));
+    return place.category === category;
+  }
+  function mapPlaces(items) {
+    const curated = items.filter(mapCategoryMatches);
+    if (nearbyMeta.status !== "loaded") return state.showCuratedPins ? curated : [];
+    const live = nearbyPlaces.filter(mapCategoryMatches);
+    return state.showCuratedPins ? live.concat(curated) : live;
+  }
+  function renderMapStatus() {
+    const status = $("[data-map-source-status]"), toggle = $("[data-toggle-curated-pins]"), note = $("[data-data-status-text]"), empty = $("[data-map-data-empty]");
+    let message = "Loading public nearby map data…";
+    if (nearbyMeta.status === "loaded") message = "Live map data · " + nearbyMeta.count + " nearby places · refreshed " + formatRelativeTime(nearbyMeta.fetchedAt);
+    if (nearbyMeta.status === "unavailable") message = "Live map data is unavailable right now · editorial pins are marked separately";
+    if (status) status.textContent = message;
+    if (note) note.textContent = nearbyMeta.status === "loaded" ? "Live nearby pins come from OpenStreetMap and show their fetch time. Curated pins are separate and should be confirmed before visiting." : "The live nearby layer could not be reached. Curated pins are editorial samples, not a guarantee of current hours, price or availability.";
+    if (toggle) {
+      toggle.hidden = nearbyMeta.status !== "loaded" && nearbyMeta.status !== "unavailable";
+      toggle.textContent = state.showCuratedPins ? "Hide guide pins" : "Show guide pins";
+      toggle.setAttribute("aria-pressed", String(state.showCuratedPins));
+    }
+    if (empty) empty.hidden = nearbyMeta.status !== "unavailable" || state.showCuratedPins;
+  }
+  function renderTodayLabel() {
+    const label = $("[data-today-label]");
+    if (label) label.textContent = new Intl.DateTimeFormat("en-IN", {weekday:"long", day:"numeric", month:"long"}).format(new Date()) + " · Gurugram";
+  }
   async function loadEvents() {
     const endpoints = [`/api/luma-events?ts=${Date.now()}`, `data/events.json?ts=${Date.now()}`];
     let loaded = false;
@@ -207,9 +243,29 @@
     renderEvents();
     if (liveMap) renderMapMarkers(visiblePlaces());
   }
+  async function loadNearbyPlaces() {
+    nearbyMeta = {status:"loading", fetchedAt:null, count:0, error:false};
+    renderMapStatus();
+    const lat = Math.round(state.coords.lat * 1000) / 1000;
+    const lng = Math.round(state.coords.lng * 1000) / 1000;
+    try {
+      const response = await fetch("/api/nearby-places?lat=" + lat + "&lng=" + lng + "&radius=5000&ts=" + Date.now(), {cache:"no-store"});
+      if (!response.ok) throw new Error("Nearby map request failed");
+      const payload = await response.json();
+      if (!Array.isArray(payload.places)) throw new Error("Nearby map response was invalid");
+      nearbyPlaces = payload.places;
+      nearbyMeta = {status:"loaded", fetchedAt:payload.fetchedAt || new Date().toISOString(), count:nearbyPlaces.length, error:false};
+    } catch (error) {
+      nearbyPlaces = [];
+      nearbyMeta = {status:"unavailable", fetchedAt:null, count:0, error:true};
+    }
+    renderMapStatus();
+    if (liveMap) renderMapMarkers(visiblePlaces());
+  }
   function renderCard(place) {
     const saved = state.saved.has(place.id);
-    return '<article class="place-card" data-place-id="' + place.id + '"><div class="place-card__cover" style="--cover:' + place.accent + '"><span class="cover-word">' + place.cover.replace("\n", "<br>") + '</span><span class="cover-glyph">' + place.glyph + '</span><span class="status-badge">' + place.visit + '</span><button class="place-card__save ' + (saved ? "is-saved" : "") + '" type="button" data-save="' + place.id + '" aria-label="' + (saved ? "Remove" : "Save") + " " + place.name + '" aria-pressed="' + saved + '">' + (saved ? "♥" : "♡") + '</button></div><button class="place-card__body" type="button" data-open-place="' + place.id + '"><div class="place-card__head"><div><h3>' + place.name + '</h3><p class="place-card__area">' + place.area + " · " + distanceFor(place).toFixed(1) + ' km away</p></div><span class="price-tag ' + (place.priceValue === 0 ? "is-free" : "") + '">' + place.price + '</span></div><div class="place-card__tags">' + place.tags.slice(0, 3).map((tag) => "<span>" + tag + "</span>").join("") + '</div><div class="place-card__details"><span class="place-card__distance">' + place.categoryLabel + '</span><span class="place-card__open">' + place.open + '</span></div><div class="verified-line"><i></i> Last checked ' + place.verified + " · " + place.source + "</div></button></article>";
+    const statusLabel = place.source === "Editorial sample" ? "Confirm before visiting" : place.visit;
+    return '<article class="place-card" data-place-id="' + place.id + '"><div class="place-card__cover" style="--cover:' + place.accent + '"><span class="cover-word">' + place.cover.replace("\n", "<br>") + '</span><span class="cover-glyph">' + place.glyph + '</span><span class="status-badge">' + statusLabel + '</span><button class="place-card__save ' + (saved ? "is-saved" : "") + '" type="button" data-save="' + place.id + '" aria-label="' + (saved ? "Remove" : "Save") + " " + place.name + '" aria-pressed="' + saved + '">' + (saved ? "♥" : "♡") + '</button></div><button class="place-card__body" type="button" data-open-place="' + place.id + '"><div class="place-card__head"><div><h3>' + place.name + '</h3><p class="place-card__area">' + place.area + " · " + distanceFor(place).toFixed(1) + ' km away</p></div><span class="price-tag ' + (place.priceValue === 0 ? "is-free" : "") + '">' + place.price + '</span></div><div class="place-card__tags">' + place.tags.slice(0, 3).map((tag) => "<span>" + tag + "</span>").join("") + '</div><div class="place-card__details"><span class="place-card__distance">' + place.categoryLabel + '</span><span class="place-card__open">' + place.open + '</span></div><div class="verified-line"><i></i> Last checked ' + place.verified + " · " + place.source + "</div></button></article>";
   }
   function renderMapPins(items) {
     if (liveMap) { renderMapMarkers(items); return; }
@@ -221,16 +277,16 @@
     if (!liveMap) return;
     mapMarkers.forEach((marker) => marker.remove());
     const eventPins = liveEvents.filter((event) => event.lat && event.lng).map((event) => ({...event, name:event.title, area:event.city || event.location || "Gurugram", category:"events", glyph:"✦", price:event.price || "See Luma", visit:"View on Luma", isEvent:true}));
-    mapMarkers = items.concat(eventPins).filter((place) => place.lat && place.lng).map((place) => {
+    mapMarkers = mapPlaces(items).concat(eventPins).filter((place) => place.lat && place.lng).map((place) => {
       const element = document.createElement("button");
-      element.className = "premium-map-pin premium-map-pin--" + place.category;
+      element.className = "premium-map-pin premium-map-pin--" + place.category + (place.isLiveSource ? " premium-map-pin--live" : "");
       element.type = "button";
       element.innerHTML = "<span>" + place.glyph + "</span>";
       element.setAttribute("aria-label", "Open " + place.name);
-      const popupContent = place.isEvent ? '<div class="map-popup"><strong>' + escapeHtml(place.name) + '</strong><span>' + escapeHtml(place.area) + " · " + escapeHtml(formatEventDate(place)) + '</span><small><a href="' + escapeHtml(place.url) + '" target="_blank" rel="noreferrer">View on Luma ↗</a></small></div>' : '<div class="map-popup"><strong>' + place.name + '</strong><span>' + place.area + " · " + place.price + '</span><small>' + place.visit + '</small></div>';
+      const popupContent = place.isEvent ? '<div class="map-popup"><strong>' + escapeHtml(place.name) + '</strong><span>' + escapeHtml(place.area) + " · " + escapeHtml(formatEventDate(place)) + '</span><small><a href="' + escapeHtml(place.url) + '" target="_blank" rel="noreferrer">View on Luma ↗</a></small></div>' : place.isLiveSource ? '<div class="map-popup"><strong>' + escapeHtml(place.name) + '</strong><span>' + escapeHtml(place.area) + " · " + escapeHtml(place.categoryLabel) + '</span><small>' + escapeHtml(place.open) + '</small><small>OpenStreetMap · refreshed ' + escapeHtml(formatRelativeTime(place.verifiedAt)) + '</small><small><a href="' + escapeHtml(place.sourceUrl) + '" target="_blank" rel="noreferrer">Open source ↗</a></small></div>' : '<div class="map-popup"><strong>' + escapeHtml(place.name) + '</strong><span>' + escapeHtml(place.area) + " · " + escapeHtml(place.price) + '</span><small>Editorial guide pin · confirm before visiting</small></div>';
       const popup = new maplibregl.Popup({offset: 18, closeButton: true}).setHTML(popupContent);
       const marker = new maplibregl.Marker({element: element, anchor: "bottom"}).setLngLat([place.lng, place.lat]).setPopup(popup).addTo(liveMap);
-      element.addEventListener("dblclick", () => place.isEvent ? window.open(place.url, "_blank", "noopener,noreferrer") : openPlace(place.id));
+      element.addEventListener("dblclick", () => place.isEvent ? window.open(place.url, "_blank", "noopener,noreferrer") : place.isLiveSource ? window.open(place.sourceUrl, "_blank", "noopener,noreferrer") : openPlace(place.id));
       return marker;
     });
   }
@@ -275,8 +331,10 @@
     root.querySelectorAll("[data-remove-active]").forEach((button, index) => button.addEventListener("click", () => filters[index][1]()));
   }
   function renderApp() {
+    renderTodayLabel();
     renderIntentFilters();
     renderMapCategoryRail();
+    renderMapStatus();
     renderNearYou();
     const items = visiblePlaces();
     const selectedMapCategory = mapCategories.find((category) => category.id === state.mapCategory);
@@ -299,7 +357,7 @@
     const place = places.find((item) => item.id === id); if (!place) return;
     focusMap(place);
     const drawer = $("[data-place-drawer]"), saved = state.saved.has(id);
-    drawer.innerHTML = '<button class="drawer-close" type="button" data-close-drawer aria-label="Close details">×</button><div class="drawer-cover" style="background:' + place.accent + '"><h2>' + place.cover.replace("\n", "<br>") + '</h2></div><div class="drawer-meta"><div><h3 id="drawer-title">' + place.name + '</h3><p class="drawer-area">' + place.area + " · " + distanceFor(place).toFixed(1) + ' km from you</p></div><span class="drawer-price ' + (place.priceValue === 0 ? "is-free" : "") + '">' + place.price + '</span></div><p class="drawer-description">' + place.description + '</p><div class="detail-list"><div><span>Visit now</span><strong>' + place.visit + '</strong></div><div><span>Hours</span><strong>' + place.open + '</strong></div><div><span>Good for</span><strong>' + place.tags[0] + " · " + place.tags[1] + '</strong></div><div><span>Price basis</span><strong>' + place.priceType + '</strong></div></div><div class="place-card__tags">' + place.tags.map((tag) => "<span>" + tag + "</span>").join("") + '</div><div class="drawer-actions"><button class="outline-button" type="button" data-save-drawer="' + place.id + '">' + (saved ? "♥ Saved" : "♡ Save place") + '</button><a class="primary-button" href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(place.name + ", " + place.area + ", Gurugram") + '" target="_blank" rel="noreferrer">Directions <span>↗</span></a></div><p class="drawer-source">Information status: <strong>Editorial sample</strong>. Production records will show a direct <a href="#" data-source-link>source link</a> and verification history.</p>';
+    drawer.innerHTML = '<button class="drawer-close" type="button" data-close-drawer aria-label="Close details">×</button><div class="drawer-cover" style="background:' + place.accent + '"><h2>' + place.cover.replace("\n", "<br>") + '</h2></div><div class="drawer-meta"><div><h3 id="drawer-title">' + place.name + '</h3><p class="drawer-area">' + place.area + " · " + distanceFor(place).toFixed(1) + ' km from you</p></div><span class="drawer-price ' + (place.priceValue === 0 ? "is-free" : "") + '">' + place.price + '</span></div><p class="drawer-description">' + place.description + '</p><div class="detail-list"><div><span>Access note</span><strong>Confirm before visiting</strong></div><div><span>Hours</span><strong>' + place.open + '</strong></div><div><span>Good for</span><strong>' + place.tags[0] + " · " + place.tags[1] + '</strong></div><div><span>Price basis</span><strong>' + place.priceType + '</strong></div></div><div class="place-card__tags">' + place.tags.map((tag) => "<span>" + tag + "</span>").join("") + '</div><div class="drawer-actions"><button class="outline-button" type="button" data-save-drawer="' + place.id + '">' + (saved ? "♥ Saved" : "♡ Save place") + '</button><a class="primary-button" href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(place.name + ", " + place.area + ", Gurugram") + '" target="_blank" rel="noreferrer">Directions <span>↗</span></a></div><p class="drawer-source">Information status: <strong>Editorial sample</strong>. Hours, price and availability can change; verify before you travel.</p>';
     $("[data-modal-backdrop]").hidden = false; document.body.classList.add("is-locked"); drawer.focus();
   }
   function closeModal(selector) {
@@ -319,7 +377,7 @@
     announce("Requesting your approximate location…");
     navigator.geolocation.getCurrentPosition((position) => {
       state.locationMode = "current"; state.coords = {lat: position.coords.latitude, lng: position.coords.longitude}; state.neighbourhood = getNearestNeighbourhood(state.coords);
-      announce("Showing places near " + state.neighbourhood + "."); renderApp(); updateWeather();
+      announce("Showing places near " + state.neighbourhood + "."); renderApp(); loadNearbyPlaces(); updateWeather();
       if (liveMap) { renderUserLocation(); liveMap.flyTo({center: [state.coords.lng, state.coords.lat], zoom: 14.2, essential: true}); }
     }, () => announce("We couldn’t access your location. Showing Cyber City instead."), {enableHighAccuracy:false, timeout:7000, maximumAge:300000});
   }
@@ -345,7 +403,7 @@
     state.mapCategory = mapCategories.some((category) => category.id === state.activeCategory) ? state.activeCategory : "all";
     onboarding.hidden = true; app.hidden = false; document.title = "Gurugram Commons — your city, carefully curated";
     setMainView("explore");
-    renderApp(); renderEvents(); initMap(); loadEvents(); updateWeather(); window.scrollTo({top:0, behavior:"instant"});
+    renderApp(); renderEvents(); initMap(); loadEvents(); loadNearbyPlaces(); updateWeather(); window.scrollTo({top:0, behavior:"instant"});
   }
   function setMainView(view) {
     const nearMode = view === "near";
@@ -396,6 +454,7 @@
       if (event.target.closest("[data-reset-area]")) { state.areaFilter = "all"; state.activeCategory = "all"; state.mapCategory = "all"; renderApp(); return; }
       const mapCategory = event.target.closest("[data-map-category]");
       if (mapCategory) { state.mapCategory = mapCategory.dataset.mapCategory; state.activeCategory = mapCategory.dataset.mapCategory; state.savedOnly = false; renderApp(); return; }
+      if (event.target.closest("[data-toggle-curated-pins]")) { state.showCuratedPins = !state.showCuratedPins; renderMapStatus(); if (liveMap) renderMapMarkers(visiblePlaces()); return; }
       const category = event.target.closest("[data-category]"); if (category) { state.activeCategory = category.dataset.category; state.mapCategory = mapCategories.some((item) => item.id === category.dataset.category) ? category.dataset.category : "all"; state.savedOnly = false; renderApp(); return; }
       const save = event.target.closest("[data-save]"); if (save) { event.stopPropagation(); setSaved(save.dataset.save); return; }
       const open = event.target.closest("[data-open-place]"); if (open) { openPlace(open.dataset.openPlace); return; }
@@ -409,6 +468,7 @@
       if (view) { $$('[data-view]').forEach((button) => button.classList.toggle("is-active", button === view)); $("[data-place-list]").hidden = view.dataset.view !== "list"; $("[data-map-panel]").hidden = view.dataset.view !== "map"; if (view.dataset.view === "map" && liveMap) window.setTimeout(() => liveMap.resize(), 0); return; }
       if (event.target.closest("[data-saved-button]")) { if (!state.saved.size) { announce("Save a place to build your personal edit."); return; } state.savedOnly = true; state.activeCategory = "all"; state.mapCategory = "all"; renderApp(); return; }
       if (event.target.closest("[data-location-button]")) { requestLocation(); return; }
+      if (event.target.closest("[data-map-refresh]")) { loadNearbyPlaces(); return; }
       if (event.target.closest("[data-profile-button]")) { announce("Your preferences are stored for this demo. Profile editing is coming next."); return; }
       const price = event.target.closest("[data-price]");
       if (price) { $$("[data-price]").forEach((button) => button.classList.remove("is-selected")); price.classList.add("is-selected"); state.price = price.dataset.price; return; }
