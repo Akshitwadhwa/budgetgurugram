@@ -1,11 +1,59 @@
 {
-  "generatedAt": "2026-07-22T16:50:00.899Z",
+  "generatedAt": "2026-07-22T19:47:04.559Z",
   "sourceCount": 1,
-  "eventCount": 3,
+  "eventCount": 6,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
+    {
+      "id": "luma-aHR0cHM6Ly9sdS5tYS",
+      "title": "WMNfintech: Chicago Showcase",
+      "description": "",
+      "start": "2026-07-23T19:00:00.000Z",
+      "end": "2026-07-23T23:00:00.000Z",
+      "location": "Location listed on Luma",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See Luma",
+      "url": "https://lu.ma/3i1kqqac",
+      "source": "Luma",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-22T19:47:04.559Z"
+    },
+    {
+      "id": "luma-aHR0cHM6Ly9sdS5tYS",
+      "title": "Prediction Markets | Chicago Tech Week",
+      "description": "",
+      "start": "2026-07-23T21:00:00.000Z",
+      "end": "2026-07-23T23:00:00.000Z",
+      "location": "Location listed on Luma",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See Luma",
+      "url": "https://lu.ma/r758son5",
+      "source": "Luma",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-22T19:47:04.559Z"
+    },
+    {
+      "id": "luma-aHR0cHM6Ly9sdS5tYS",
+      "title": "Fastest Draw in the 312: Outpacing the Tech Frontier",
+      "description": "",
+      "start": "2026-07-24T20:00:00.000Z",
+      "end": "2026-07-24T23:00:00.000Z",
+      "location": "Location listed on Luma",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See Luma",
+      "url": "https://lu.ma/2o7ethm3",
+      "source": "Luma",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-22T19:47:04.559Z"
+    },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
       "title": "Startup Mixer Delhi : Build India Together",
@@ -20,7 +68,7 @@
       "url": "https://lu.ma/jvkelufn",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-22T16:50:00.899Z"
+      "verifiedAt": "2026-07-22T19:47:04.559Z"
     },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
@@ -36,7 +84,7 @@
       "url": "https://lu.ma/irhvdvdh",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-22T16:50:00.899Z"
+      "verifiedAt": "2026-07-22T19:47:04.559Z"
     },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +100,7 @@
       "url": "https://lu.ma/dhftdjzm",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-22T16:50:00.899Z"
+      "verifiedAt": "2026-07-22T19:47:04.559Z"
     }
   ]
 }
