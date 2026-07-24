@@ -1,11 +1,75 @@
 {
-  "generatedAt": "2026-07-24T08:44:45.053Z",
+  "generatedAt": "2026-07-24T11:13:56.244Z",
   "sourceCount": 1,
-  "eventCount": 3,
+  "eventCount": 9,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
+    {
+      "id": "luma-aHR0cHM6Ly9sdS5tYS",
+      "title": "SF Intern & New Grad Summerfest by Comma Capital & Pylon",
+      "description": "",
+      "start": "2026-07-25T00:00:00.000Z",
+      "end": "2026-07-25T03:00:00.000Z",
+      "location": "Location listed on Luma",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See Luma",
+      "url": "https://lu.ma/4gwg4wtw",
+      "source": "Luma",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-24T11:13:56.244Z"
+    },
+    {
+      "id": "luma-aHR0cHM6Ly9sdS5tYS",
+      "title": "YC Startup School Founder & Investor Mixer",
+      "description": "",
+      "start": "2026-07-25T01:00:00.000Z",
+      "end": "2026-07-25T04:00:00.000Z",
+      "location": "Location listed on Luma",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See Luma",
+      "url": "https://lu.ma/beta-ugt5",
+      "source": "Luma",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-24T11:13:56.244Z"
+    },
+    {
+      "id": "luma-aHR0cHM6Ly9sdS5tYS",
+      "title": "Night Hack by Founders, Inc.",
+      "description": "",
+      "start": "2026-07-25T01:30:00.000Z",
+      "end": "2026-07-25T07:30:00.000Z",
+      "location": "Location listed on Luma",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See Luma",
+      "url": "https://lu.ma/nighthack",
+      "source": "Luma",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-24T11:13:56.244Z"
+    },
+    {
+      "id": "luma-aHR0cHM6Ly9sdS5tYS",
+      "title": "Ship 2 Prod | YC AI SUS Black-Tie Yacht Gala",
+      "description": "",
+      "start": "2026-07-25T02:00:00.000Z",
+      "end": "2026-07-25T06:00:00.000Z",
+      "location": "Location listed on Luma",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See Luma",
+      "url": "https://lu.ma/ojidqyj8",
+      "source": "Luma",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-24T11:13:56.244Z"
+    },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
       "title": "Startup Mixer Delhi : Build India Together",
@@ -20,7 +84,7 @@
       "url": "https://lu.ma/jvkelufn",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-24T08:44:45.053Z"
+      "verifiedAt": "2026-07-24T11:13:56.244Z"
     },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
@@ -36,7 +100,7 @@
       "url": "https://lu.ma/iunn7xyz",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-24T08:44:45.053Z"
+      "verifiedAt": "2026-07-24T11:13:56.244Z"
     },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +116,39 @@
       "url": "https://lu.ma/of3m14t8",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-24T08:44:45.053Z"
+      "verifiedAt": "2026-07-24T11:13:56.244Z"
+    },
+    {
+      "id": "luma-aHR0cHM6Ly9sdS5tYS",
+      "title": "YC AI Startup School Afterparty",
+      "description": "",
+      "start": "2026-07-26T01:00:00.000Z",
+      "end": "2026-07-26T05:00:00.000Z",
+      "location": "Location listed on Luma",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See Luma",
+      "url": "https://lu.ma/m4ez9liu",
+      "source": "Luma",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-24T11:13:56.244Z"
+    },
+    {
+      "id": "luma-aHR0cHM6Ly9sdS5tYS",
+      "title": "Startup School Afterparty | by Vercel, Warp, Reducto, and Browserbase",
+      "description": "",
+      "start": "2026-07-27T01:00:00.000Z",
+      "end": "2026-07-27T03:00:00.000Z",
+      "location": "Location listed on Luma",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See Luma",
+      "url": "https://lu.ma/browse-l2aj",
+      "source": "Luma",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-24T11:13:56.244Z"
     }
   ]
 }
