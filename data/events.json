@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T22:16:37.297Z",
+  "generatedAt": "2026-07-24T03:46:53.602Z",
   "sourceCount": 1,
   "eventCount": 3,
   "nextWindowDays": 31,
@@ -20,39 +20,39 @@
       "url": "https://lu.ma/jvkelufn",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-23T22:16:37.297Z"
+      "verifiedAt": "2026-07-24T03:46:53.602Z"
     },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
-      "title": "Brand Marketing 101 for Founders",
+      "title": "World Models Mini Builds: Bengaluru Edition | ai&weekends",
       "description": "",
-      "start": "2026-08-02T12:00:00.000Z",
-      "end": "2026-08-02T13:00:00.000Z",
+      "start": "2026-07-25T09:00:00.000Z",
+      "end": "2026-07-25T15:00:00.000Z",
       "location": "Location listed on Luma",
       "city": "Gurugram",
       "lat": null,
       "lng": null,
       "price": "See Luma",
-      "url": "https://lu.ma/irhvdvdh",
+      "url": "https://lu.ma/iunn7xyz",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-23T22:16:37.297Z"
+      "verifiedAt": "2026-07-24T03:46:53.602Z"
     },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
-      "title": "STARTUP WORLD CUP - 2026",
-      "description": "",
-      "start": "2026-08-08T04:30:00.000Z",
-      "end": "2026-08-08T08:30:00.000Z",
-      "location": "Location listed on Luma",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
+      "title": "5K Run and Coffee",
+      "description": "Join Delhi Run Collective for a high-energy morning built around movement and community.\nExpect a fun 5K run through a carefully curated route, followed by coffee and conversations with fellow runners.\nWhat the morning looks like :\n5K commu",
+      "start": "2026-07-26T00:45:00.000Z",
+      "end": "2026-07-26T08:45:00.000+05:30",
+      "location": "Global Foyer Mall",
+      "city": "Global Foyer Mall Gurugram Haryana",
+      "lat": 28.4605486,
+      "lng": 77.09511719999999,
       "price": "See Luma",
-      "url": "https://lu.ma/dhftdjzm",
+      "url": "https://lu.ma/of3m14t8",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-23T22:16:37.297Z"
+      "verifiedAt": "2026-07-24T03:46:53.602Z"
     }
   ]
 }
