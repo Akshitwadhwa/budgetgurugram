@@ -1,43 +1,11 @@
 {
-  "generatedAt": "2026-07-25T08:26:08.492Z",
+  "generatedAt": "2026-07-25T10:45:58.182Z",
   "sourceCount": 1,
-  "eventCount": 3,
+  "eventCount": 4,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
-    {
-      "id": "luma-aHR0cHM6Ly9sdS5tYS",
-      "title": "Startup Mixer Delhi : Build India Together",
-      "description": "",
-      "start": "2026-07-25T08:30:00.000Z",
-      "end": "2026-07-25T12:30:00.000Z",
-      "location": "Location listed on Luma",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See Luma",
-      "url": "https://lu.ma/jvkelufn",
-      "source": "Luma",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-25T08:26:08.492Z"
-    },
-    {
-      "id": "luma-aHR0cHM6Ly9sdS5tYS",
-      "title": "World Models Mini Builds: Bengaluru Edition | ai&weekends",
-      "description": "",
-      "start": "2026-07-25T09:00:00.000Z",
-      "end": "2026-07-25T15:00:00.000Z",
-      "location": "Location listed on Luma",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See Luma",
-      "url": "https://lu.ma/iunn7xyz",
-      "source": "Luma",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-25T08:26:08.492Z"
-    },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
       "title": "5K Run and Coffee",
@@ -52,7 +20,55 @@
       "url": "https://lu.ma/of3m14t8",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-25T08:26:08.492Z"
+      "verifiedAt": "2026-07-25T10:45:58.182Z"
+    },
+    {
+      "id": "luma-aHR0cHM6Ly9sdS5tYS",
+      "title": "AIgnite - Decoding the Voice of CX + AI Startup Mixer",
+      "description": "",
+      "start": "2026-07-29T12:30:00.000Z",
+      "end": "2026-07-29T16:00:00.000Z",
+      "location": "Location listed on Luma",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See Luma",
+      "url": "https://lu.ma/59mzdvnt",
+      "source": "Luma",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-25T10:45:58.182Z"
+    },
+    {
+      "id": "luma-aHR0cHM6Ly9sdS5tYS",
+      "title": "AI Careers Mixer: Delhi Edition",
+      "description": "About the Event\nAI is no longer just another technology trend. It's rapidly becoming the foundation on which products are built, businesses operate, and decisions are made.\nFor professionals, the challenge is no longer deciding whether AI m",
+      "start": "2026-07-29T12:30:00.000Z",
+      "end": "2026-07-29T20:00:00.000+05:30",
+      "location": "Masters' Union School of Business",
+      "city": "Masters' Union School of Business Gurugram Haryana",
+      "lat": 28.5025843,
+      "lng": 77.0909444,
+      "price": "See Luma",
+      "url": "https://lu.ma/the-kyrh",
+      "source": "Luma",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-25T10:45:58.182Z"
+    },
+    {
+      "id": "luma-aHR0cHM6Ly9sdS5tYS",
+      "title": "Scientist to Founder by Fifty Years",
+      "description": "",
+      "start": "2026-07-31T21:00:00.000Z",
+      "end": "2026-07-31T23:00:00.000Z",
+      "location": "Location listed on Luma",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See Luma",
+      "url": "https://lu.ma/lwpbze0e",
+      "source": "Luma",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-25T10:45:58.182Z"
     }
   ]
 }
