@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-25T10:45:58.182Z",
+  "generatedAt": "2026-07-25T14:04:05.732Z",
   "sourceCount": 1,
-  "eventCount": 4,
+  "eventCount": 3,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,7 +20,7 @@
       "url": "https://lu.ma/of3m14t8",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-25T10:45:58.182Z"
+      "verifiedAt": "2026-07-25T14:04:05.732Z"
     },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
@@ -36,7 +36,7 @@
       "url": "https://lu.ma/59mzdvnt",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-25T10:45:58.182Z"
+      "verifiedAt": "2026-07-25T14:04:05.732Z"
     },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
@@ -52,23 +52,7 @@
       "url": "https://lu.ma/the-kyrh",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-25T10:45:58.182Z"
-    },
-    {
-      "id": "luma-aHR0cHM6Ly9sdS5tYS",
-      "title": "Scientist to Founder by Fifty Years",
-      "description": "",
-      "start": "2026-07-31T21:00:00.000Z",
-      "end": "2026-07-31T23:00:00.000Z",
-      "location": "Location listed on Luma",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See Luma",
-      "url": "https://lu.ma/lwpbze0e",
-      "source": "Luma",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-25T10:45:58.182Z"
+      "verifiedAt": "2026-07-25T14:04:05.732Z"
     }
   ]
 }
