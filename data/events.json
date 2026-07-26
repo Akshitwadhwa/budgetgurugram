@@ -1,11 +1,59 @@
 {
-  "generatedAt": "2026-07-26T03:58:14.134Z",
+  "generatedAt": "2026-07-26T08:40:51.835Z",
   "sourceCount": 1,
-  "eventCount": 4,
+  "eventCount": 8,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
+    {
+      "id": "luma-aHR0cHM6Ly9sdS5tYS",
+      "title": "Robotics × Physical AI Founder-Investor Summit",
+      "description": "",
+      "start": "2026-07-26T20:00:00.000Z",
+      "end": "2026-07-27T02:00:00.000Z",
+      "location": "Location listed on Luma",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See Luma",
+      "url": "https://lu.ma/u8j9b0a6",
+      "source": "Luma",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-26T08:40:51.835Z"
+    },
+    {
+      "id": "luma-aHR0cHM6Ly9sdS5tYS",
+      "title": "Startup School Afterparty | by Vercel, Warp, Reducto, and Browserbase",
+      "description": "",
+      "start": "2026-07-27T01:00:00.000Z",
+      "end": "2026-07-27T03:00:00.000Z",
+      "location": "Location listed on Luma",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See Luma",
+      "url": "https://lu.ma/browse-l2aj",
+      "source": "Luma",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-26T08:40:51.835Z"
+    },
+    {
+      "id": "luma-aHR0cHM6Ly9sdS5tYS",
+      "title": "YC Startup School After Party",
+      "description": "",
+      "start": "2026-07-27T02:30:00.000Z",
+      "end": "2026-07-27T05:00:00.000Z",
+      "location": "Location listed on Luma",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See Luma",
+      "url": "https://lu.ma/yp4xhswa",
+      "source": "Luma",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-26T08:40:51.835Z"
+    },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
       "title": "AIgnite - Decoding the Voice of CX + AI Startup Mixer",
@@ -20,7 +68,7 @@
       "url": "https://lu.ma/59mzdvnt",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-26T03:58:14.134Z"
+      "verifiedAt": "2026-07-26T08:40:51.835Z"
     },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
@@ -36,7 +84,7 @@
       "url": "https://lu.ma/the-kyrh",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-26T03:58:14.134Z"
+      "verifiedAt": "2026-07-26T08:40:51.835Z"
     },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
@@ -52,23 +100,39 @@
       "url": "https://lu.ma/59ibhyau",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-26T03:58:14.134Z"
+      "verifiedAt": "2026-07-26T08:40:51.835Z"
     },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
-      "title": "Scientist to Founder by Fifty Years",
+      "title": "ADHD Hacks | Bangalore",
       "description": "",
-      "start": "2026-07-31T20:00:00.000Z",
-      "end": "2026-07-31T22:00:00.000Z",
+      "start": "2026-08-01T04:30:00.000Z",
+      "end": "2026-08-01T12:30:00.000Z",
       "location": "Location listed on Luma",
       "city": "Gurugram",
       "lat": null,
       "lng": null,
       "price": "See Luma",
-      "url": "https://lu.ma/lwpbze0e",
+      "url": "https://lu.ma/claude-952l",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-26T03:58:14.134Z"
+      "verifiedAt": "2026-07-26T08:40:51.835Z"
+    },
+    {
+      "id": "luma-aHR0cHM6Ly9sdS5tYS",
+      "title": "Claude Code Workshop - San Francisco",
+      "description": "",
+      "start": "2026-08-11T20:00:00.000Z",
+      "end": "2026-08-12T00:00:00.000Z",
+      "location": "Location listed on Luma",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See Luma",
+      "url": "https://lu.ma/claude-code-workshop-sf-aug-11",
+      "source": "Luma",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-26T08:40:51.835Z"
     }
   ]
 }
