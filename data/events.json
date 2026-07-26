@@ -1,27 +1,11 @@
 {
-  "generatedAt": "2026-07-25T22:12:29.479Z",
+  "generatedAt": "2026-07-26T03:58:14.134Z",
   "sourceCount": 1,
   "eventCount": 4,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
-    {
-      "id": "luma-aHR0cHM6Ly9sdS5tYS",
-      "title": "5K Run and Coffee",
-      "description": "Join Delhi Run Collective for a high-energy morning built around movement and community.\nExpect a fun 5K run through a carefully curated route, followed by coffee and conversations with fellow runners.\nWhat the morning looks like :\n5K commu",
-      "start": "2026-07-26T00:45:00.000Z",
-      "end": "2026-07-26T08:45:00.000+05:30",
-      "location": "Global Foyer Mall",
-      "city": "Global Foyer Mall Gurugram Haryana",
-      "lat": 28.4605486,
-      "lng": 77.09511719999999,
-      "price": "See Luma",
-      "url": "https://lu.ma/of3m14t8",
-      "source": "Luma",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-25T22:12:29.479Z"
-    },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
       "title": "AIgnite - Decoding the Voice of CX + AI Startup Mixer",
@@ -36,7 +20,7 @@
       "url": "https://lu.ma/59mzdvnt",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-25T22:12:29.479Z"
+      "verifiedAt": "2026-07-26T03:58:14.134Z"
     },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +36,7 @@
       "url": "https://lu.ma/the-kyrh",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-25T22:12:29.479Z"
+      "verifiedAt": "2026-07-26T03:58:14.134Z"
     },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +52,23 @@
       "url": "https://lu.ma/59ibhyau",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-25T22:12:29.479Z"
+      "verifiedAt": "2026-07-26T03:58:14.134Z"
+    },
+    {
+      "id": "luma-aHR0cHM6Ly9sdS5tYS",
+      "title": "Scientist to Founder by Fifty Years",
+      "description": "",
+      "start": "2026-07-31T20:00:00.000Z",
+      "end": "2026-07-31T22:00:00.000Z",
+      "location": "Location listed on Luma",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See Luma",
+      "url": "https://lu.ma/lwpbze0e",
+      "source": "Luma",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-26T03:58:14.134Z"
     }
   ]
 }
