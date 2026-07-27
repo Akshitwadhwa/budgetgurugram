@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-27T04:05:02.424Z",
+  "generatedAt": "2026-07-27T10:11:35.233Z",
   "sourceCount": 1,
-  "eventCount": 7,
+  "eventCount": 6,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,7 +20,7 @@
       "url": "https://lu.ma/59mzdvnt",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-27T04:05:02.424Z"
+      "verifiedAt": "2026-07-27T10:11:35.233Z"
     },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
@@ -36,7 +36,7 @@
       "url": "https://lu.ma/the-kyrh",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-27T04:05:02.424Z"
+      "verifiedAt": "2026-07-27T10:11:35.233Z"
     },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
@@ -52,23 +52,7 @@
       "url": "https://lu.ma/59ibhyau",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-27T04:05:02.424Z"
-    },
-    {
-      "id": "luma-aHR0cHM6Ly9sdS5tYS",
-      "title": "ADHD Hacks | Bangalore",
-      "description": "",
-      "start": "2026-08-01T04:30:00.000Z",
-      "end": "2026-08-01T12:30:00.000Z",
-      "location": "Location listed on Luma",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See Luma",
-      "url": "https://lu.ma/claude-952l",
-      "source": "Luma",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-27T04:05:02.424Z"
+      "verifiedAt": "2026-07-27T10:11:35.233Z"
     },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +68,7 @@
       "url": "https://lu.ma/bnvhz5y4",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-27T04:05:02.424Z"
+      "verifiedAt": "2026-07-27T10:11:35.233Z"
     },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +84,7 @@
       "url": "https://lu.ma/hmr76csk",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-27T04:05:02.424Z"
+      "verifiedAt": "2026-07-27T10:11:35.233Z"
     },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
@@ -116,7 +100,7 @@
       "url": "https://lu.ma/vsiwm90r",
       "source": "Luma",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-27T04:05:02.424Z"
+      "verifiedAt": "2026-07-27T10:11:35.233Z"
     }
   ]
 }
