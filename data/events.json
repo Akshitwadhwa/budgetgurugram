@@ -1,27 +1,11 @@
 {
-  "generatedAt": "2026-07-27T11:12:39.501Z",
+  "generatedAt": "2026-07-27T15:16:33.566Z",
   "sourceCount": 2,
   "eventCount": 8,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "The Founders Pitch",
-      "description": "",
-      "start": "2026-07-29T11:30:00.000Z",
-      "end": "2026-07-29T13:30:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/founders-pitch-delhi-stin",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-27T11:12:39.501Z"
-    },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
       "title": "AIgnite - Decoding the Voice of CX + AI Startup Mixer",
@@ -36,7 +20,7 @@
       "url": "https://lu.ma/59mzdvnt",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-27T11:12:39.501Z"
+      "verifiedAt": "2026-07-27T15:16:33.566Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +36,7 @@
       "url": "https://lu.ma/the-kyrh",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-27T11:12:39.501Z"
+      "verifiedAt": "2026-07-27T15:16:33.566Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +52,7 @@
       "url": "https://lu.ma/59ibhyau",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-27T11:12:39.501Z"
+      "verifiedAt": "2026-07-27T15:16:33.566Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +68,7 @@
       "url": "https://lu.ma/bnvhz5y4",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-27T11:12:39.501Z"
+      "verifiedAt": "2026-07-27T15:16:33.566Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,23 +84,39 @@
       "url": "https://lu.ma/hmr76csk",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-27T11:12:39.501Z"
+      "verifiedAt": "2026-07-27T15:16:33.566Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Brand Marketing 101 for Founders",
+      "description": "",
+      "start": "2026-08-02T12:00:00.000Z",
+      "end": "2026-08-02T13:00:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/irhvdvdh",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-27T15:16:33.566Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
       "title": "Voice AI Builders’ Room| Microsoft X Aight",
       "description": "",
       "start": "2026-08-05T09:30:00.000Z",
-      "end": "2026-08-05T13:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
+      "end": "2026-08-05T18:30:00.000+05:30",
+      "location": "Gurugram, India",
+      "city": "Gurugram, India Gurugram Haryana",
+      "lat": 28.501994602476774,
+      "lng": 77.09544611778621,
       "price": "See source",
       "url": "https://lu.ma/g13the71",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-27T11:12:39.501Z"
+      "verifiedAt": "2026-07-27T15:16:33.566Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -132,7 +132,7 @@
       "url": "https://www.meetup.com/hrlovestatups/events/315842077/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-07-27T11:12:39.501Z"
+      "verifiedAt": "2026-07-27T15:16:33.566Z"
     }
   ]
 }
