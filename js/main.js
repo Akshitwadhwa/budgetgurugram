@@ -49,8 +49,8 @@
   let liveMap = null;
   let mapMarkers = [];
   let userMarker = null;
-  let liveEvents = Array.isArray(window.GC_EVENTS) ? window.GC_EVENTS : [];
-  let eventsMeta = {generatedAt:null, eventCount:liveEvents.length, error:false, live:false};
+  let liveEvents = Array.isArray(window.GC_EVENTS) ? window.GC_EVENTS.filter(isEventUpcoming) : [];
+  let eventsMeta = {generatedAt:null, eventCount:liveEvents.length, error:false, live:false, stale:false};
   let nearbyPlaces = [];
   let nearbyMeta = {status:"idle", fetchedAt:null, count:0, error:false};
   let toastTimer;
@@ -157,18 +157,31 @@
     if (Number.isNaN(date.getTime())) return "Date to be confirmed";
     return new Intl.DateTimeFormat("en-IN", {weekday:"short", day:"numeric", month:"short", hour:"numeric", minute:"2-digit"}).format(date);
   }
+  function isEventUpcoming(event) {
+    const now = new Date();
+    const start = new Date(event.start);
+    const end = new Date(event.end || "");
+    if (!Number.isFinite(start.getTime())) return false;
+    return Number.isFinite(end.getTime()) ? end > now : start >= now;
+  }
   function eventMatchesFilter(event) {
     const date = new Date(event.start), now = new Date();
+    if (!isEventUpcoming(event)) return false;
     if (state.eventFilter === "free") return /free|₹0|0\b/i.test(event.price || "");
     if (state.eventFilter === "today") return date.toDateString() === now.toDateString();
     if (state.eventFilter === "week") return date >= now && date <= new Date(now.getTime() + 7 * 86400000);
     return true;
   }
   function eventDistance(event) {
-    if (!Number.isFinite(event.lat) || !Number.isFinite(event.lng)) return "Location listed on Luma";
+    if (!Number.isFinite(event.lat) || !Number.isFinite(event.lng)) return "Location listed on " + (event.source || "source");
     const latDelta = (event.lat - state.coords.lat) * 111;
     const lngDelta = (event.lng - state.coords.lng) * 111 * Math.cos(state.coords.lat * Math.PI / 180);
     return `${Math.max(.1, Math.sqrt(latDelta * latDelta + lngDelta * lngDelta)).toFixed(1)} km away`;
+  }
+  function renderEventCard(event) {
+    const sourceLabel = escapeHtml(event.source || "Event source");
+    const viewLabel = "View on " + sourceLabel + " ↗";
+    return `<article class="event-card"><div class="event-card__top"><span class="event-card__source">${sourceLabel}</span><span class="event-card__date">${escapeHtml(formatEventDate(event))}</span></div><h3>${escapeHtml(event.title)}</h3><p class="event-card__location">⌖ ${escapeHtml(event.location || event.city || "Gurugram")} · ${escapeHtml(eventDistance(event))}</p>${event.description ? `<p class="event-card__description">${escapeHtml(event.description)}</p>` : ""}<div class="event-card__footer"><span class="event-card__price">${escapeHtml(event.price || "See source")}</span><a class="event-card__link" href="${escapeHtml(event.url)}" target="_blank" rel="noreferrer">${viewLabel}</a></div></article>`;
   }
   function renderEvents() {
     const root = $("[data-events-grid]"), status = $("[data-events-status]");
@@ -176,14 +189,14 @@
     const items = liveEvents.filter(eventMatchesFilter);
     if (status) {
       if (eventsMeta.error) status.textContent = "Event sync unavailable";
-      else if (eventsMeta.generatedAt) status.textContent = `${eventsMeta.live ? "Live · " : ""}${liveEvents.length} upcoming · Updated ${formatRelativeTime(eventsMeta.generatedAt)}`;
+      else if (eventsMeta.generatedAt) status.textContent = (eventsMeta.live ? "Live · " : "") + liveEvents.length + " upcoming · Updated " + formatRelativeTime(eventsMeta.generatedAt) + (eventsMeta.stale ? " · Refresh needed" : "");
       else status.textContent = "Waiting for the first public sync";
     }
     if (!items.length) {
-      root.innerHTML = `<div class="events-empty"><strong>${liveEvents.length ? "No events match this filter." : "No upcoming public tech events yet."}</strong><span>${eventsMeta.error ? "The last sync could not be read. Try refreshing in a moment." : "Add an approved public Luma calendar in data/event-sources.json, then run the sync workflow."}</span></div>`;
+      root.innerHTML = `<div class="events-empty"><strong>${liveEvents.length ? "No events match this filter." : "No upcoming public tech events yet."}</strong><span>${eventsMeta.error ? "The last sync could not be read. Try refreshing in a moment." : "Add an approved public event source in data/event-sources.json, then run the sync workflow."}</span></div>`;
       return;
     }
-    root.innerHTML = items.map((event) => `<article class="event-card"><div class="event-card__top"><span class="event-card__source">${escapeHtml(event.source || "Luma")}</span><span class="event-card__date">${escapeHtml(formatEventDate(event))}</span></div><h3>${escapeHtml(event.title)}</h3><p class="event-card__location">⌖ ${escapeHtml(event.location || event.city || "Gurugram")} · ${escapeHtml(eventDistance(event))}</p>${event.description ? `<p class="event-card__description">${escapeHtml(event.description)}</p>` : ""}<div class="event-card__footer"><span class="event-card__price">${escapeHtml(event.price || "See Luma")}</span><a class="event-card__link" href="${escapeHtml(event.url)}" target="_blank" rel="noreferrer">View on Luma ↗</a></div></article>`).join("");
+    root.innerHTML = items.map(renderEventCard).join("");
   }
   function formatRelativeTime(value) {
     const date = new Date(value), minutes = Math.max(0, Math.round((Date.now() - date.getTime()) / 60000));
@@ -233,13 +246,16 @@
         const response = await fetch(endpoint, {cache:"no-store"});
         if (!response.ok) continue;
         const payload = await response.json();
-        liveEvents = Array.isArray(payload.events) ? payload.events : [];
-        eventsMeta = {generatedAt:payload.generatedAt, eventCount:payload.eventCount || liveEvents.length, error:false, live:Boolean(payload.live)};
+        liveEvents = Array.isArray(payload.events) ? payload.events.filter(isEventUpcoming) : [];
+        const generatedAt = payload.generatedAt || null;
+        const generatedDate = generatedAt ? new Date(generatedAt) : null;
+        const stale = !generatedDate || !Number.isFinite(generatedDate.getTime()) || Date.now() - generatedDate.getTime() > 6 * 60 * 60 * 1000;
+        eventsMeta = {generatedAt, eventCount:liveEvents.length, error:false, live:Boolean(payload.live), stale};
         loaded = true;
         break;
       } catch (error) { /* Try the generated static fallback. */ }
     }
-    if (!loaded) eventsMeta = {generatedAt:null, eventCount:liveEvents.length, error:true, live:false};
+    if (!loaded) eventsMeta = {generatedAt:null, eventCount:liveEvents.length, error:true, live:false, stale:true};
     renderEvents();
     if (liveMap) renderMapMarkers(visiblePlaces());
   }
@@ -276,14 +292,14 @@
   function renderMapMarkers(items) {
     if (!liveMap) return;
     mapMarkers.forEach((marker) => marker.remove());
-    const eventPins = liveEvents.filter((event) => event.lat && event.lng).map((event) => ({...event, name:event.title, area:event.city || event.location || "Gurugram", category:"events", glyph:"✦", price:event.price || "See Luma", visit:"View on Luma", isEvent:true}));
+    const eventPins = liveEvents.filter((event) => isEventUpcoming(event) && event.lat && event.lng).map((event) => ({...event, name:event.title, area:event.city || event.location || "Gurugram", category:"events", glyph:"✦", price:event.price || "See source", visit:"View on " + (event.source || "source"), isEvent:true}));
     mapMarkers = mapPlaces(items).concat(eventPins).filter((place) => place.lat && place.lng).map((place) => {
       const element = document.createElement("button");
       element.className = "premium-map-pin premium-map-pin--" + place.category + (place.isLiveSource ? " premium-map-pin--live" : "");
       element.type = "button";
       element.innerHTML = "<span>" + place.glyph + "</span>";
       element.setAttribute("aria-label", "Open " + place.name);
-      const popupContent = place.isEvent ? '<div class="map-popup"><strong>' + escapeHtml(place.name) + '</strong><span>' + escapeHtml(place.area) + " · " + escapeHtml(formatEventDate(place)) + '</span><small><a href="' + escapeHtml(place.url) + '" target="_blank" rel="noreferrer">View on Luma ↗</a></small></div>' : place.isLiveSource ? '<div class="map-popup"><strong>' + escapeHtml(place.name) + '</strong><span>' + escapeHtml(place.area) + " · " + escapeHtml(place.categoryLabel) + '</span><small>' + escapeHtml(place.open) + '</small><small>OpenStreetMap · refreshed ' + escapeHtml(formatRelativeTime(place.verifiedAt)) + '</small><small><a href="' + escapeHtml(place.sourceUrl) + '" target="_blank" rel="noreferrer">Open source ↗</a></small></div>' : '<div class="map-popup"><strong>' + escapeHtml(place.name) + '</strong><span>' + escapeHtml(place.area) + " · " + escapeHtml(place.price) + '</span><small>Editorial guide pin · confirm before visiting</small></div>';
+      const popupContent = place.isEvent ? '<div class="map-popup"><strong>' + escapeHtml(place.name) + '</strong><span>' + escapeHtml(place.area) + " · " + escapeHtml(formatEventDate(place)) + '</span><small><a href="' + escapeHtml(place.url) + '" target="_blank" rel="noreferrer">' + escapeHtml(place.source || "source") + ' ↗</a></small></div>' : place.isLiveSource ? '<div class="map-popup"><strong>' + escapeHtml(place.name) + '</strong><span>' + escapeHtml(place.area) + " · " + escapeHtml(place.categoryLabel) + '</span><small>' + escapeHtml(place.open) + '</small><small>OpenStreetMap · refreshed ' + escapeHtml(formatRelativeTime(place.verifiedAt)) + '</small><small><a href="' + escapeHtml(place.sourceUrl) + '" target="_blank" rel="noreferrer">Open source ↗</a></small></div>' : '<div class="map-popup"><strong>' + escapeHtml(place.name) + '</strong><span>' + escapeHtml(place.area) + " · " + escapeHtml(place.price) + '</span><small>Editorial guide pin · confirm before visiting</small></div>';
       const popup = new maplibregl.Popup({offset: 18, closeButton: true}).setHTML(popupContent);
       const marker = new maplibregl.Marker({element: element, anchor: "bottom"}).setLngLat([place.lng, place.lat]).setPopup(popup).addTo(liveMap);
       element.addEventListener("dblclick", () => place.isEvent ? window.open(place.url, "_blank", "noopener,noreferrer") : place.isLiveSource ? window.open(place.sourceUrl, "_blank", "noopener,noreferrer") : openPlace(place.id));

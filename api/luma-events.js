@@ -10,7 +10,7 @@ module.exports = async function handler(request, response) {
     const sources = JSON.parse(await fs.readFile(path.join(process.cwd(), "data", "event-sources.json"), "utf8"));
     const {syncPublicEvents} = await import("../lib/public-events.mjs");
     const payload = await syncPublicEvents(sources, {days:31});
-    response.setHeader("Cache-Control", "public, s-maxage=900, stale-while-revalidate=3600");
+    response.setHeader("Cache-Control", "public, s-maxage=300, stale-while-revalidate=1800");
     return response.status(200).json(payload);
   } catch (error) {
     return response.status(502).json({live:false, error:"Unable to refresh public event sources", events:[]});

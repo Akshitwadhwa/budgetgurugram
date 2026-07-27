@@ -1,4 +1,4 @@
-name: Sync public Luma events
+name: Sync public events
 
 on:
   workflow_dispatch:

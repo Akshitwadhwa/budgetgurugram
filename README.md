@@ -21,7 +21,7 @@ Then open `http://localhost:4173` in a browser.
 - Approximate user-location marker when permission is granted
 - Weather-aware visit guidance
 - Saved places stored locally in the browser
-- Public Luma event section with direct registration links
+- Public event section with direct registration links
 - Live Vercel endpoint and Vercel Cron refresh for the next 31 days
 - GitHub Actions sync that refreshes approved public event pages every three hours
 - Editorial sample data across food, workspaces, public spaces, events, and services
@@ -41,8 +41,8 @@ The public OpenStreetMap services have usage limits and attribution requirements
 
 ## Public event sync
 
-This project intentionally does not require a Luma API key. Add approved public Luma calendar or event pages to `data/event-sources.json`. The scraper reads public structured event metadata, keeps future tech events for Gurugram/Delhi NCR, removes duplicates and writes `data/events.json`.
+This project intentionally does not require a Luma API key. Add approved public event pages to data/event-sources.json. The scraper reads public structured event metadata, keeps future tech events for Gurugram/Delhi NCR, removes duplicates and writes data/events.json. Luma and Meetup are currently supported; each card keeps its source link.
 
 The frontend first calls `/api/luma-events`, which scrapes the public sources live on Vercel and returns upcoming events for the next 31 days. `vercel.json` schedules that endpoint every three hours in production. The GitHub workflow at `.github/workflows/sync-events.yml` is a durable static fallback and can also be started manually from the Actions tab; it refreshes `data/events.json` and Vercel redeploys the updated fallback when connected to this repository.
 
-Only use public sources you are allowed to index. Do not bypass sign-in, CAPTCHA, robots rules or rate limits. Add attribution and keep the original Luma link on every event card.
+Only use public sources you are allowed to index. Do not bypass sign-in, CAPTCHA, robots rules or rate limits. Commudle and HackerEarth should be added only after confirming a public feed or permission to index their pages; their public pages currently do not expose a stable server-readable event feed for this scraper. Add attribution and keep the original source link on every event card.

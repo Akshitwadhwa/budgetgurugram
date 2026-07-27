@@ -4,6 +4,17 @@
     "url": "https://lu.ma/CommunityMeetups",
     "cityKeywords": ["Gurugram", "Gurgaon", "DelhiNCR", "Delhi NCR"],
     "techOnly": true,
+    "excludeKeywords": ["Noida", "Chennai", "Mumbai", "Bangalore", "Bengaluru", "Hyderabad", "Pune", "Kolkata", "Jaipur", "Chicago"],
+    "enabled": true
+  },
+  {
+    "name": "Meetup Gurgaon public listings",
+    "displayName": "Meetup",
+    "url": "https://www.meetup.com/find/in--gurgaon/",
+    "cityKeywords": ["Gurugram", "Gurgaon", "Delhi NCR", "Delhi-NCR"],
+    "techOnly": true,
+    "excludeKeywords": ["Chennai", "Mumbai", "Noida", "Theatre", "Theater", "Chai Pe Charchaa", "Chess", "Potluck", "Couples", "Breakfast", "Riding", "Thailand", "Australia"],
+    "structuredOnly": true,
     "enabled": true
   }
 ]
