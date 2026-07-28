@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-28T09:07:15.035Z",
+  "generatedAt": "2026-07-28T11:29:51.679Z",
   "sourceCount": 2,
-  "eventCount": 8,
+  "eventCount": 9,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,14 +20,30 @@
       "url": "https://lu.ma/59mzdvnt",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-28T09:07:15.035Z"
+      "verifiedAt": "2026-07-28T11:29:51.679Z"
+    },
+    {
+      "id": "meetup-aHR0cHM6Ly93d3cubW",
+      "title": "AI Careers Mixer: Delhi Edition",
+      "description": "",
+      "start": "2026-07-29T12:30:00.000Z",
+      "end": "2026-07-29T14:30:00.000Z",
+      "location": "CDS Corporate Tower",
+      "city": "CDS Corporate Tower Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://www.meetup.com/meetup-group-fghuuyfb/events/315801386/",
+      "source": "Meetup",
+      "sourceName": "Meetup Gurgaon public listings",
+      "verifiedAt": "2026-07-28T11:29:51.679Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
       "title": "AI Careers Mixer: Delhi Edition",
       "description": "",
-      "start": "2026-07-29T12:30:00.000Z",
-      "end": "2026-07-29T20:00:00.000+05:30",
+      "start": "2026-07-31T12:30:00.000Z",
+      "end": "2026-07-31T20:00:00.000+05:30",
       "location": "Masters' Union School of Business",
       "city": "Masters' Union School of Business Gurugram Haryana",
       "lat": 28.5025843,
@@ -36,7 +52,7 @@
       "url": "https://lu.ma/the-kyrh",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-28T09:07:15.035Z"
+      "verifiedAt": "2026-07-28T11:29:51.679Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +68,7 @@
       "url": "https://lu.ma/59ibhyau",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-28T09:07:15.035Z"
+      "verifiedAt": "2026-07-28T11:29:51.679Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +84,7 @@
       "url": "https://lu.ma/bnvhz5y4",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-28T09:07:15.035Z"
+      "verifiedAt": "2026-07-28T11:29:51.679Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +100,7 @@
       "url": "https://lu.ma/hmr76csk",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-28T09:07:15.035Z"
+      "verifiedAt": "2026-07-28T11:29:51.679Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +116,7 @@
       "url": "https://lu.ma/irhvdvdh",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-28T09:07:15.035Z"
+      "verifiedAt": "2026-07-28T11:29:51.679Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -116,7 +132,7 @@
       "url": "https://lu.ma/g13the71",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-28T09:07:15.035Z"
+      "verifiedAt": "2026-07-28T11:29:51.679Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -132,7 +148,7 @@
       "url": "https://www.meetup.com/hrlovestatups/events/315842077/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-07-28T09:07:15.035Z"
+      "verifiedAt": "2026-07-28T11:29:51.679Z"
     }
   ]
 }
