@@ -6,6 +6,11 @@ import {syncPublicEvents} from "../lib/public-events.mjs";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const sources = JSON.parse(await fs.readFile(path.join(root, "data", "event-sources.json"), "utf8"));
 const payload = await syncPublicEvents(sources, {days:31});
+const enabledSourceCount = sources.filter((source) => source.enabled !== false).length;
+if (enabledSourceCount && payload.errors.length === enabledSourceCount) {
+  throw new Error("All public event sources failed; preserving the previous event snapshot.");
+}
 await fs.writeFile(path.join(root, "data", "events.json"), JSON.stringify(payload, null, 2) + "\n");
+await fs.writeFile(path.join(root, "js", "events.js"), "window.GC_EVENTS = " + JSON.stringify(payload.events) + ";\n");
 payload.errors.forEach((error) => console.warn(`Skipped source: ${error}`));
 console.log(`Wrote ${payload.eventCount} events for the next ${payload.nextWindowDays} days to data/events.json`);
