@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-30T03:32:25.123Z",
+  "generatedAt": "2026-07-30T09:05:00.867Z",
   "sourceCount": 2,
-  "eventCount": 9,
+  "eventCount": 11,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,7 +20,7 @@
       "url": "https://lu.ma/the-kyrh",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T03:32:25.123Z"
+      "verifiedAt": "2026-07-30T09:05:00.867Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -36,7 +36,7 @@
       "url": "https://lu.ma/59ibhyau",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T03:32:25.123Z"
+      "verifiedAt": "2026-07-30T09:05:00.867Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +52,7 @@
       "url": "https://lu.ma/bnvhz5y4",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T03:32:25.123Z"
+      "verifiedAt": "2026-07-30T09:05:00.867Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +68,23 @@
       "url": "https://lu.ma/hmr76csk",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T03:32:25.123Z"
+      "verifiedAt": "2026-07-30T09:05:00.867Z"
+    },
+    {
+      "id": "meetup-aHR0cHM6Ly93d3cubW",
+      "title": "The Founders Forum- Driving Influence",
+      "description": "",
+      "start": "2026-08-01T05:30:00.000Z",
+      "end": "2026-08-01T09:30:00.000Z",
+      "location": "Greenr Cafe",
+      "city": "Greenr Cafe Gurugram Ha",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://www.meetup.com/meetup-group-qioqfovy/events/315886927/",
+      "source": "Meetup",
+      "sourceName": "Meetup Gurgaon public listings",
+      "verifiedAt": "2026-07-30T09:05:00.867Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +100,7 @@
       "url": "https://lu.ma/irhvdvdh",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T03:32:25.123Z"
+      "verifiedAt": "2026-07-30T09:05:00.867Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +116,7 @@
       "url": "https://lu.ma/g13the71",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T03:32:25.123Z"
+      "verifiedAt": "2026-07-30T09:05:00.867Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -116,7 +132,7 @@
       "url": "https://lu.ma/aes6fn88",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T03:32:25.123Z"
+      "verifiedAt": "2026-07-30T09:05:00.867Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -132,7 +148,7 @@
       "url": "https://lu.ma/dhftdjzm",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T03:32:25.123Z"
+      "verifiedAt": "2026-07-30T09:05:00.867Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -148,7 +164,23 @@
       "url": "https://www.meetup.com/hrlovestatups/events/315842077/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-07-30T03:32:25.123Z"
+      "verifiedAt": "2026-07-30T09:05:00.867Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "MetaMask Community Builder Night Gurgaon, India Edition",
+      "description": "Community Builder Night is a community-first version of MetaMask’s global Builder Nights bringing Web3 education, onboarding and conversations closer to local ecosystems.\nThis in-person meetup is designed for developers, students, founders,",
+      "start": "2026-08-19T23:00:00.000Z",
+      "end": "2026-08-20T19:30:00.000+05:30",
+      "location": "Gurugram, India",
+      "city": "Gurugram, India Gurugram Haryana",
+      "lat": 28.46177797459191,
+      "lng": 77.0259407362503,
+      "price": "See source",
+      "url": "https://lu.ma/cbnkolkataaugust2026",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-30T09:05:00.867Z"
     }
   ]
 }
