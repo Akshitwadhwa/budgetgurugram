@@ -1,27 +1,11 @@
 {
-  "generatedAt": "2026-07-30T11:22:00.161Z",
+  "generatedAt": "2026-07-30T14:34:52.800Z",
   "sourceCount": 2,
-  "eventCount": 13,
+  "eventCount": 11,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "☕️ OpenAI Codex Community Meetup-San Francisco #8",
-      "description": "",
-      "start": "2026-07-31T00:00:00.000Z",
-      "end": "2026-07-31T03:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/h5x0pzw9",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T11:22:00.161Z"
-    },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
       "title": "AI Careers Mixer: Delhi Edition",
@@ -36,7 +20,7 @@
       "url": "https://lu.ma/the-kyrh",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T11:22:00.161Z"
+      "verifiedAt": "2026-07-30T14:34:52.800Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +36,7 @@
       "url": "https://lu.ma/59ibhyau",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T11:22:00.161Z"
+      "verifiedAt": "2026-07-30T14:34:52.800Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +52,7 @@
       "url": "https://lu.ma/bnvhz5y4",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T11:22:00.161Z"
+      "verifiedAt": "2026-07-30T14:34:52.800Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +68,7 @@
       "url": "https://lu.ma/hmr76csk",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T11:22:00.161Z"
+      "verifiedAt": "2026-07-30T14:34:52.800Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -100,7 +84,7 @@
       "url": "https://www.meetup.com/meetup-group-qioqfovy/events/315886927/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-07-30T11:22:00.161Z"
+      "verifiedAt": "2026-07-30T14:34:52.800Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -116,7 +100,7 @@
       "url": "https://lu.ma/irhvdvdh",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T11:22:00.161Z"
+      "verifiedAt": "2026-07-30T14:34:52.800Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -132,7 +116,7 @@
       "url": "https://lu.ma/g13the71",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T11:22:00.161Z"
+      "verifiedAt": "2026-07-30T14:34:52.800Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -148,7 +132,7 @@
       "url": "https://lu.ma/aes6fn88",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T11:22:00.161Z"
+      "verifiedAt": "2026-07-30T14:34:52.800Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -164,23 +148,7 @@
       "url": "https://lu.ma/dhftdjzm",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T11:22:00.161Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Claude Code Workshop - San Francisco",
-      "description": "",
-      "start": "2026-08-11T20:00:00.000Z",
-      "end": "2026-08-12T00:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/claude-code-workshop-sf-aug-11",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T11:22:00.161Z"
+      "verifiedAt": "2026-07-30T14:34:52.800Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -196,23 +164,23 @@
       "url": "https://www.meetup.com/hrlovestatups/events/315842077/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-07-30T11:22:00.161Z"
+      "verifiedAt": "2026-07-30T14:34:52.800Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
       "title": "MetaMask Community Builder Night Gurgaon, India Edition",
       "description": "Community Builder Night is a community-first version of MetaMask’s global Builder Nights bringing Web3 education, onboarding and conversations closer to local ecosystems.\nThis in-person meetup is designed for developers, students, founders,",
-      "start": "2026-08-19T23:00:00.000Z",
-      "end": "2026-08-20T19:30:00.000+05:30",
+      "start": "2026-08-20T05:00:00.000Z",
+      "end": "2026-08-20T16:30:00.000+05:30",
       "location": "Gurugram, India",
       "city": "Gurugram, India Gurugram Haryana",
       "lat": 28.46177797459191,
       "lng": 77.0259407362503,
       "price": "See source",
-      "url": "https://lu.ma/cbnkolkataaugust2026",
+      "url": "https://lu.ma/cbngurgaonaugust2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T11:22:00.161Z"
+      "verifiedAt": "2026-07-30T14:34:52.800Z"
     }
   ]
 }
