@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T14:34:52.800Z",
+  "generatedAt": "2026-07-30T16:51:51.213Z",
   "sourceCount": 2,
   "eventCount": 11,
   "nextWindowDays": 31,
@@ -20,7 +20,7 @@
       "url": "https://lu.ma/the-kyrh",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T14:34:52.800Z"
+      "verifiedAt": "2026-07-30T16:51:51.213Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -36,23 +36,7 @@
       "url": "https://lu.ma/59ibhyau",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T14:34:52.800Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Nerds Hack Days {New Delhi}",
-      "description": "",
-      "start": "2026-08-01T04:30:00.000Z",
-      "end": "2026-08-01T11:30:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/bnvhz5y4",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T14:34:52.800Z"
+      "verifiedAt": "2026-07-30T16:51:51.213Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +52,7 @@
       "url": "https://lu.ma/hmr76csk",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T14:34:52.800Z"
+      "verifiedAt": "2026-07-30T16:51:51.213Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -84,7 +68,7 @@
       "url": "https://www.meetup.com/meetup-group-qioqfovy/events/315886927/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-07-30T14:34:52.800Z"
+      "verifiedAt": "2026-07-30T16:51:51.213Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +84,7 @@
       "url": "https://lu.ma/irhvdvdh",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T14:34:52.800Z"
+      "verifiedAt": "2026-07-30T16:51:51.213Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -116,7 +100,7 @@
       "url": "https://lu.ma/g13the71",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T14:34:52.800Z"
+      "verifiedAt": "2026-07-30T16:51:51.213Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -132,7 +116,7 @@
       "url": "https://lu.ma/aes6fn88",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T14:34:52.800Z"
+      "verifiedAt": "2026-07-30T16:51:51.213Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -148,7 +132,23 @@
       "url": "https://lu.ma/dhftdjzm",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T14:34:52.800Z"
+      "verifiedAt": "2026-07-30T16:51:51.213Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Nerds Hack Days {New Delhi}",
+      "description": "",
+      "start": "2026-08-10T04:30:00.000Z",
+      "end": "2026-08-10T17:00:00.000+05:30",
+      "location": "Gurugram, India",
+      "city": "Gurugram, India Gurugram Haryana",
+      "lat": 28.502635080356345,
+      "lng": 77.0892090677566,
+      "price": "See source",
+      "url": "https://lu.ma/bnvhz5y4",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-30T16:51:51.213Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -164,7 +164,7 @@
       "url": "https://www.meetup.com/hrlovestatups/events/315842077/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-07-30T14:34:52.800Z"
+      "verifiedAt": "2026-07-30T16:51:51.213Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -180,7 +180,7 @@
       "url": "https://lu.ma/cbngurgaonaugust2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-30T14:34:52.800Z"
+      "verifiedAt": "2026-07-30T16:51:51.213Z"
     }
   ]
 }
