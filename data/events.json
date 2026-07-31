@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-31T14:38:51.960Z",
+  "generatedAt": "2026-07-31T16:58:50.261Z",
   "sourceCount": 2,
-  "eventCount": 10,
+  "eventCount": 13,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,7 +20,7 @@
       "url": "https://lu.ma/hmr76csk",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T14:38:51.960Z"
+      "verifiedAt": "2026-07-31T16:58:50.261Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -36,7 +36,23 @@
       "url": "https://www.meetup.com/meetup-group-qioqfovy/events/315886927/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-07-31T14:38:51.960Z"
+      "verifiedAt": "2026-07-31T16:58:50.261Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Get-together, the email game (we have $1.7k in prizes!)",
+      "description": "",
+      "start": "2026-08-01T18:00:00.000Z",
+      "end": "2026-08-02T01:00:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/p32tfjbc",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-31T16:58:50.261Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +68,23 @@
       "url": "https://lu.ma/irhvdvdh",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T14:38:51.960Z"
+      "verifiedAt": "2026-07-31T16:58:50.261Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Built on Baseten | AI Demo Night",
+      "description": "",
+      "start": "2026-08-05T01:00:00.000Z",
+      "end": "2026-08-05T03:00:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/b4y2veki",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-31T16:58:50.261Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +100,7 @@
       "url": "https://lu.ma/g13the71",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T14:38:51.960Z"
+      "verifiedAt": "2026-07-31T16:58:50.261Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +116,7 @@
       "url": "https://lu.ma/aes6fn88",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T14:38:51.960Z"
+      "verifiedAt": "2026-07-31T16:58:50.261Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +132,7 @@
       "url": "https://lu.ma/dhftdjzm",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T14:38:51.960Z"
+      "verifiedAt": "2026-07-31T16:58:50.261Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -116,7 +148,23 @@
       "url": "https://lu.ma/bnvhz5y4",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T14:38:51.960Z"
+      "verifiedAt": "2026-07-31T16:58:50.261Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Claude Code Workshop - San Francisco",
+      "description": "",
+      "start": "2026-08-11T20:00:00.000Z",
+      "end": "2026-08-12T00:00:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/claude-code-workshop-sf-aug-11",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-31T16:58:50.261Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -132,7 +180,7 @@
       "url": "https://www.meetup.com/hrlovestatups/events/315842077/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-07-31T14:38:51.960Z"
+      "verifiedAt": "2026-07-31T16:58:50.261Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -148,7 +196,7 @@
       "url": "https://lu.ma/cbngurgaonaugust2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T14:38:51.960Z"
+      "verifiedAt": "2026-07-31T16:58:50.261Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -164,7 +212,7 @@
       "url": "https://lu.ma/09hud1xc",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T14:38:51.960Z"
+      "verifiedAt": "2026-07-31T16:58:50.261Z"
     }
   ]
 }
