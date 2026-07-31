@@ -1,59 +1,11 @@
 {
-  "generatedAt": "2026-07-31T09:18:50.958Z",
+  "generatedAt": "2026-07-31T14:38:51.960Z",
   "sourceCount": 2,
-  "eventCount": 12,
+  "eventCount": 10,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "AI Careers Mixer: Delhi Edition",
-      "description": "",
-      "start": "2026-07-31T12:30:00.000Z",
-      "end": "2026-07-31T20:00:00.000+05:30",
-      "location": "Masters' Union School of Business",
-      "city": "Masters' Union School of Business Gurugram Haryana",
-      "lat": 28.5025843,
-      "lng": 77.0909444,
-      "price": "See source",
-      "url": "https://lu.ma/the-kyrh",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T09:18:50.958Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Capability <> Capital | Defence-tech founder & VC Mixer",
-      "description": "",
-      "start": "2026-07-31T12:30:00.000Z",
-      "end": "2026-07-31T20:00:00.000+05:30",
-      "location": "Gurugram, India",
-      "city": "Gurugram, India Gurugram Haryana",
-      "lat": 28.456957445226056,
-      "lng": 77.07233180832739,
-      "price": "See source",
-      "url": "https://lu.ma/59ibhyau",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T09:18:50.958Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Scientist to Founder by Fifty Years",
-      "description": "",
-      "start": "2026-07-31T20:00:00.000Z",
-      "end": "2026-07-31T22:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/lwpbze0e",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T09:18:50.958Z"
-    },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
       "title": "webcmd Hackathon ⚡Agentic Payments Edition",
@@ -68,7 +20,7 @@
       "url": "https://lu.ma/hmr76csk",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T09:18:50.958Z"
+      "verifiedAt": "2026-07-31T14:38:51.960Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -84,7 +36,7 @@
       "url": "https://www.meetup.com/meetup-group-qioqfovy/events/315886927/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-07-31T09:18:50.958Z"
+      "verifiedAt": "2026-07-31T14:38:51.960Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +52,7 @@
       "url": "https://lu.ma/irhvdvdh",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T09:18:50.958Z"
+      "verifiedAt": "2026-07-31T14:38:51.960Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -116,7 +68,7 @@
       "url": "https://lu.ma/g13the71",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T09:18:50.958Z"
+      "verifiedAt": "2026-07-31T14:38:51.960Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -132,7 +84,7 @@
       "url": "https://lu.ma/aes6fn88",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T09:18:50.958Z"
+      "verifiedAt": "2026-07-31T14:38:51.960Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -148,7 +100,7 @@
       "url": "https://lu.ma/dhftdjzm",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T09:18:50.958Z"
+      "verifiedAt": "2026-07-31T14:38:51.960Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -164,7 +116,7 @@
       "url": "https://lu.ma/bnvhz5y4",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T09:18:50.958Z"
+      "verifiedAt": "2026-07-31T14:38:51.960Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -180,7 +132,7 @@
       "url": "https://www.meetup.com/hrlovestatups/events/315842077/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-07-31T09:18:50.958Z"
+      "verifiedAt": "2026-07-31T14:38:51.960Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -196,7 +148,23 @@
       "url": "https://lu.ma/cbngurgaonaugust2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T09:18:50.958Z"
+      "verifiedAt": "2026-07-31T14:38:51.960Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Startup Mixer Delhi 2.0 : Build India Together",
+      "description": "",
+      "start": "2026-08-22T07:30:00.000Z",
+      "end": "2026-08-22T17:00:00.000+05:30",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/09hud1xc",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-07-31T14:38:51.960Z"
     }
   ]
 }
