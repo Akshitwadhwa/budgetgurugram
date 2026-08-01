@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-31T22:16:49.411Z",
+  "generatedAt": "2026-08-01T03:53:26.763Z",
   "sourceCount": 2,
-  "eventCount": 10,
+  "eventCount": 9,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,23 +20,7 @@
       "url": "https://lu.ma/hmr76csk",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T22:16:49.411Z"
-    },
-    {
-      "id": "meetup-aHR0cHM6Ly93d3cubW",
-      "title": "The Founders Forum- Driving Influence",
-      "description": "",
-      "start": "2026-08-01T05:30:00.000Z",
-      "end": "2026-08-01T09:30:00.000Z",
-      "location": "Greenr Cafe",
-      "city": "Greenr Cafe Gurugram Ha",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://www.meetup.com/meetup-group-qioqfovy/events/315886927/",
-      "source": "Meetup",
-      "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-07-31T22:16:49.411Z"
+      "verifiedAt": "2026-08-01T03:53:26.763Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +36,7 @@
       "url": "https://lu.ma/irhvdvdh",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T22:16:49.411Z"
+      "verifiedAt": "2026-08-01T03:53:26.763Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +52,7 @@
       "url": "https://lu.ma/g13the71",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T22:16:49.411Z"
+      "verifiedAt": "2026-08-01T03:53:26.763Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +68,7 @@
       "url": "https://lu.ma/aes6fn88",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T22:16:49.411Z"
+      "verifiedAt": "2026-08-01T03:53:26.763Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +84,7 @@
       "url": "https://lu.ma/dhftdjzm",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T22:16:49.411Z"
+      "verifiedAt": "2026-08-01T03:53:26.763Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -116,7 +100,7 @@
       "url": "https://lu.ma/bnvhz5y4",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T22:16:49.411Z"
+      "verifiedAt": "2026-08-01T03:53:26.763Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -132,7 +116,7 @@
       "url": "https://www.meetup.com/hrlovestatups/events/315842077/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-07-31T22:16:49.411Z"
+      "verifiedAt": "2026-08-01T03:53:26.763Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -148,7 +132,7 @@
       "url": "https://lu.ma/cbngurgaonaugust2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T22:16:49.411Z"
+      "verifiedAt": "2026-08-01T03:53:26.763Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -164,7 +148,7 @@
       "url": "https://lu.ma/09hud1xc",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-07-31T22:16:49.411Z"
+      "verifiedAt": "2026-08-01T03:53:26.763Z"
     }
   ]
 }
