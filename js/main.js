@@ -152,6 +152,80 @@
   function escapeHtml(value) {
     return String(value || "").replace(/[&<>'"]/g, (character) => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[character]));
   }
+  function recommendationContext() {
+    const interests = state.motives.filter((motive) => motive !== "explore").map((motive) => intentLabels[motive] ? intentLabels[motive][0] : motive);
+    const interestText = interests.length ? interests.join(" + ") : "Explore the city";
+    return interestText + " · " + state.neighbourhood + ", Gurugram";
+  }
+  function eventDistanceValue(event) {
+    if (!Number.isFinite(event.lat) || !Number.isFinite(event.lng)) return 6;
+    const latDelta = (event.lat - state.coords.lat) * 111;
+    const lngDelta = (event.lng - state.coords.lng) * 111 * Math.cos(state.coords.lat * Math.PI / 180);
+    return Math.max(.1, Math.sqrt(latDelta * latDelta + lngDelta * lngDelta));
+  }
+  function recommendationItems() {
+    const selected = new Set(state.motives), role = state.role.toLowerCase(), weather = state.weather.label.toLowerCase();
+    const items = places.map((place) => {
+      const searchable = [place.name, place.area, place.categoryLabel].concat(place.tags || []).join(" ").toLowerCase();
+      let score = 18;
+      if (selected.has(place.category)) score += 38;
+      if (selected.has("events") && (place.category === "events" || /network|community|music|event/.test(searchable))) score += 24;
+      if (selected.has("work") && (place.category === "work" || /work|laptop|wi-fi|power|meeting/.test(searchable))) score += 25;
+      if (selected.has("food") && place.category === "food") score += 22;
+      if (selected.has("public") && place.category === "public") score += 22;
+      if (selected.has("services") && place.category === "services") score += 22;
+      if (selected.has("explore")) score += 10;
+      if (/tech|startup|founder|freelancer/.test(role) && (place.category === "work" || place.category === "events" || /community|network|laptop/.test(searchable))) score += 22;
+      if (/student/.test(role) && (place.priceValue <= 300 || /study|quiet|library/.test(searchable))) score += 16;
+      if (place.area === state.neighbourhood) score += 12;
+      score += Math.max(0, 16 - distanceFor(place) * 2);
+      if (/rain/.test(weather)) score += /indoor|wi-fi|quiet|work|coffee/.test(searchable) ? 9 : -8;
+      if (/clear|good to be out/.test(weather) && /outdoor|walk|nature|park/.test(searchable)) score += 8;
+      return {kind:"place", item:place, score, distance:distanceFor(place)};
+    });
+    liveEvents.filter(isEventUpcoming).forEach((event) => {
+      const searchable = [event.title, event.description, event.city, event.location].join(" ").toLowerCase();
+      const start = new Date(event.start), now = new Date();
+      let score = 16;
+      if (selected.has("events")) score += 48;
+      if (selected.has("explore")) score += 10;
+      if (/tech|startup|founder|freelancer/.test(role) && /ai|hack|startup|founder|developer|tech|builder|career|vc|marketing/.test(searchable)) score += 28;
+      if (/gurugram|gurgaon|delhi ncr/.test(searchable)) score += 12;
+      if (start.toDateString() === now.toDateString()) score += 18;
+      else if (start.getTime() - now.getTime() <= 7 * 86400000) score += 10;
+      score += Math.max(0, 12 - eventDistanceValue(event));
+      items.push({kind:"event", item:event, score, distance:eventDistanceValue(event)});
+    });
+    return items.sort((a, b) => b.score - a.score || a.distance - b.distance).slice(0, 4);
+  }
+  function recommendationReason(candidate) {
+    if (candidate.kind === "event") {
+      if (state.motives.includes("events")) return "Matches your events interest";
+      if (/tech|startup|founder|freelancer/i.test(state.role)) return "Good for your tech circle";
+      return "Happening soon in Gurugram";
+    }
+    const place = candidate.item;
+    if (place.area === state.neighbourhood) return "Close to your starting area";
+    if (state.motives.includes(place.category)) return "Matches your interest";
+    if (/rain/i.test(state.weather.label) && /indoor|wi-fi|quiet|work|coffee/i.test((place.tags || []).join(" "))) return "A comfortable indoor pick today";
+    return "Worth the short trip";
+  }
+  function renderRecommendationCard(candidate) {
+    const item = candidate.item, reason = escapeHtml(recommendationReason(candidate));
+    if (candidate.kind === "event") {
+      return '<article class="recommendation-card recommendation-card--event"><div class="recommendation-card__top"><span class="recommendation-card__type">EVENT</span><span>' + escapeHtml(formatEventDate(item)) + '</span></div><h3>' + escapeHtml(item.title) + '</h3><p>' + escapeHtml(item.location || item.city || "Gurugram") + '</p><div class="recommendation-card__footer"><span class="recommendation-card__reason">' + reason + '</span><a href="' + escapeHtml(item.url) + '" target="_blank" rel="noreferrer">View ↗</a></div></article>';
+    }
+    const place = item;
+    return '<article class="recommendation-card recommendation-card--place" style="--recommendation-accent:' + escapeHtml(place.accent) + '"><div class="recommendation-card__top"><span class="recommendation-card__type">PLACE</span><span>' + escapeHtml(distanceFor(place).toFixed(1)) + ' km away</span></div><h3>' + escapeHtml(place.name) + '</h3><p>' + escapeHtml(place.area + " · " + place.price) + '</p><div class="recommendation-card__footer"><span class="recommendation-card__reason">' + reason + '</span><button type="button" data-open-place="' + escapeHtml(place.id) + '">Open ↗</button></div></article>';
+  }
+  function renderRecommendations() {
+    const grid = $("[data-recommendations-grid]");
+    if (!grid) return;
+    const context = $("[data-recommendation-context]");
+    if (context) context.textContent = recommendationContext();
+    const items = recommendationItems();
+    grid.innerHTML = items.length ? items.map(renderRecommendationCard).join("") : '<div class="recommendation-empty">We are tuning your first Gurugram picks.</div>';
+  }
   function formatEventDate(event) {
     const date = new Date(event.start);
     if (Number.isNaN(date.getTime())) return "Date to be confirmed";
@@ -257,6 +331,7 @@
     }
     if (!loaded) eventsMeta = {generatedAt:null, eventCount:liveEvents.length, error:true, live:false, stale:true};
     renderEvents();
+    renderRecommendations();
     if (liveMap) renderMapMarkers(visiblePlaces());
   }
   async function loadNearbyPlaces() {
@@ -352,6 +427,7 @@
     renderMapCategoryRail();
     renderMapStatus();
     renderNearYou();
+    renderRecommendations();
     const items = visiblePlaces();
     const selectedMapCategory = mapCategories.find((category) => category.id === state.mapCategory);
     const categoryHeading = intentLabels[state.activeCategory] ? intentLabels[state.activeCategory][0] : (selectedMapCategory ? selectedMapCategory.label : "Made for your day");
