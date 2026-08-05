@@ -358,11 +358,20 @@
     const statusLabel = place.source === "Editorial sample" ? "Confirm before visiting" : place.visit;
     return '<article class="place-card" data-place-id="' + place.id + '"><div class="place-card__cover" style="--cover:' + place.accent + '"><span class="cover-word">' + place.cover.replace("\n", "<br>") + '</span><span class="cover-glyph">' + place.glyph + '</span><span class="status-badge">' + statusLabel + '</span><button class="place-card__save ' + (saved ? "is-saved" : "") + '" type="button" data-save="' + place.id + '" aria-label="' + (saved ? "Remove" : "Save") + " " + place.name + '" aria-pressed="' + saved + '">' + (saved ? "♥" : "♡") + '</button></div><button class="place-card__body" type="button" data-open-place="' + place.id + '"><div class="place-card__head"><div><h3>' + place.name + '</h3><p class="place-card__area">' + place.area + " · " + distanceFor(place).toFixed(1) + ' km away</p></div><span class="price-tag ' + (place.priceValue === 0 ? "is-free" : "") + '">' + place.price + '</span></div><div class="place-card__tags">' + place.tags.slice(0, 3).map((tag) => "<span>" + tag + "</span>").join("") + '</div><div class="place-card__details"><span class="place-card__distance">' + place.categoryLabel + '</span><span class="place-card__open">' + place.open + '</span></div><div class="verified-line"><i></i> Last checked ' + place.verified + " · " + place.source + "</div></button></article>";
   }
+  function mapPinVariant(place) {
+    const text = [place.name, place.kind, ...(place.tags || [])].join(" ").toLowerCase();
+    if (/coffee|café|cafe|espresso|roaster/.test(text)) return "coffee";
+    if (/gym|fitness|yoga|pilates/.test(text)) return "gym";
+    return place.category || "services";
+  }
+  function mapPinGlyph(place) {
+    return ({food:"◒", coffee:"☕", work:"▣", public:"✦", events:"✦", services:"⌖", bars:"◈", grocery:"▦", gym:"●"})[mapPinVariant(place)] || place.glyph || "•";
+  }
   function renderMapPins(items) {
     if (liveMap) { renderMapMarkers(items); return; }
     const root = $("[data-map-pins]");
     if (!root) return;
-    root.innerHTML = items.map((place) => '<button class="map-pin" style="left:' + place.mapX + "%;top:" + place.mapY + '%" type="button" data-open-place="' + place.id + '" aria-label="Open ' + place.name + '"><span>' + place.glyph + "</span></button>").join("");
+    root.innerHTML = items.map((place) => '<button class="map-pin map-pin--' + mapPinVariant(place) + '" style="left:' + place.mapX + "%;top:" + place.mapY + '%" type="button" data-open-place="' + place.id + '" aria-label="Open ' + place.name + '"><span aria-hidden="true">' + mapPinGlyph(place) + "</span></button>").join("");
   }
   function renderMapMarkers(items) {
     if (!liveMap) return;
@@ -370,9 +379,9 @@
     const eventPins = liveEvents.filter((event) => isEventUpcoming(event) && event.lat && event.lng).map((event) => ({...event, name:event.title, area:event.city || event.location || "Gurugram", category:"events", glyph:"✦", price:event.price || "See source", visit:"View on " + (event.source || "source"), isEvent:true}));
     mapMarkers = mapPlaces(items).concat(eventPins).filter((place) => place.lat && place.lng).map((place) => {
       const element = document.createElement("button");
-      element.className = "premium-map-pin premium-map-pin--" + place.category + (place.isLiveSource ? " premium-map-pin--live" : "");
+      element.className = "premium-map-pin premium-map-pin--" + mapPinVariant(place) + (place.isLiveSource ? " premium-map-pin--live" : "");
       element.type = "button";
-      element.innerHTML = "<span>" + place.glyph + "</span>";
+      element.innerHTML = "<span aria-hidden=\"true\">" + mapPinGlyph(place) + "</span>";
       element.setAttribute("aria-label", "Open " + place.name);
       const popupContent = place.isEvent ? '<div class="map-popup"><strong>' + escapeHtml(place.name) + '</strong><span>' + escapeHtml(place.area) + " · " + escapeHtml(formatEventDate(place)) + '</span><small><a href="' + escapeHtml(place.url) + '" target="_blank" rel="noreferrer">' + escapeHtml(place.source || "source") + ' ↗</a></small></div>' : place.isLiveSource ? '<div class="map-popup"><strong>' + escapeHtml(place.name) + '</strong><span>' + escapeHtml(place.area) + " · " + escapeHtml(place.categoryLabel) + '</span><small>' + escapeHtml(place.open) + '</small><small>OpenStreetMap · refreshed ' + escapeHtml(formatRelativeTime(place.verifiedAt)) + '</small><small><a href="' + escapeHtml(place.sourceUrl) + '" target="_blank" rel="noreferrer">Open source ↗</a></small></div>' : '<div class="map-popup"><strong>' + escapeHtml(place.name) + '</strong><span>' + escapeHtml(place.area) + " · " + escapeHtml(place.price) + '</span><small>Editorial guide pin · confirm before visiting</small></div>';
       const popup = new maplibregl.Popup({offset: 18, closeButton: true}).setHTML(popupContent);
