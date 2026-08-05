@@ -498,11 +498,17 @@
     renderApp(); renderEvents(); initMap(); loadEvents(); loadNearbyPlaces(); updateWeather(); window.scrollTo({top:0, behavior:"instant"});
   }
   function setMainView(view) {
+    const exploreMode = view === "explore";
     const nearMode = view === "near";
-    $$("[data-explore-view]").forEach((section) => { section.hidden = nearMode; });
+    const eventsMode = view === "events";
+    $$("[data-explore-view]").forEach((section) => { section.hidden = !exploreMode; });
     const nearView = $("[data-near-you-view]");
     if (nearView) nearView.hidden = !nearMode;
-    $$("[data-explore-link], [data-near-you-link]").forEach((link) => link.classList.toggle("is-active", nearMode ? link.hasAttribute("data-near-you-link") : link.hasAttribute("data-explore-link")));
+    const eventsView = $("[data-events-view]");
+    if (eventsView) eventsView.hidden = !eventsMode;
+    $$("[data-explore-link]").forEach((link) => link.classList.toggle("is-active", exploreMode));
+    $$("[data-near-you-link]").forEach((link) => link.classList.toggle("is-active", nearMode));
+    $$("[data-events-link]").forEach((link) => link.classList.toggle("is-active", eventsMode));
     window.scrollTo({top:0, behavior:"smooth"});
   }
   function bindEvents() {
@@ -523,6 +529,8 @@
       if (nearLink) { event.preventDefault(); setMainView("near"); return; }
       const exploreLink = event.target.closest("[data-explore-link]");
       if (exploreLink) { event.preventDefault(); setMainView("explore"); return; }
+      const eventsLink = event.target.closest("[data-events-link]");
+      if (eventsLink) { event.preventDefault(); setMainView("events"); return; }
       const eventFilter = event.target.closest("[data-event-filter]");
       if (eventFilter) { state.eventFilter = eventFilter.dataset.eventFilter; $$('[data-event-filter]').forEach((button) => button.classList.toggle("is-active", button === eventFilter)); renderEvents(); return; }
       if (event.target.closest("[data-events-refresh]")) { loadEvents(); return; }
