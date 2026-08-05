@@ -1,27 +1,11 @@
 {
-  "generatedAt": "2026-08-05T11:31:16.658Z",
+  "generatedAt": "2026-08-05T14:35:57.628Z",
   "sourceCount": 2,
-  "eventCount": 9,
+  "eventCount": 10,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Voice AI Builders’ Room| Microsoft X Aight",
-      "description": "",
-      "start": "2026-08-05T09:30:00.000Z",
-      "end": "2026-08-05T18:30:00.000+05:30",
-      "location": "Gurugram, India",
-      "city": "Gurugram, India Gurugram Haryana",
-      "lat": 28.501994602476774,
-      "lng": 77.09544611778621,
-      "price": "See source",
-      "url": "https://lu.ma/g13the71",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-05T11:31:16.658Z"
-    },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
       "title": "Founders & Builders Over Coffee☕ | Delhi NCR",
@@ -36,7 +20,7 @@
       "url": "https://lu.ma/aes6fn88",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-05T11:31:16.658Z"
+      "verifiedAt": "2026-08-05T14:35:57.628Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +36,7 @@
       "url": "https://lu.ma/dhftdjzm",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-05T11:31:16.658Z"
+      "verifiedAt": "2026-08-05T14:35:57.628Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -68,7 +52,23 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/315930215/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-05T11:31:16.658Z"
+      "verifiedAt": "2026-08-05T14:35:57.628Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "AI Walks - DCA - Lotus Edition 🪷",
+      "description": "",
+      "start": "2026-08-08T13:30:00.000Z",
+      "end": "2026-08-08T17:30:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/9tbnmprd",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-08-05T14:35:57.628Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +84,7 @@
       "url": "https://lu.ma/bnvhz5y4",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-05T11:31:16.658Z"
+      "verifiedAt": "2026-08-05T14:35:57.628Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -100,7 +100,7 @@
       "url": "https://www.meetup.com/hrlovestatups/events/315842077/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-05T11:31:16.658Z"
+      "verifiedAt": "2026-08-05T14:35:57.628Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -116,7 +116,7 @@
       "url": "https://lu.ma/cbngurgaonaugust2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-05T11:31:16.658Z"
+      "verifiedAt": "2026-08-05T14:35:57.628Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -132,7 +132,23 @@
       "url": "https://lu.ma/09hud1xc",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-05T11:31:16.658Z"
+      "verifiedAt": "2026-08-05T14:35:57.628Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Defense Tech DC 018",
+      "description": "",
+      "start": "2026-08-25T21:30:00.000Z",
+      "end": "2026-08-25T23:30:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/dtdc018",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-08-05T14:35:57.628Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -148,7 +164,7 @@
       "url": "https://lu.ma/gqn9wl58",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-05T11:31:16.658Z"
+      "verifiedAt": "2026-08-05T14:35:57.628Z"
     }
   ]
 }
