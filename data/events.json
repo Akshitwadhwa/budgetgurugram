@@ -1,27 +1,11 @@
 {
-  "generatedAt": "2026-08-06T14:37:11.942Z",
+  "generatedAt": "2026-08-07T00:17:16.833Z",
   "sourceCount": 2,
-  "eventCount": 7,
+  "eventCount": 6,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Founders & Builders Over Coffee☕ | Delhi NCR",
-      "description": "",
-      "start": "2026-08-06T10:30:00.000Z",
-      "end": "2026-08-06T15:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/aes6fn88",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-06T14:37:11.942Z"
-    },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
       "title": "Primewise Founders Club Networking Event- Gurgaon(Online)",
@@ -36,7 +20,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/315930215/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-06T14:37:11.942Z"
+      "verifiedAt": "2026-08-07T00:17:16.833Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +36,7 @@
       "url": "https://lu.ma/bnvhz5y4",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-06T14:37:11.942Z"
+      "verifiedAt": "2026-08-07T00:17:16.833Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -68,7 +52,7 @@
       "url": "https://www.meetup.com/hrlovestatups/events/315842077/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-06T14:37:11.942Z"
+      "verifiedAt": "2026-08-07T00:17:16.833Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +68,7 @@
       "url": "https://lu.ma/cbngurgaonaugust2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-06T14:37:11.942Z"
+      "verifiedAt": "2026-08-07T00:17:16.833Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +84,7 @@
       "url": "https://lu.ma/09hud1xc",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-06T14:37:11.942Z"
+      "verifiedAt": "2026-08-07T00:17:16.833Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -116,7 +100,7 @@
       "url": "https://lu.ma/gqn9wl58",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-06T14:37:11.942Z"
+      "verifiedAt": "2026-08-07T00:17:16.833Z"
     }
   ]
 }
