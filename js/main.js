@@ -17,10 +17,8 @@
   const mapCategories = [
     {id:"food", label:"Food", color:"#ef3340", filter:"food"},
     {id:"work", label:"Work Spots", color:"#0ea5e9", filter:"work"},
-    {id:"coffee", label:"Coffee", color:"#936037", filter:"food"},
-    {id:"gym", label:"Gym", color:"#171827", filter:"gym"},
-    {id:"bars", label:"Bars", color:"#d44778", filter:"bars"},
-    {id:"grocery", label:"Grocery", color:"#2ca292", filter:"grocery"}
+    {id:"coffee", label:"Coffee", color:"#936037", filter:"coffee"},
+    {id:"gym", label:"Gym", color:"#171827", filter:"gym"}
   ];
   const nearYouAreas = [
     {area:"Cyber City", note:"Workdays, coffee & after-hours"},
@@ -282,17 +280,18 @@
   function mapCategoryMatches(place) {
     const category = state.mapCategory;
     const searchable = [place.name, place.kind, place.categoryLabel, place.tags].join(" ").toLowerCase();
+    const useful = place.category === "food" || place.category === "work" || place.category === "gym" || (place.category === "public" && /gym|fitness|yoga|pilates/.test(searchable));
+    if (!useful) return false;
     if (category === "all") return true;
     if (category === "coffee") return place.category === "food" && /coffee|cafe|café|tea/.test(searchable);
-    if (category === "bars") return place.category === "bars" || (place.category === "events" && /bar|pub|social|late|music/.test(searchable));
-    if (category === "grocery") return place.category === "grocery" || (place.category === "services" && /grocery|market|supermarket|convenience|bazaar/.test(searchable));
+    if (category === "gym") return place.category === "gym" || (place.category === "public" && /gym|fitness|yoga|pilates/.test(searchable));
     return place.category === category;
   }
   function mapPlaces(items) {
     const curated = items.filter(mapCategoryMatches);
     if (nearbyMeta.status !== "loaded") return state.showCuratedPins ? curated : [];
     const live = nearbyPlaces.filter(mapCategoryMatches);
-    return state.showCuratedPins ? live.concat(curated) : live;
+    return (state.showCuratedPins ? live.concat(curated) : live).slice(0, 80);
   }
   function renderMapStatus() {
     const status = $("[data-map-source-status]"), toggle = $("[data-toggle-curated-pins]"), note = $("[data-data-status-text]"), empty = $("[data-map-data-empty]");
@@ -376,8 +375,7 @@
   function renderMapMarkers(items) {
     if (!liveMap) return;
     mapMarkers.forEach((marker) => marker.remove());
-    const eventPins = liveEvents.filter((event) => isEventUpcoming(event) && event.lat && event.lng).map((event) => ({...event, name:event.title, area:event.city || event.location || "Gurugram", category:"events", glyph:"✦", price:event.price || "See source", visit:"View on " + (event.source || "source"), isEvent:true}));
-    mapMarkers = mapPlaces(items).concat(eventPins).filter((place) => place.lat && place.lng).map((place) => {
+    mapMarkers = mapPlaces(items).filter((place) => place.lat && place.lng).map((place) => {
       const element = document.createElement("button");
       element.className = "premium-map-pin premium-map-pin--" + mapPinVariant(place) + (place.isLiveSource ? " premium-map-pin--live" : "");
       element.type = "button";

@@ -14,17 +14,15 @@ function text(value) {
 }
 
 function categoryFor(tags) {
-  const values = [tags.amenity, tags.shop, tags.office, tags.leisure, tags.tourism].filter(Boolean).join(" ").toLowerCase();
-  if (/bar|pub|nightclub/.test(values)) return "bars";
-  if (/cafe|restaurant|fast_food|food_court|biergarten|bakery|coffee/.test(values)) return "food";
-  if (/coworking|office|studio/.test(values)) return "work";
-  if (/park|garden|library|community_centre|arts_centre|museum|theatre|cinema|gallery|attraction/.test(values)) return "public";
-  if (/supermarket|convenience|grocery|greengrocer|marketplace|pharmacy|bank|post_office/.test(values)) return "grocery";
-  return "services";
+  const values = [tags.amenity, tags.shop, tags.office, tags.leisure].filter(Boolean).join(" ").toLowerCase();
+  if (/gym|fitness_centre|sports_centre|yoga|pilates/.test(values) || tags.leisure === "fitness_centre" || tags.leisure === "sports_centre") return "gym";
+  if (tags.office === "coworking" || tags.amenity === "coworking_space" || /coworking/.test(values)) return "work";
+  if (/cafe|restaurant|fast_food|food_court|bakery|coffee/.test(values)) return "food";
+  return null;
 }
 
 function categoryLabel(category) {
-  return ({food:"Food & drink", work:"Workspaces", public:"Public spaces", events:"Events", services:"Useful services", bars:"Bars", grocery:"Grocery"})[category] || "Local place";
+  return ({food:"Food & drink", work:"Workspaces", gym:"Gyms", public:"Public spaces", events:"Events", services:"Useful services", bars:"Bars", grocery:"Grocery"})[category] || "Local place";
 }
 
 function sourceUrl(element) {
@@ -39,6 +37,7 @@ function normalize(element, fetchedAt) {
   const name = text(tags.name);
   if (!name || !Number.isFinite(lat) || !Number.isFinite(lng)) return null;
   const category = categoryFor(tags);
+  if (!category) return null;
   const address = [tags["addr:housenumber"], tags["addr:street"], tags["addr:suburb"], tags["addr:city"]].filter(Boolean).join(", ");
   const website = text(tags.website || tags["contact:website"]);
   const kind = text(tags.amenity || tags.shop || tags.office || tags.leisure || tags.tourism);
@@ -61,8 +60,8 @@ function normalize(element, fetchedAt) {
     source: "OpenStreetMap",
     sourceUrl: website || sourceUrl(element),
     description: "Nearby place found in public OpenStreetMap data. Check the original source for current hours, price and availability.",
-    accent: category === "food" ? "#c8795d" : category === "work" ? "#5b847b" : category === "grocery" ? "#2ca292" : "#718d85",
-    glyph: category === "food" ? "F" : category === "work" ? "W" : category === "grocery" ? "G" : "•",
+    accent: category === "food" ? "#c8795d" : category === "work" ? "#5b847b" : "#171827",
+    glyph: category === "food" ? "F" : category === "work" ? "W" : "G",
     lat,
     lng,
     isLiveSource: true
@@ -94,18 +93,17 @@ module.exports = async function handler(request, response) {
   const radius = numberParam(request.query?.radius, 5000, 500, 10000);
   const fetchedAt = new Date().toISOString();
   const query = `[out:json][timeout:20];(
-    nwr(around:${radius},${lat},${lng})["name"]["amenity"];
-    nwr(around:${radius},${lat},${lng})["name"]["shop"];
-    nwr(around:${radius},${lat},${lng})["name"]["office"];
-    nwr(around:${radius},${lat},${lng})["name"]["leisure"];
-    nwr(around:${radius},${lat},${lng})["name"]["tourism"];
+    nwr(around:${radius},${lat},${lng})["name"]["amenity"~"cafe|restaurant|fast_food|food_court|bakery|coffee|coworking_space|gym|fitness_centre|sports_centre",i];
+    nwr(around:${radius},${lat},${lng})["name"]["shop"~"coffee|bakery",i];
+    nwr(around:${radius},${lat},${lng})["name"]["office"="coworking"];
+    nwr(around:${radius},${lat},${lng})["name"]["leisure"~"fitness_centre|sports_centre|gym",i];
   );out center tags;`;
 
   try {
     const upstream = await fetchOverpass(query);
     if (!upstream.ok) throw new Error(`Overpass returned ${upstream.status}`);
     const payload = await upstream.json();
-    const places = Array.from(new Map((payload.elements || []).map((element) => normalize(element, fetchedAt)).filter(Boolean).map((place) => [`${place.name.toLowerCase()}|${place.lat.toFixed(5)}|${place.lng.toFixed(5)}`, place])).values()).slice(0, 150);
+    const places = Array.from(new Map((payload.elements || []).map((element) => normalize(element, fetchedAt)).filter(Boolean).map((place) => [`${place.name.toLowerCase()}|${place.lat.toFixed(5)}|${place.lng.toFixed(5)}`, place])).values()).slice(0, 80);
     response.setHeader("Cache-Control", "public, s-maxage=300, stale-while-revalidate=1800");
     response.setHeader("Access-Control-Allow-Origin", "*");
     return response.status(200).json({source: "OpenStreetMap", fetchedAt, count: places.length, radius, places});
