@@ -289,14 +289,16 @@
   }
   function mapPlaces(items) {
     const curated = items.filter(mapCategoryMatches);
-    if (nearbyMeta.status !== "loaded") return state.showCuratedPins ? curated : [];
     const live = nearbyPlaces.filter(mapCategoryMatches);
-    return (state.showCuratedPins ? live.concat(curated) : live).slice(0, 80);
+    if (nearbyMeta.status === "loaded" && live.length) return (state.showCuratedPins ? live.concat(curated) : live).slice(0, 80);
+    return curated.slice(0, 80);
   }
   function renderMapStatus() {
     const status = $("[data-map-source-status]"), toggle = $("[data-toggle-curated-pins]"), note = $("[data-data-status-text]"), empty = $("[data-map-data-empty]");
     let message = "Loading public nearby map data…";
-    if (nearbyMeta.status === "loaded") message = "Live map data · " + nearbyMeta.count + " nearby places · refreshed " + formatRelativeTime(nearbyMeta.fetchedAt);
+    const liveUsefulCount = nearbyPlaces.filter(mapCategoryMatches).length;
+    if (nearbyMeta.status === "loaded" && liveUsefulCount) message = "Live map data · " + liveUsefulCount + " useful places · refreshed " + formatRelativeTime(nearbyMeta.fetchedAt);
+    if (nearbyMeta.status === "loaded" && !liveUsefulCount) message = "No live matching places returned · showing the Gurugram guide pins";
     if (nearbyMeta.status === "unavailable") message = "Live map data is unavailable right now · editorial pins are marked separately";
     if (status) status.textContent = message;
     if (note) note.textContent = nearbyMeta.status === "loaded" ? "Live nearby pins come from OpenStreetMap and show their fetch time. Curated pins are separate and should be confirmed before visiting." : "The live nearby layer could not be reached. Curated pins are editorial samples, not a guarantee of current hours, price or availability.";
