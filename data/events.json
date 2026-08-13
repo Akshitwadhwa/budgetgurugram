@@ -1,27 +1,11 @@
 {
-  "generatedAt": "2026-08-13T07:56:23.375Z",
+  "generatedAt": "2026-08-13T10:29:43.401Z",
   "sourceCount": 2,
-  "eventCount": 8,
+  "eventCount": 5,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Founder Fridays: The AI Collective x Unstuck Labs",
-      "description": "",
-      "start": "2026-08-14T17:30:00.000Z",
-      "end": "2026-08-14T20:30:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/aic-dc-8-14",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-13T07:56:23.375Z"
-    },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
       "title": "Hiring tips for startups",
@@ -36,23 +20,7 @@
       "url": "https://www.meetup.com/hrlovestatups/events/315842077/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-13T07:56:23.375Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "P/M Fit & Local Resources for Startups",
-      "description": "",
-      "start": "2026-08-20T22:00:00.000Z",
-      "end": "2026-08-21T00:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/mv3h0pvq",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-13T07:56:23.375Z"
+      "verifiedAt": "2026-08-13T10:29:43.401Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -68,7 +36,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316040718/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-13T07:56:23.375Z"
+      "verifiedAt": "2026-08-13T10:29:43.401Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +52,7 @@
       "url": "https://lu.ma/09hud1xc",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-13T07:56:23.375Z"
+      "verifiedAt": "2026-08-13T10:29:43.401Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,23 +68,7 @@
       "url": "https://lu.ma/cbngurgaonaugust2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-13T07:56:23.375Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Defense Tech DC 018",
-      "description": "",
-      "start": "2026-08-25T21:30:00.000Z",
-      "end": "2026-08-25T23:30:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/dtdc018",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-13T07:56:23.375Z"
+      "verifiedAt": "2026-08-13T10:29:43.401Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -132,7 +84,7 @@
       "url": "https://lu.ma/gqn9wl58",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-13T07:56:23.375Z"
+      "verifiedAt": "2026-08-13T10:29:43.401Z"
     }
   ]
 }
