@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-08-15T18:49:07.695Z",
+  "generatedAt": "2026-08-15T21:37:03.418Z",
   "sourceCount": 2,
-  "eventCount": 5,
+  "eventCount": 6,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "1871 Events: Scale the System: 1871 Emerging Tech Innovation Summit",
+      "title": "P/M Fit & Local Resources for Startups",
       "description": "",
-      "start": "2026-08-20T14:00:00.000Z",
-      "end": "2026-08-20T23:00:00.000Z",
+      "start": "2026-08-20T22:00:00.000Z",
+      "end": "2026-08-21T00:00:00.000Z",
       "location": "Location listed on CommunityMeetups India",
       "city": "Gurugram",
       "lat": null,
       "lng": null,
       "price": "See source",
-      "url": "https://lu.ma/0pljqbaw",
+      "url": "https://lu.ma/mv3h0pvq",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-15T18:49:07.695Z"
+      "verifiedAt": "2026-08-15T21:37:03.418Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -36,7 +36,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316040718/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-15T18:49:07.695Z"
+      "verifiedAt": "2026-08-15T21:37:03.418Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +52,7 @@
       "url": "https://lu.ma/09hud1xc",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-15T18:49:07.695Z"
+      "verifiedAt": "2026-08-15T21:37:03.418Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +68,23 @@
       "url": "https://lu.ma/cbngurgaonaugust2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-15T18:49:07.695Z"
+      "verifiedAt": "2026-08-15T21:37:03.418Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Defense Tech DC 018",
+      "description": "",
+      "start": "2026-08-25T21:30:00.000Z",
+      "end": "2026-08-25T23:30:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/dtdc018",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-08-15T21:37:03.418Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +100,7 @@
       "url": "https://lu.ma/gqn9wl58",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-15T18:49:07.695Z"
+      "verifiedAt": "2026-08-15T21:37:03.418Z"
     }
   ]
 }
