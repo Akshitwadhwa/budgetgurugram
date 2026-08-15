@@ -1,11 +1,91 @@
 {
-  "generatedAt": "2026-08-14T21:42:40.996Z",
+  "generatedAt": "2026-08-15T01:52:02.046Z",
   "sourceCount": 2,
-  "eventCount": 4,
+  "eventCount": 9,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Chai Night",
+      "description": "",
+      "start": "2026-08-15T02:00:00.000Z",
+      "end": "2026-08-15T05:00:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/f3vov0vl",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-08-15T01:52:02.046Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "YC Startup Internship Expo",
+      "description": "",
+      "start": "2026-08-15T16:00:00.000Z",
+      "end": "2026-08-16T00:00:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/yc-meetup-1244",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-08-15T01:52:02.046Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Founder BBQ Bash",
+      "description": "",
+      "start": "2026-08-16T19:00:00.000Z",
+      "end": "2026-08-16T23:00:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/founderbbqbash",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-08-15T01:52:02.046Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Salt Bread Maxxing: Shio Pan x Multiplayer AI, feat. Tano SF",
+      "description": "",
+      "start": "2026-08-19T00:00:00.000Z",
+      "end": "2026-08-19T03:00:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/saltbreadmaxxing",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-08-15T01:52:02.046Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Claude Code Workshop - San Francisco",
+      "description": "",
+      "start": "2026-08-20T20:00:00.000Z",
+      "end": "2026-08-21T00:00:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/claude-code-workshop-sf-aug-20",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-08-15T01:52:02.046Z"
+    },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
       "title": "Primewise Founders Club Networking Event- Gurgaon(Online)",
@@ -20,7 +100,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316040718/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-14T21:42:40.996Z"
+      "verifiedAt": "2026-08-15T01:52:02.046Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -36,7 +116,7 @@
       "url": "https://lu.ma/09hud1xc",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-14T21:42:40.996Z"
+      "verifiedAt": "2026-08-15T01:52:02.046Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +132,7 @@
       "url": "https://lu.ma/cbngurgaonaugust2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-14T21:42:40.996Z"
+      "verifiedAt": "2026-08-15T01:52:02.046Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +148,7 @@
       "url": "https://lu.ma/gqn9wl58",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-14T21:42:40.996Z"
+      "verifiedAt": "2026-08-15T01:52:02.046Z"
     }
   ]
 }
