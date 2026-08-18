@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T21:43:09.984Z",
+  "generatedAt": "2026-08-18T01:52:27.060Z",
   "sourceCount": 2,
   "eventCount": 4,
   "nextWindowDays": 31,
@@ -20,7 +20,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316040718/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-17T21:43:09.984Z"
+      "verifiedAt": "2026-08-18T01:52:27.060Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -36,7 +36,7 @@
       "url": "https://lu.ma/09hud1xc",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-17T21:43:09.984Z"
+      "verifiedAt": "2026-08-18T01:52:27.060Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -46,13 +46,13 @@
       "end": "2026-08-23T16:00:00.000+05:30",
       "location": "Gurugram, India",
       "city": "Gurugram, India Gurugram Haryana",
-      "lat": 28.46177797459191,
-      "lng": 77.0259407362503,
+      "lat": 28.451194113218783,
+      "lng": 77.07329473176532,
       "price": "See source",
       "url": "https://lu.ma/cbngurgaonaugust2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-17T21:43:09.984Z"
+      "verifiedAt": "2026-08-18T01:52:27.060Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +68,7 @@
       "url": "https://lu.ma/gqn9wl58",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-17T21:43:09.984Z"
+      "verifiedAt": "2026-08-18T01:52:27.060Z"
     }
   ]
 }
