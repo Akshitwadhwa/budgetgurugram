@@ -1,27 +1,11 @@
 {
-  "generatedAt": "2026-08-19T18:55:32.001Z",
+  "generatedAt": "2026-08-19T21:43:16.873Z",
   "sourceCount": 2,
-  "eventCount": 7,
+  "eventCount": 6,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "1871 Events: Scale the System: 1871 Emerging Tech Innovation Summit",
-      "description": "",
-      "start": "2026-08-20T14:00:00.000Z",
-      "end": "2026-08-20T23:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/0pljqbaw",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-19T18:55:32.001Z"
-    },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
       "title": "Primewise Founders Club Networking Event- Gurgaon(Online)",
@@ -36,7 +20,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316040718/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-19T18:55:32.001Z"
+      "verifiedAt": "2026-08-19T21:43:16.873Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +36,7 @@
       "url": "https://lu.ma/09hud1xc",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-19T18:55:32.001Z"
+      "verifiedAt": "2026-08-19T21:43:16.873Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -68,7 +52,7 @@
       "url": "https://www.meetup.com/gurgaon-exploring-our-town-meetup-group/events/316166475/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-19T18:55:32.001Z"
+      "verifiedAt": "2026-08-19T21:43:16.873Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +68,7 @@
       "url": "https://lu.ma/cbngurgaonaugust2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-19T18:55:32.001Z"
+      "verifiedAt": "2026-08-19T21:43:16.873Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +84,7 @@
       "url": "https://lu.ma/gqn9wl58",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-19T18:55:32.001Z"
+      "verifiedAt": "2026-08-19T21:43:16.873Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -116,7 +100,7 @@
       "url": "https://www.meetup.com/expert-talks-gurgaon/events/316165112/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-19T18:55:32.001Z"
+      "verifiedAt": "2026-08-19T21:43:16.873Z"
     }
   ]
 }
