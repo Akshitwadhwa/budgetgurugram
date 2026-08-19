@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-19T04:01:50.113Z",
+  "generatedAt": "2026-08-19T07:08:01.493Z",
   "sourceCount": 2,
-  "eventCount": 4,
+  "eventCount": 6,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,7 +20,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316040718/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-19T04:01:50.113Z"
+      "verifiedAt": "2026-08-19T07:08:01.493Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -36,7 +36,23 @@
       "url": "https://lu.ma/09hud1xc",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-19T04:01:50.113Z"
+      "verifiedAt": "2026-08-19T07:08:01.493Z"
+    },
+    {
+      "id": "meetup-aHR0cHM6Ly93d3cubW",
+      "title": "Gapsap chitchat Hathaai",
+      "description": "",
+      "start": "2026-08-22T12:30:00.000Z",
+      "end": "2026-08-22T17:30:00.000Z",
+      "location": "Nagarro Plot 13",
+      "city": "Nagarro Plot 13 Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://www.meetup.com/gurgaon-exploring-our-town-meetup-group/events/316166475/",
+      "source": "Meetup",
+      "sourceName": "Meetup Gurgaon public listings",
+      "verifiedAt": "2026-08-19T07:08:01.493Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +68,7 @@
       "url": "https://lu.ma/cbngurgaonaugust2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-19T04:01:50.113Z"
+      "verifiedAt": "2026-08-19T07:08:01.493Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +84,23 @@
       "url": "https://lu.ma/gqn9wl58",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-19T04:01:50.113Z"
+      "verifiedAt": "2026-08-19T07:08:01.493Z"
+    },
+    {
+      "id": "meetup-aHR0cHM6Ly93d3cubW",
+      "title": "Production-Ready AI for Data Engineering: Context, Trust & Automation",
+      "description": "",
+      "start": "2026-09-05T05:00:00.000Z",
+      "end": "2026-09-05T07:00:00.000Z",
+      "location": "Gurgaon",
+      "city": "Gurgaon Gurgaon",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://www.meetup.com/expert-talks-gurgaon/events/316165112/",
+      "source": "Meetup",
+      "sourceName": "Meetup Gurgaon public listings",
+      "verifiedAt": "2026-08-19T07:08:01.493Z"
     }
   ]
 }
