@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-21T07:09:39.671Z",
+  "generatedAt": "2026-08-21T09:53:24.520Z",
   "sourceCount": 2,
-  "eventCount": 7,
+  "eventCount": 8,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,7 +20,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316040718/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-21T07:09:39.671Z"
+      "verifiedAt": "2026-08-21T09:53:24.520Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -36,7 +36,7 @@
       "url": "https://lu.ma/09hud1xc",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-21T07:09:39.671Z"
+      "verifiedAt": "2026-08-21T09:53:24.520Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -52,7 +52,7 @@
       "url": "https://www.meetup.com/gurgaon-exploring-our-town-meetup-group/events/316166475/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-21T07:09:39.671Z"
+      "verifiedAt": "2026-08-21T09:53:24.520Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +68,23 @@
       "url": "https://lu.ma/cbngurgaonaugust2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-21T07:09:39.671Z"
+      "verifiedAt": "2026-08-21T09:53:24.520Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Defense Tech DC 018",
+      "description": "",
+      "start": "2026-08-25T21:30:00.000Z",
+      "end": "2026-08-25T23:30:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/dtdc018",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-08-21T09:53:24.520Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +100,7 @@
       "url": "https://lu.ma/gqn9wl58",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-21T07:09:39.671Z"
+      "verifiedAt": "2026-08-21T09:53:24.520Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -100,7 +116,7 @@
       "url": "https://www.meetup.com/delhi-vancouver-entrepreneurs-meetup-group/events/316178203/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-21T07:09:39.671Z"
+      "verifiedAt": "2026-08-21T09:53:24.520Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -116,7 +132,7 @@
       "url": "https://www.meetup.com/expert-talks-gurgaon/events/316165112/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-21T07:09:39.671Z"
+      "verifiedAt": "2026-08-21T09:53:24.520Z"
     }
   ]
 }
