@@ -1,27 +1,11 @@
 {
-  "generatedAt": "2026-08-22T13:02:38.914Z",
+  "generatedAt": "2026-08-22T15:37:38.955Z",
   "sourceCount": 2,
-  "eventCount": 7,
+  "eventCount": 3,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Dogathon: AI Valley × Pet Zen, with Arcade.dev + Emergent",
-      "description": "",
-      "start": "2026-08-22T16:00:00.000Z",
-      "end": "2026-08-23T04:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/rklrsomo",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-22T13:02:38.914Z"
-    },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
       "title": "MetaMask Community Builder Night Gurgaon, India Edition",
@@ -36,39 +20,7 @@
       "url": "https://lu.ma/cbngurgaonaugust2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-22T13:02:38.914Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Recursive Self Improvement Hack: Evals",
-      "description": "",
-      "start": "2026-08-23T17:00:00.000Z",
-      "end": "2026-08-24T03:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/rkum5o5l",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-22T13:02:38.914Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Embodied AI Night: Founders, Builders, and Researchers",
-      "description": "",
-      "start": "2026-08-26T01:00:00.000Z",
-      "end": "2026-08-26T03:30:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/7tvf89y2",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-22T13:02:38.914Z"
+      "verifiedAt": "2026-08-22T15:37:38.955Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -84,23 +36,7 @@
       "url": "https://www.meetup.com/meetup-group-vivtmgcr/events/316213198/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-22T13:02:38.914Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Open Source AI Summit SF",
-      "description": "",
-      "start": "2026-08-28T22:00:00.000Z",
-      "end": "2026-08-29T03:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/buildp-c5h9",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-22T13:02:38.914Z"
+      "verifiedAt": "2026-08-22T15:37:38.955Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -116,7 +52,7 @@
       "url": "https://www.meetup.com/expert-talks-gurgaon/events/316165112/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-22T13:02:38.914Z"
+      "verifiedAt": "2026-08-22T15:37:38.955Z"
     }
   ]
 }
