@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22T03:58:35.683Z",
+  "generatedAt": "2026-08-22T07:01:39.439Z",
   "sourceCount": 2,
   "eventCount": 7,
   "nextWindowDays": 31,
@@ -20,7 +20,7 @@
       "url": "https://lu.ma/09hud1xc",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-22T03:58:35.683Z"
+      "verifiedAt": "2026-08-22T07:01:39.439Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -36,7 +36,7 @@
       "url": "https://www.meetup.com/gurgaon-exploring-our-town-meetup-group/events/316166475/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-22T03:58:35.683Z"
+      "verifiedAt": "2026-08-22T07:01:39.439Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +52,7 @@
       "url": "https://lu.ma/cbngurgaonaugust2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-22T03:58:35.683Z"
+      "verifiedAt": "2026-08-22T07:01:39.439Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +68,23 @@
       "url": "https://lu.ma/dtdc018",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-22T03:58:35.683Z"
+      "verifiedAt": "2026-08-22T07:01:39.439Z"
+    },
+    {
+      "id": "meetup-aHR0cHM6Ly93d3cubW",
+      "title": "Baithak: A D2C Founders' Table",
+      "description": "",
+      "start": "2026-08-26T13:30:00.000Z",
+      "end": "2026-08-26T16:30:00.000Z",
+      "location": "Juu Juu",
+      "city": "Juu Juu Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://www.meetup.com/meetup-group-vivtmgcr/events/316213198/",
+      "source": "Meetup",
+      "sourceName": "Meetup Gurgaon public listings",
+      "verifiedAt": "2026-08-22T07:01:39.439Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,23 +100,7 @@
       "url": "https://lu.ma/gqn9wl58",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-22T03:58:35.683Z"
-    },
-    {
-      "id": "meetup-aHR0cHM6Ly93d3cubW",
-      "title": "Students Networking and Friendship Meetup Gurgaon",
-      "description": "",
-      "start": "2026-08-30T10:30:00.000Z",
-      "end": "2026-08-30T13:30:00.000Z",
-      "location": "DLF Cyber Hub, Cyber City, Phase 2, DLF Cyber Hub, Gurgaon, Haryana, India-122002",
-      "city": "DLF Cyber Hub, Cyber City, Phase 2, DLF Cyber Hub, Gurgaon, Haryana, India-122002 Gurgaon",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://www.meetup.com/delhi-vancouver-entrepreneurs-meetup-group/events/316178203/",
-      "source": "Meetup",
-      "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-22T03:58:35.683Z"
+      "verifiedAt": "2026-08-22T07:01:39.439Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -116,7 +116,7 @@
       "url": "https://www.meetup.com/expert-talks-gurgaon/events/316165112/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-22T03:58:35.683Z"
+      "verifiedAt": "2026-08-22T07:01:39.439Z"
     }
   ]
 }
