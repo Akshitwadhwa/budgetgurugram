@@ -1,27 +1,11 @@
 {
-  "generatedAt": "2026-08-23T09:45:34.582Z",
+  "generatedAt": "2026-08-23T13:03:50.094Z",
   "sourceCount": 2,
-  "eventCount": 4,
+  "eventCount": 3,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "MetaMask Community Builder Night Gurgaon, India Edition",
-      "description": "Community Builder Night is a community-first version of MetaMask’s global Builder Nights bringing Web3 education, onboarding and conversations closer to local ecosystems.\nThis in-person meetup is designed for developers, students, founders,",
-      "start": "2026-08-23T04:30:00.000Z",
-      "end": "2026-08-23T16:00:00.000+05:30",
-      "location": "Gurugram, India",
-      "city": "Gurugram, India Gurugram Haryana",
-      "lat": 28.451194113218783,
-      "lng": 77.07329473176532,
-      "price": "See source",
-      "url": "https://lu.ma/cbngurgaonaugust2026",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-23T09:45:34.582Z"
-    },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
       "title": "Baithak: A D2C Founders' Table",
@@ -36,7 +20,7 @@
       "url": "https://www.meetup.com/meetup-group-vivtmgcr/events/316213198/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-23T09:45:34.582Z"
+      "verifiedAt": "2026-08-23T13:03:50.094Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -52,7 +36,7 @@
       "url": "https://www.meetup.com/expert-talks-gurgaon/events/316165112/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-23T09:45:34.582Z"
+      "verifiedAt": "2026-08-23T13:03:50.094Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +52,7 @@
       "url": "https://lu.ma/m0o37oik",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-23T09:45:34.582Z"
+      "verifiedAt": "2026-08-23T13:03:50.094Z"
     }
   ]
 }
