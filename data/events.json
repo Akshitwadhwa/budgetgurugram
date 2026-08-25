@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-08-24T21:45:45.433Z",
+  "generatedAt": "2026-08-25T01:54:27.792Z",
   "sourceCount": 2,
-  "eventCount": 5,
+  "eventCount": 4,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Embodied AI Night: Founders, Builders, and Researchers",
+      "title": "Defense Tech DC 018",
       "description": "",
-      "start": "2026-08-26T01:00:00.000Z",
-      "end": "2026-08-26T03:30:00.000Z",
+      "start": "2026-08-25T21:30:00.000Z",
+      "end": "2026-08-25T23:30:00.000Z",
       "location": "Location listed on CommunityMeetups India",
       "city": "Gurugram",
       "lat": null,
       "lng": null,
       "price": "See source",
-      "url": "https://lu.ma/7tvf89y2",
+      "url": "https://lu.ma/dtdc018",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-24T21:45:45.433Z"
+      "verifiedAt": "2026-08-25T01:54:27.792Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -36,23 +36,7 @@
       "url": "https://www.meetup.com/meetup-group-vivtmgcr/events/316213198/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-24T21:45:45.433Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Open Source AI Summit SF",
-      "description": "",
-      "start": "2026-08-28T22:00:00.000Z",
-      "end": "2026-08-29T03:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/buildp-c5h9",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-24T21:45:45.433Z"
+      "verifiedAt": "2026-08-25T01:54:27.792Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -68,7 +52,7 @@
       "url": "https://www.meetup.com/expert-talks-gurgaon/events/316165112/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-24T21:45:45.433Z"
+      "verifiedAt": "2026-08-25T01:54:27.792Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +68,7 @@
       "url": "https://lu.ma/m0o37oik",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-24T21:45:45.433Z"
+      "verifiedAt": "2026-08-25T01:54:27.792Z"
     }
   ]
 }
