@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T18:59:20.196Z",
+  "generatedAt": "2026-08-25T21:46:08.236Z",
   "sourceCount": 2,
   "eventCount": 3,
   "nextWindowDays": 31,
@@ -20,7 +20,7 @@
       "url": "https://www.meetup.com/meetup-group-vivtmgcr/events/316213198/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-25T18:59:20.196Z"
+      "verifiedAt": "2026-08-25T21:46:08.236Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -36,7 +36,7 @@
       "url": "https://www.meetup.com/expert-talks-gurgaon/events/316165112/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-25T18:59:20.196Z"
+      "verifiedAt": "2026-08-25T21:46:08.236Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +52,7 @@
       "url": "https://lu.ma/m0o37oik",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-25T18:59:20.196Z"
+      "verifiedAt": "2026-08-25T21:46:08.236Z"
     }
   ]
 }
