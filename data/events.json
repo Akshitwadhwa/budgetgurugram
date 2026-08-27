@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T20:05:26.229Z",
+  "generatedAt": "2026-08-27T00:50:16.352Z",
   "sourceCount": 2,
   "eventCount": 2,
   "nextWindowDays": 31,
@@ -20,7 +20,7 @@
       "url": "https://www.meetup.com/expert-talks-gurgaon/events/316165112/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-26T20:05:26.229Z"
+      "verifiedAt": "2026-08-27T00:50:16.352Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -36,7 +36,7 @@
       "url": "https://lu.ma/m0o37oik",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-26T20:05:26.229Z"
+      "verifiedAt": "2026-08-27T00:50:16.352Z"
     }
   ]
 }
