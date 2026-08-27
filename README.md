@@ -25,8 +25,21 @@ Then open `http://localhost:4173` in a browser.
 - Live Vercel endpoint and Vercel Cron refresh for the next 31 days
 - GitHub Actions sync that refreshes approved public event pages every three hours
 - Editorial sample data across food, workspaces, public spaces, events, and services
+- Optional Supabase Auth profile sync for interests, role, area, budget, accessibility and saved places
 
 The current listings are prototype editorial samples. Before launch, replace them with source-backed records and verified coordinates.
+
+## Supabase profiles
+
+The first cloud-backed account slice is optional: guests can still use the app, while signed-in users can save their profile and saved places across devices.
+
+1. Create a Supabase project.
+2. Open the SQL editor and run supabase/migrations/20260827075457_create_profiles_and_saves.sql.
+3. In Supabase Auth, enable Email/Password or Magic Link authentication and add your Vercel URL to the redirect URLs.
+4. Copy the project URL and publishable key into js/config.js. Only use the publishable/anon key in this browser file; never use a service-role key.
+5. Deploy the site. The profile button opens the account form, and the email field sends a secure magic link when configured.
+
+The migration enables RLS and restricts profile, saved-place and saved-event rows to their owning authenticated user. The app intentionally keeps sensitive fields optional and does not use gender as an authorization signal.
 
 ## Map data and trust model
 

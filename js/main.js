@@ -29,12 +29,13 @@
     {area:"Udyog Vihar", note:"Flexible workday bases"}
   ];
   const profileStorageKey = "gc-profile";
+  const supabaseClient = window.GC_SUPABASE_CLIENT;
   const defaultCoords = {lat: 28.4945, lng: 77.0894};
   let storedProfile = null;
   try { storedProfile = JSON.parse(localStorage.getItem(profileStorageKey) || "null"); } catch (error) { storedProfile = null; }
   const storedCoords = storedProfile && storedProfile.coords && Number.isFinite(storedProfile.coords.lat) && Number.isFinite(storedProfile.coords.lng) ? storedProfile.coords : defaultCoords;
   const state = {
-    onboardingStep: 1, motives: storedProfile && Array.isArray(storedProfile.motives) && storedProfile.motives.length ? storedProfile.motives : ["explore"], role: storedProfile && typeof storedProfile.role === "string" ? storedProfile.role : "", locationMode: storedProfile && storedProfile.locationMode === "current" ? "current" : "area", neighbourhood: storedProfile && typeof storedProfile.neighbourhood === "string" ? storedProfile.neighbourhood : "Cyber City",
+    onboardingStep: 1, motives: storedProfile && Array.isArray(storedProfile.motives) && storedProfile.motives.length ? storedProfile.motives : ["explore"], role: storedProfile && typeof storedProfile.role === "string" ? storedProfile.role : "", displayName: storedProfile?.displayName || "", email: storedProfile?.email || "", preferredArea: storedProfile?.preferredArea || "", budgetRange: storedProfile?.budgetRange || "", genderPreference: storedProfile?.genderPreference || "", interests: Array.isArray(storedProfile?.interests) ? storedProfile.interests : [], accessibilityPreferences: Array.isArray(storedProfile?.accessibilityPreferences) ? storedProfile.accessibilityPreferences : [], locationMode: storedProfile && storedProfile.locationMode === "current" ? "current" : "area", neighbourhood: storedProfile && typeof storedProfile.neighbourhood === "string" ? storedProfile.neighbourhood : "Cyber City",
     coords: storedCoords, weather: {temp: 29, icon: "☼", label: "Clear skies · Good to be out"},
     showCuratedPins: false,
     activeCategory: "all", mapCategory: "all", areaFilter: "all", eventFilter: "all", query: "", price: "all", tags: [], saved: new Set(JSON.parse(localStorage.getItem("gc-saved") || "[]")), savedOnly: false
@@ -99,8 +100,79 @@
   }
   function saveProfile() {
     try {
-      localStorage.setItem(profileStorageKey, JSON.stringify({motives: state.motives, role: state.role, locationMode: state.locationMode, neighbourhood: state.neighbourhood, coords: state.coords}));
+      localStorage.setItem(profileStorageKey, JSON.stringify({motives: state.motives, role: state.role, displayName: state.displayName, email: state.email, preferredArea: state.preferredArea, budgetRange: state.budgetRange, genderPreference: state.genderPreference, interests: state.interests, accessibilityPreferences: state.accessibilityPreferences, locationMode: state.locationMode, neighbourhood: state.neighbourhood, coords: state.coords}));
     } catch (error) { /* Storage can be unavailable in private browsing. */ }
+    syncProfileToCloud();
+  }
+  async function syncProfileToCloud() {
+    if (!supabaseClient) return;
+    const {data: {user}} = await supabaseClient.auth.getUser();
+    if (!user) return;
+    const {error} = await supabaseClient.from("profiles").upsert({
+      id: user.id, display_name: state.displayName || null, role: state.role || null,
+      interests: state.interests, preferred_area: state.preferredArea || state.neighbourhood || null,
+      budget_range: state.budgetRange || null, gender_preference: state.genderPreference || null,
+      accessibility_preferences: state.accessibilityPreferences
+    });
+    if (error) announce("Preferences are saved on this device. Cloud sync needs the Supabase table setup.");
+  }
+  async function syncSavedPlace(placeId, saved) {
+    if (!supabaseClient) return;
+    const {data: {user}} = await supabaseClient.auth.getUser();
+    if (!user) return;
+    const query = supabaseClient.from("saved_places");
+    const result = saved
+      ? await query.upsert({user_id: user.id, place_id: placeId})
+      : await query.delete().eq("user_id", user.id).eq("place_id", placeId);
+    if (result.error) announce("Saved locally. Cloud save needs the Supabase table setup.");
+  }
+  function renderProfileForm() {
+    const form = $("[data-profile-form]");
+    if (!form) return;
+    form.elements.displayName.value = state.displayName;
+    form.elements.email.value = state.email;
+    form.elements.role.value = state.role;
+    form.elements.preferredArea.value = state.preferredArea;
+    form.elements.budgetRange.value = state.budgetRange;
+    form.elements.genderPreference.value = state.genderPreference;
+    const selectedInterests = state.interests.length ? state.interests : state.motives;
+    $$('input[name="interest"]', form).forEach((input) => { input.checked = selectedInterests.includes(input.value); });
+    $$('input[name="accessibility"]', form).forEach((input) => { input.checked = state.accessibilityPreferences.includes(input.value); });
+    const status = $("[data-profile-sync-status]");
+    if (status) status.textContent = supabaseClient ? "Cloud profile sync is ready when you sign in." : "Guest preferences are stored on this device. Add Supabase keys to sync across devices.";
+  }
+  async function openProfileModal() {
+    renderProfileForm();
+    const modal = $("[data-profile-modal]");
+    if (modal) { modal.hidden = false; document.body.classList.add("is-locked"); }
+    if (!supabaseClient) return;
+    const {data: {user}} = await supabaseClient.auth.getUser();
+    const status = $("[data-profile-sync-status]");
+    const signOut = $("[data-sign-out]");
+    if (user) {
+      state.email = user.email || state.email;
+      if (status) status.textContent = "Synced account · " + state.email;
+      if (signOut) signOut.hidden = false;
+      renderProfileForm();
+    }
+  }
+  async function loadCloudProfile() {
+    if (!supabaseClient) return;
+    const {data: {user}} = await supabaseClient.auth.getUser();
+    if (!user) return;
+    const {data, error} = await supabaseClient.from("profiles").select("*").eq("id", user.id).maybeSingle();
+    if (error) return;
+    if (!data) { await syncProfileToCloud(); return; }
+    state.displayName = data.display_name || state.displayName;
+    state.role = data.role || state.role;
+    state.interests = Array.isArray(data.interests) ? data.interests : state.interests;
+    state.preferredArea = data.preferred_area || state.preferredArea;
+    state.budgetRange = data.budget_range || state.budgetRange;
+    state.genderPreference = data.gender_preference || state.genderPreference;
+    state.accessibilityPreferences = Array.isArray(data.accessibility_preferences) ? data.accessibility_preferences : state.accessibilityPreferences;
+    if (state.interests.length) state.motives = state.interests;
+    saveProfile();
+    renderApp();
   }
   function distanceFor(place) {
     if (state.locationMode !== "current") return place.distance;
@@ -313,6 +385,10 @@
     const label = $("[data-today-label]");
     if (label) label.textContent = new Intl.DateTimeFormat("en-IN", {weekday:"long", day:"numeric", month:"long"}).format(new Date()) + " · Gurugram";
   }
+  function renderProfileButton() {
+    const button = $("[data-profile-button]");
+    if (button) button.textContent = (state.displayName || state.email || "A").trim().charAt(0).toUpperCase();
+  }
   async function loadEvents() {
     const endpoints = [`/api/luma-events?ts=${Date.now()}`, `data/events.json?ts=${Date.now()}`];
     let loaded = false;
@@ -437,6 +513,7 @@
     renderMapStatus();
     renderNearYou();
     renderRecommendations();
+    renderProfileButton();
     const items = visiblePlaces();
     const selectedMapCategory = mapCategories.find((category) => category.id === state.mapCategory);
     const categoryHeading = intentLabels[state.activeCategory] ? intentLabels[state.activeCategory][0] : (selectedMapCategory ? selectedMapCategory.label : "Made for your day");
@@ -453,6 +530,7 @@
   function setSaved(id) {
     if (state.saved.has(id)) { state.saved.delete(id); announce("Removed from your saved places."); } else { state.saved.add(id); announce("Saved to your personal edit."); }
     localStorage.setItem("gc-saved", JSON.stringify(Array.from(state.saved))); renderApp();
+    syncSavedPlace(id, state.saved.has(id));
   }
   function openPlace(id) {
     const place = places.find((item) => item.id === id); if (!place) return;
@@ -533,7 +611,7 @@
       if (event.target.closest("[data-finish]")) { const area = $("[data-neighbourhood]"); if (area && state.locationMode === "area") state.neighbourhood = area.value; startApp(); return; }
       if (event.target.closest("[data-skip]")) startApp();
     });
-    document.addEventListener("click", (event) => {
+    document.addEventListener("click", async (event) => {
       const nearLink = event.target.closest("[data-near-you-link]");
       if (nearLink) { event.preventDefault(); setMainView("near"); return; }
       const exploreLink = event.target.closest("[data-explore-link]");
@@ -578,7 +656,14 @@
       if (event.target.closest("[data-saved-button]")) { if (!state.saved.size) { announce("Save a place to build your personal edit."); return; } state.savedOnly = true; state.activeCategory = "all"; state.mapCategory = "all"; renderApp(); return; }
       if (event.target.closest("[data-location-button]")) { requestLocation(); return; }
       if (event.target.closest("[data-map-refresh]")) { loadNearbyPlaces(); return; }
-      if (event.target.closest("[data-profile-button]")) { announce("Your preferences are stored for this demo. Profile editing is coming next."); return; }
+      if (event.target.closest("[data-profile-button]")) { openProfileModal(); return; }
+      if (event.target.closest("[data-close-profile]") || event.target === $("[data-profile-modal]")) { closeModal("[data-profile-modal]"); return; }
+      if (event.target.closest("[data-sign-out]")) {
+        if (supabaseClient) await supabaseClient.auth.signOut();
+        announce("Signed out. Your local preferences remain on this device.");
+        closeModal("[data-profile-modal]");
+        return;
+      }
       const price = event.target.closest("[data-price]");
       if (price) { $$("[data-price]").forEach((button) => button.classList.remove("is-selected")); price.classList.add("is-selected"); state.price = price.dataset.price; return; }
       const filterTag = event.target.closest("[data-filter-tag]");
@@ -588,8 +673,40 @@
     });
     const search = $("#place-search"); if (search) search.addEventListener("input", (event) => { state.query = event.target.value.trim(); renderApp(); });
     const addForm = $("[data-add-form]"); if (addForm) addForm.addEventListener("submit", (event) => { event.preventDefault(); closeModal("[data-add-modal]"); event.target.reset(); announce("Thanks — your place has been sent to the Commons edit."); });
-    document.addEventListener("keydown", (event) => { if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") { event.preventDefault(); $("#place-search")?.focus(); } if (event.key === "Escape") { closeModal("[data-modal-backdrop]"); closeModal("[data-filter-modal]"); closeModal("[data-add-modal]"); } });
+    const profileForm = $("[data-profile-form]");
+    if (profileForm) profileForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const form = event.target;
+      state.displayName = form.elements.displayName.value.trim();
+      state.email = form.elements.email.value.trim();
+      state.role = form.elements.role.value;
+      state.preferredArea = form.elements.preferredArea.value;
+      state.budgetRange = form.elements.budgetRange.value;
+      state.genderPreference = form.elements.genderPreference.value;
+      state.interests = $$('input[name="interest"]:checked', form).map((input) => input.value);
+      state.accessibilityPreferences = $$('input[name="accessibility"]:checked', form).map((input) => input.value);
+      if (state.interests.length) state.motives = state.interests;
+      saveProfile();
+      renderApp();
+      if (supabaseClient) {
+        const {data: {user}} = await supabaseClient.auth.getUser();
+        if (!user && state.email) {
+          const {error} = await supabaseClient.auth.signInWithOtp({email: state.email, options: {emailRedirectTo: window.location.href}});
+          if (error) announce("Could not send the sign-in link. Check your email and try again.");
+          else announce("Check your email for a secure sign-in link. Your profile is saved locally meanwhile.");
+        } else if (user) {
+          await syncProfileToCloud();
+          announce("Your preferences are saved to your account.");
+        }
+      } else {
+        announce("Preferences saved on this device. Add Supabase keys to sync across devices.");
+      }
+      closeModal("[data-profile-modal]");
+    });
+    document.addEventListener("keydown", (event) => { if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") { event.preventDefault(); $("#place-search")?.focus(); } if (event.key === "Escape") { closeModal("[data-modal-backdrop]"); closeModal("[data-filter-modal]"); closeModal("[data-add-modal]"); closeModal("[data-profile-modal]"); } });
   }
   bindEvents();
+  if (supabaseClient) supabaseClient.auth.onAuthStateChange((event) => { if (event === "SIGNED_IN") loadCloudProfile(); });
   if (storedProfile) startApp(); else renderOnboarding();
+  if (storedProfile && supabaseClient) loadCloudProfile();
 })();

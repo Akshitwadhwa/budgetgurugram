@@ -17,6 +17,9 @@
     >
     <link href="https://unpkg.com/maplibre-gl@5.12.0/dist/maplibre-gl.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.0/dist/umd/supabase.min.js"></script>
+    <script src="js/config.js" defer></script>
+    <script src="js/supabase.js" defer></script>
     <script src="js/places.js" defer></script>
     <script src="js/events.js" defer></script>
     <script src="https://unpkg.com/maplibre-gl@5.12.0/dist/maplibre-gl.js" defer></script>
@@ -252,6 +255,23 @@
           <div class="form-row"><label>Neighbourhood<select name="area"><option>Cyber City</option><option>Sector 29</option><option>MG Road</option><option>Old Gurgaon</option><option>Golf Course Road</option><option>Udyog Vihar</option></select></label><label>Typical price<input name="price" placeholder="e.g. Free or ₹200–400"></label></div>
           <label>Why should people know it?<textarea name="reason" rows="3" placeholder="A short note from a local..."></textarea></label>
           <button class="primary-button" type="submit">Send to the Commons <span>↗</span></button>
+        </form>
+      </section>
+    </div>
+
+    <div class="modal-backdrop" data-profile-modal hidden>
+      <section class="form-modal profile-modal" role="dialog" aria-modal="true" aria-labelledby="profile-title">
+        <div class="modal-heading"><div><p class="eyebrow">Your personal edit</p><h2 id="profile-title">Make Gurugram fit you.</h2></div><button class="close-button" type="button" data-close-profile aria-label="Close profile">×</button></div>
+        <p class="modal-copy">Save your preferences so recommendations, places and events feel more relevant every time you return.</p>
+        <form data-profile-form>
+          <label>Display name<input name="displayName" placeholder="What should we call you?"></label>
+          <label>Email for account sync<input name="email" type="email" placeholder="you@example.com" autocomplete="email"></label>
+          <div class="form-row"><label>What best describes you?<select name="role"><option value="">Choose one</option><option>Tech professional</option><option>Startup founder</option><option>Startup employee</option><option>Freelancer / remote</option><option>Student</option><option>Resident</option><option>Visitor</option></select></label><label>Preferred area<select name="preferredArea"><option value="">Any area</option><option>Cyber City</option><option>Sector 29</option><option>MG Road</option><option>Old Gurgaon</option><option>Golf Course Road</option><option>Udyog Vihar</option></select></label></div>
+          <div class="profile-fieldset"><span>What do you want more of?</span><div class="profile-checks"><label><input type="checkbox" name="interest" value="food"> Food</label><label><input type="checkbox" name="interest" value="work"> Work spots</label><label><input type="checkbox" name="interest" value="coffee"> Coffee</label><label><input type="checkbox" name="interest" value="gym"> Gyms</label><label><input type="checkbox" name="interest" value="events"> Tech events</label></div></div>
+          <div class="form-row"><label>Budget comfort<select name="budgetRange"><option value="">Any budget</option><option>Free</option><option>Under ₹300</option><option>₹300–700</option><option>₹700+</option></select></label><label>Gender preference <span class="optional-label">optional</span><select name="genderPreference"><option value="">Prefer not to say</option><option>Women-focused spaces</option><option>Men-focused spaces</option><option>All spaces</option></select></label></div>
+          <div class="profile-fieldset"><span>Accessibility needs <span class="optional-label">optional</span></span><div class="profile-checks"><label><input type="checkbox" name="accessibility" value="step-free"> Step-free access</label><label><input type="checkbox" name="accessibility" value="quiet"> Quiet environment</label><label><input type="checkbox" name="accessibility" value="accessible-washroom"> Accessible washroom</label></div></div>
+          <p class="profile-sync-status" data-profile-sync-status>Guest preferences are stored on this device.</p>
+          <div class="profile-form-actions"><button class="quiet-button" type="button" data-sign-out hidden>Sign out</button><button class="primary-button" type="submit">Save preferences <span>↗</span></button></div>
         </form>
       </section>
     </div>
