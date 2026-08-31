@@ -1,43 +1,11 @@
 {
-  "generatedAt": "2026-08-31T13:58:15.689Z",
+  "generatedAt": "2026-08-31T20:51:43.640Z",
   "sourceCount": 2,
-  "eventCount": 7,
+  "eventCount": 4,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Deep Tech Startups in the Age of AI by Fifty Years",
-      "description": "",
-      "start": "2026-09-03T01:30:00.000Z",
-      "end": "2026-09-03T03:30:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/u5fkxj50",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-31T13:58:15.689Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Deploying Physical AI in the Real World w Skild AI, Dexterity, Weave Robotics & Instawork",
-      "description": "",
-      "start": "2026-09-04T00:30:00.000Z",
-      "end": "2026-09-04T04:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/7b9joney",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-31T13:58:15.689Z"
-    },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
       "title": "Production-Ready AI for Data Engineering: Context, Trust & Automation",
@@ -52,23 +20,7 @@
       "url": "https://www.meetup.com/expert-talks-gurgaon/events/316165112/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-31T13:58:15.689Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Spatial Intelligence + Generative 3D Hackathon with Mint, Tripo, World Labs, Convex and Founders Inc.",
-      "description": "",
-      "start": "2026-09-05T17:00:00.000Z",
-      "end": "2026-09-06T03:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/b101ml40",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-31T13:58:15.689Z"
+      "verifiedAt": "2026-08-31T20:51:43.640Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -84,7 +36,7 @@
       "url": "https://www.meetup.com/hrlovestatups/events/316336072/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-08-31T13:58:15.689Z"
+      "verifiedAt": "2026-08-31T20:51:43.640Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +52,7 @@
       "url": "https://lu.ma/m0o37oik",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-31T13:58:15.689Z"
+      "verifiedAt": "2026-08-31T20:51:43.640Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -116,7 +68,7 @@
       "url": "https://lu.ma/HiringMela2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-08-31T13:58:15.689Z"
+      "verifiedAt": "2026-08-31T20:51:43.640Z"
     }
   ]
 }
