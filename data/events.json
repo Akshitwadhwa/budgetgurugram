@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-04T20:47:54.605Z",
+  "generatedAt": "2026-09-04T23:03:42.723Z",
   "sourceCount": 2,
-  "eventCount": 6,
+  "eventCount": 8,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,7 +20,23 @@
       "url": "https://www.meetup.com/expert-talks-gurgaon/events/316165112/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-04T20:47:54.605Z"
+      "verifiedAt": "2026-09-04T23:03:42.723Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Cup of Capital powered by Capital Factory",
+      "description": "",
+      "start": "2026-09-11T13:00:00.000Z",
+      "end": "2026-09-11T15:00:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/mqhwmqqk",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-09-04T23:03:42.723Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -36,7 +52,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316366394/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-04T20:47:54.605Z"
+      "verifiedAt": "2026-09-04T23:03:42.723Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -52,7 +68,7 @@
       "url": "https://www.meetup.com/aidev-delhi/events/316349924/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-04T20:47:54.605Z"
+      "verifiedAt": "2026-09-04T23:03:42.723Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -68,7 +84,7 @@
       "url": "https://www.meetup.com/hrlovestatups/events/316336072/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-04T20:47:54.605Z"
+      "verifiedAt": "2026-09-04T23:03:42.723Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +100,23 @@
       "url": "https://lu.ma/m0o37oik",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-04T20:47:54.605Z"
+      "verifiedAt": "2026-09-04T23:03:42.723Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Defense Tech DC 019",
+      "description": "",
+      "start": "2026-09-22T21:30:00.000Z",
+      "end": "2026-09-22T23:30:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/dtdc019",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-09-04T23:03:42.723Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +132,7 @@
       "url": "https://lu.ma/HiringMela2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-04T20:47:54.605Z"
+      "verifiedAt": "2026-09-04T23:03:42.723Z"
     }
   ]
 }
