@@ -1,43 +1,11 @@
 {
-  "generatedAt": "2026-09-04T23:03:42.723Z",
+  "generatedAt": "2026-09-05T04:34:52.359Z",
   "sourceCount": 2,
-  "eventCount": 8,
+  "eventCount": 6,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
-    {
-      "id": "meetup-aHR0cHM6Ly93d3cubW",
-      "title": "Production-Ready AI for Data Engineering: Context, Trust & Automation",
-      "description": "",
-      "start": "2026-09-05T05:00:00.000Z",
-      "end": "2026-09-05T07:00:00.000Z",
-      "location": "Gurgaon",
-      "city": "Gurgaon Gurgaon",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://www.meetup.com/expert-talks-gurgaon/events/316165112/",
-      "source": "Meetup",
-      "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-04T23:03:42.723Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Cup of Capital powered by Capital Factory",
-      "description": "",
-      "start": "2026-09-11T13:00:00.000Z",
-      "end": "2026-09-11T15:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/mqhwmqqk",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-04T23:03:42.723Z"
-    },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
       "title": "Primewise Founders Club Networking Event- Gurgaon(Online)",
@@ -52,7 +20,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316366394/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-04T23:03:42.723Z"
+      "verifiedAt": "2026-09-05T04:34:52.359Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -68,7 +36,7 @@
       "url": "https://www.meetup.com/aidev-delhi/events/316349924/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-04T23:03:42.723Z"
+      "verifiedAt": "2026-09-05T04:34:52.359Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -84,7 +52,7 @@
       "url": "https://www.meetup.com/hrlovestatups/events/316336072/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-04T23:03:42.723Z"
+      "verifiedAt": "2026-09-05T04:34:52.359Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,23 +68,23 @@
       "url": "https://lu.ma/m0o37oik",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-04T23:03:42.723Z"
+      "verifiedAt": "2026-09-05T04:34:52.359Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Defense Tech DC 019",
+      "title": "AI & SaaS Founders Connect",
       "description": "",
-      "start": "2026-09-22T21:30:00.000Z",
-      "end": "2026-09-22T23:30:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
+      "start": "2026-09-26T08:30:00.000Z",
+      "end": "2026-09-26T18:00:00.000+05:30",
+      "location": "Gurugram, India",
+      "city": "Gurugram, India Gurugram Haryana",
+      "lat": 28.45956457154372,
+      "lng": 77.02823503285923,
       "price": "See source",
-      "url": "https://lu.ma/dtdc019",
+      "url": "https://lu.ma/s6w0r7zd",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-04T23:03:42.723Z"
+      "verifiedAt": "2026-09-05T04:34:52.359Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -132,7 +100,7 @@
       "url": "https://lu.ma/HiringMela2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-04T23:03:42.723Z"
+      "verifiedAt": "2026-09-05T04:34:52.359Z"
     }
   ]
 }
