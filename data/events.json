@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-10T04:48:49.909Z",
+  "generatedAt": "2026-09-10T11:25:24.298Z",
   "sourceCount": 2,
-  "eventCount": 9,
+  "eventCount": 10,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,7 +20,7 @@
       "url": "https://lu.ma/BaseDynSGL",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-10T04:48:49.909Z"
+      "verifiedAt": "2026-09-10T11:25:24.298Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -36,7 +36,23 @@
       "url": "https://lu.ma/bxal13do",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-10T04:48:49.909Z"
+      "verifiedAt": "2026-09-10T11:25:24.298Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "137th SF Hardware Meetup @ Mission Robotics | Physical AI Robotics",
+      "description": "",
+      "start": "2026-09-11T01:30:00.000Z",
+      "end": "2026-09-11T04:30:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/84lattht",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-09-10T11:25:24.298Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -52,7 +68,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316366394/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-10T04:48:49.909Z"
+      "verifiedAt": "2026-09-10T11:25:24.298Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -68,7 +84,7 @@
       "url": "https://www.meetup.com/bizowl-best-startup-meetups/events/316429070/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-10T04:48:49.909Z"
+      "verifiedAt": "2026-09-10T11:25:24.298Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -84,7 +100,7 @@
       "url": "https://www.meetup.com/hrlovestatups/events/316336072/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-10T04:48:49.909Z"
+      "verifiedAt": "2026-09-10T11:25:24.298Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +116,7 @@
       "url": "https://lu.ma/m0o37oik",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-10T04:48:49.909Z"
+      "verifiedAt": "2026-09-10T11:25:24.298Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -116,7 +132,7 @@
       "url": "https://lu.ma/s6w0r7zd",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-10T04:48:49.909Z"
+      "verifiedAt": "2026-09-10T11:25:24.298Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -132,7 +148,7 @@
       "url": "https://lu.ma/HiringMela2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-10T04:48:49.909Z"
+      "verifiedAt": "2026-09-10T11:25:24.298Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -148,7 +164,7 @@
       "url": "https://lu.ma/589m955f",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-10T04:48:49.909Z"
+      "verifiedAt": "2026-09-10T11:25:24.298Z"
     }
   ]
 }
