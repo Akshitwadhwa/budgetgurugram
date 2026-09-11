@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-11T11:27:10.777Z",
+  "generatedAt": "2026-09-11T16:32:02.001Z",
   "sourceCount": 2,
-  "eventCount": 6,
+  "eventCount": 7,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,7 +20,23 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316366394/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-11T11:27:10.777Z"
+      "verifiedAt": "2026-09-11T16:32:02.001Z"
+    },
+    {
+      "id": "meetup-aHR0cHM6Ly93d3cubW",
+      "title": "Build with AI with Google, Tata 1mg",
+      "description": "",
+      "start": "2026-09-19T04:30:00.000Z",
+      "end": "2026-09-19T07:30:00.000Z",
+      "location": "TATA 1MG HEALTHCARE SOLUTIONS",
+      "city": "TATA 1MG HEALTHCARE SOLUTIONS Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://www.meetup.com/aidev-delhi/events/316349924/",
+      "source": "Meetup",
+      "sourceName": "Meetup Gurgaon public listings",
+      "verifiedAt": "2026-09-11T16:32:02.001Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -36,7 +52,7 @@
       "url": "https://www.meetup.com/bizowl-best-startup-meetups/events/316429070/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-11T11:27:10.777Z"
+      "verifiedAt": "2026-09-11T16:32:02.001Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -52,7 +68,7 @@
       "url": "https://www.meetup.com/hrlovestatups/events/316336072/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-11T11:27:10.777Z"
+      "verifiedAt": "2026-09-11T16:32:02.001Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +84,7 @@
       "url": "https://lu.ma/m0o37oik",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-11T11:27:10.777Z"
+      "verifiedAt": "2026-09-11T16:32:02.001Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +100,7 @@
       "url": "https://lu.ma/HiringMela2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-11T11:27:10.777Z"
+      "verifiedAt": "2026-09-11T16:32:02.001Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +116,7 @@
       "url": "https://lu.ma/589m955f",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-11T11:27:10.777Z"
+      "verifiedAt": "2026-09-11T16:32:02.001Z"
     }
   ]
 }
