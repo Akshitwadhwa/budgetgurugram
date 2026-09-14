@@ -1,11 +1,27 @@
 {
-  "generatedAt": "2026-09-13T23:11:40.388Z",
+  "generatedAt": "2026-09-14T05:01:44.546Z",
   "sourceCount": 2,
-  "eventCount": 6,
+  "eventCount": 7,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "What is Law in the Age of AI?",
+      "description": "",
+      "start": "2026-09-15T00:30:00.000Z",
+      "end": "2026-09-15T03:30:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/81aqxabn",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-09-14T05:01:44.546Z"
+    },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
       "title": "Startup Unfiltered: Founders Meetup by Bizowl",
@@ -20,7 +36,7 @@
       "url": "https://www.meetup.com/bizowl-best-startup-meetups/events/316429070/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-13T23:11:40.388Z"
+      "verifiedAt": "2026-09-14T05:01:44.546Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -36,7 +52,7 @@
       "url": "https://www.meetup.com/hrlovestatups/events/316336072/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-13T23:11:40.388Z"
+      "verifiedAt": "2026-09-14T05:01:44.546Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +68,7 @@
       "url": "https://lu.ma/m0o37oik",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-13T23:11:40.388Z"
+      "verifiedAt": "2026-09-14T05:01:44.546Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +84,7 @@
       "url": "https://lu.ma/HiringMela2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-13T23:11:40.388Z"
+      "verifiedAt": "2026-09-14T05:01:44.546Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +100,7 @@
       "url": "https://lu.ma/27ijzr4q",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-13T23:11:40.388Z"
+      "verifiedAt": "2026-09-14T05:01:44.546Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +116,7 @@
       "url": "https://lu.ma/589m955f",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-13T23:11:40.388Z"
+      "verifiedAt": "2026-09-14T05:01:44.546Z"
     }
   ]
 }
