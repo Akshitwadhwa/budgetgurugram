@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-09-14T05:01:44.546Z",
+  "generatedAt": "2026-09-14T12:55:01.669Z",
   "sourceCount": 2,
-  "eventCount": 7,
+  "eventCount": 9,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "What is Law in the Age of AI?",
+      "title": "Founder Fridays: The AI Collective x Unstuck Labs",
       "description": "",
-      "start": "2026-09-15T00:30:00.000Z",
-      "end": "2026-09-15T03:30:00.000Z",
+      "start": "2026-09-18T17:30:00.000Z",
+      "end": "2026-09-18T20:30:00.000Z",
       "location": "Location listed on CommunityMeetups India",
       "city": "Gurugram",
       "lat": null,
       "lng": null,
       "price": "See source",
-      "url": "https://lu.ma/81aqxabn",
+      "url": "https://lu.ma/aic-dc-9-18",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-14T05:01:44.546Z"
+      "verifiedAt": "2026-09-14T12:55:01.669Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -36,7 +36,7 @@
       "url": "https://www.meetup.com/bizowl-best-startup-meetups/events/316429070/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-14T05:01:44.546Z"
+      "verifiedAt": "2026-09-14T12:55:01.669Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -52,7 +52,7 @@
       "url": "https://www.meetup.com/hrlovestatups/events/316336072/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-14T05:01:44.546Z"
+      "verifiedAt": "2026-09-14T12:55:01.669Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +68,39 @@
       "url": "https://lu.ma/m0o37oik",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-14T05:01:44.546Z"
+      "verifiedAt": "2026-09-14T12:55:01.669Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Defense Tech DC 019",
+      "description": "",
+      "start": "2026-09-22T21:30:00.000Z",
+      "end": "2026-09-22T23:30:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/dtdc019",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-09-14T12:55:01.669Z"
+    },
+    {
+      "id": "meetup-aHR0cHM6Ly93d3cubW",
+      "title": "Tech Nibba & Nibbis → Gurugram Builders & Testers | First Meetup",
+      "description": "",
+      "start": "2026-09-26T11:30:00.000Z",
+      "end": "2026-09-26T13:00:00.000Z",
+      "location": "Good Earth City Center Mall",
+      "city": "Good Earth City Center Mall Gurugram HR",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://www.meetup.com/gurugrambuilders-testers/events/316535988/",
+      "source": "Meetup",
+      "sourceName": "Meetup Gurgaon public listings",
+      "verifiedAt": "2026-09-14T12:55:01.669Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +116,7 @@
       "url": "https://lu.ma/HiringMela2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-14T05:01:44.546Z"
+      "verifiedAt": "2026-09-14T12:55:01.669Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +132,7 @@
       "url": "https://lu.ma/27ijzr4q",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-14T05:01:44.546Z"
+      "verifiedAt": "2026-09-14T12:55:01.669Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -116,7 +148,7 @@
       "url": "https://lu.ma/589m955f",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-14T05:01:44.546Z"
+      "verifiedAt": "2026-09-14T12:55:01.669Z"
     }
   ]
 }
