@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-21T12:54:39.329Z",
+  "generatedAt": "2026-09-21T19:59:56.956Z",
   "sourceCount": 2,
-  "eventCount": 8,
+  "eventCount": 6,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,23 +20,7 @@
       "url": "https://lu.ma/m0o37oik",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-21T12:54:39.329Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Defense Tech DC 019",
-      "description": "",
-      "start": "2026-09-22T21:30:00.000Z",
-      "end": "2026-09-22T23:30:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/dtdc019",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-21T12:54:39.329Z"
+      "verifiedAt": "2026-09-21T19:59:56.956Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -52,7 +36,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316633059/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-21T12:54:39.329Z"
+      "verifiedAt": "2026-09-21T19:59:56.956Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +52,7 @@
       "url": "https://lu.ma/s6w0r7zd",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-21T12:54:39.329Z"
+      "verifiedAt": "2026-09-21T19:59:56.956Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +68,7 @@
       "url": "https://lu.ma/n0h1o0js",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-21T12:54:39.329Z"
+      "verifiedAt": "2026-09-21T19:59:56.956Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -100,23 +84,7 @@
       "url": "https://www.meetup.com/gurugrambuilders-testers/events/316535988/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-21T12:54:39.329Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "The AI Era & What It Means To Be Human (w/ The AI Collective)",
-      "description": "",
-      "start": "2026-09-30T21:00:00.000Z",
-      "end": "2026-10-01T00:30:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/aic-dc-9-30",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-21T12:54:39.329Z"
+      "verifiedAt": "2026-09-21T19:59:56.956Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -132,7 +100,7 @@
       "url": "https://lu.ma/589m955f",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-21T12:54:39.329Z"
+      "verifiedAt": "2026-09-21T19:59:56.956Z"
     }
   ]
 }
