@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-22T21:22:50.471Z",
+  "generatedAt": "2026-09-23T04:49:38.489Z",
   "sourceCount": 2,
-  "eventCount": 6,
+  "eventCount": 5,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,7 +20,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316633059/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-22T21:22:50.471Z"
+      "verifiedAt": "2026-09-23T04:49:38.489Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -36,7 +36,7 @@
       "url": "https://lu.ma/s6w0r7zd",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-22T21:22:50.471Z"
+      "verifiedAt": "2026-09-23T04:49:38.489Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +52,7 @@
       "url": "https://lu.ma/n0h1o0js",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-22T21:22:50.471Z"
+      "verifiedAt": "2026-09-23T04:49:38.489Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -68,23 +68,7 @@
       "url": "https://www.meetup.com/gurugrambuilders-testers/events/316535988/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-22T21:22:50.471Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Above the Fog: Founders × Investors Rooftop Mixer",
-      "description": "",
-      "start": "2026-09-29T01:00:00.000Z",
-      "end": "2026-09-29T04:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/yv2hv22g",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-22T21:22:50.471Z"
+      "verifiedAt": "2026-09-23T04:49:38.489Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +84,7 @@
       "url": "https://lu.ma/589m955f",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-22T21:22:50.471Z"
+      "verifiedAt": "2026-09-23T04:49:38.489Z"
     }
   ]
 }
