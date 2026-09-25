@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-25T05:02:02.819Z",
+  "generatedAt": "2026-09-25T11:55:10.880Z",
   "sourceCount": 2,
-  "eventCount": 9,
+  "eventCount": 6,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,7 +20,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316633059/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-25T05:02:02.819Z"
+      "verifiedAt": "2026-09-25T11:55:10.880Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -36,7 +36,7 @@
       "url": "https://lu.ma/s6w0r7zd",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-25T05:02:02.819Z"
+      "verifiedAt": "2026-09-25T11:55:10.880Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +52,7 @@
       "url": "https://lu.ma/n0h1o0js",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-25T05:02:02.819Z"
+      "verifiedAt": "2026-09-25T11:55:10.880Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -68,55 +68,7 @@
       "url": "https://www.meetup.com/gurugrambuilders-testers/events/316535988/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-25T05:02:02.819Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Berkeley x DeepMind Hackathon: Build. Ship. Pitch. Win.",
-      "description": "",
-      "start": "2026-09-27T17:00:00.000Z",
-      "end": "2026-09-28T01:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/vmqjw9hv",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-25T05:02:02.819Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Above the Fog: Founders × Investors Rooftop Mixer",
-      "description": "",
-      "start": "2026-09-29T01:00:00.000Z",
-      "end": "2026-09-29T04:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/yv2hv22g",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-25T05:02:02.819Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Grok Bot x Notion for Product Builders night (SF)",
-      "description": "",
-      "start": "2026-09-30T00:00:00.000Z",
-      "end": "2026-09-30T03:30:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/grokbotproduct-sf",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-25T05:02:02.819Z"
+      "verifiedAt": "2026-09-25T11:55:10.880Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -132,7 +84,7 @@
       "url": "https://lu.ma/589m955f",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-25T05:02:02.819Z"
+      "verifiedAt": "2026-09-25T11:55:10.880Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -148,7 +100,7 @@
       "url": "https://lu.ma/HiringMela2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-25T05:02:02.819Z"
+      "verifiedAt": "2026-09-25T11:55:10.880Z"
     }
   ]
 }
