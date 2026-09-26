@@ -1,27 +1,11 @@
 {
-  "generatedAt": "2026-09-25T21:37:56.958Z",
+  "generatedAt": "2026-09-26T05:04:48.968Z",
   "sourceCount": 2,
-  "eventCount": 6,
+  "eventCount": 4,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
-    {
-      "id": "meetup-aHR0cHM6Ly93d3cubW",
-      "title": "Primewise Founders Club Networking Event- Gurgaon(Online)",
-      "description": "",
-      "start": "2026-09-26T06:30:00.000Z",
-      "end": "2026-09-26T08:00:00.000Z",
-      "location": "Gurgaon",
-      "city": "Gurgaon Gurgaon",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://www.meetup.com/founders-club-gurgaon/events/316633059/",
-      "source": "Meetup",
-      "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-25T21:37:56.958Z"
-    },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
       "title": "AI & SaaS Founders Connect",
@@ -30,29 +14,13 @@
       "end": "2026-09-26T18:00:00.000+05:30",
       "location": "Gurugram, India",
       "city": "Gurugram, India Gurugram Haryana",
-      "lat": 28.45956457154372,
-      "lng": 77.02823503285923,
+      "lat": 28.480224691311086,
+      "lng": 77.0836715195495,
       "price": "See source",
       "url": "https://lu.ma/s6w0r7zd",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-25T21:37:56.958Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "AI & SaaS Founders Connect",
-      "description": "",
-      "start": "2026-09-26T09:30:00.000Z",
-      "end": "2026-09-26T19:00:00.000+05:30",
-      "location": "Gurugram, India",
-      "city": "Gurugram, India Gurugram Haryana",
-      "lat": 28.45982502930548,
-      "lng": 77.02421381455464,
-      "price": "See source",
-      "url": "https://lu.ma/n0h1o0js",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-25T21:37:56.958Z"
+      "verifiedAt": "2026-09-26T05:04:48.968Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -68,7 +36,7 @@
       "url": "https://www.meetup.com/gurugrambuilders-testers/events/316535988/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-25T21:37:56.958Z"
+      "verifiedAt": "2026-09-26T05:04:48.968Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +52,7 @@
       "url": "https://lu.ma/589m955f",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-25T21:37:56.958Z"
+      "verifiedAt": "2026-09-26T05:04:48.968Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +68,7 @@
       "url": "https://lu.ma/HiringMela2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-25T21:37:56.958Z"
+      "verifiedAt": "2026-09-26T05:04:48.968Z"
     }
   ]
 }
