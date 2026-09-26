@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-26T05:04:48.968Z",
+  "generatedAt": "2026-09-26T11:29:50.307Z",
   "sourceCount": 2,
-  "eventCount": 4,
+  "eventCount": 3,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,23 +20,7 @@
       "url": "https://lu.ma/s6w0r7zd",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-26T05:04:48.968Z"
-    },
-    {
-      "id": "meetup-aHR0cHM6Ly93d3cubW",
-      "title": "Tech Nibba & Nibbis → Gurugram Builders & Testers | First Meetup",
-      "description": "",
-      "start": "2026-09-26T11:30:00.000Z",
-      "end": "2026-09-26T13:00:00.000Z",
-      "location": "Good Earth City Center Mall",
-      "city": "Good Earth City Center Mall Gurugram HR",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://www.meetup.com/gurugrambuilders-testers/events/316535988/",
-      "source": "Meetup",
-      "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-26T05:04:48.968Z"
+      "verifiedAt": "2026-09-26T11:29:50.307Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +36,7 @@
       "url": "https://lu.ma/589m955f",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-26T05:04:48.968Z"
+      "verifiedAt": "2026-09-26T11:29:50.307Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +52,7 @@
       "url": "https://lu.ma/HiringMela2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-26T05:04:48.968Z"
+      "verifiedAt": "2026-09-26T11:29:50.307Z"
     }
   ]
 }
