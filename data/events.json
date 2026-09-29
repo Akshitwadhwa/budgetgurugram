@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T01:02:57.205Z",
+  "generatedAt": "2026-09-29T09:54:11.245Z",
   "sourceCount": 2,
   "eventCount": 3,
   "nextWindowDays": 31,
@@ -20,14 +20,14 @@
       "url": "https://lu.ma/589m955f",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-29T01:02:57.205Z"
+      "verifiedAt": "2026-09-29T09:54:11.245Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
       "title": "Primewise Founders Club Networking Event- Gurgaon(Online)",
       "description": "",
-      "start": "2026-10-10T06:30:00.000Z",
-      "end": "2026-10-10T08:00:00.000Z",
+      "start": "2026-10-17T06:30:00.000Z",
+      "end": "2026-10-17T08:00:00.000Z",
       "location": "Gurgaon",
       "city": "Gurgaon Gurgaon",
       "lat": null,
@@ -36,7 +36,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316633059/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-09-29T01:02:57.205Z"
+      "verifiedAt": "2026-09-29T09:54:11.245Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +52,7 @@
       "url": "https://lu.ma/HiringMela2026",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-09-29T01:02:57.205Z"
+      "verifiedAt": "2026-09-29T09:54:11.245Z"
     }
   ]
 }
