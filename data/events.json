@@ -1,43 +1,11 @@
 {
-  "generatedAt": "2026-10-01T18:26:42.504Z",
+  "generatedAt": "2026-10-02T00:49:57.345Z",
   "sourceCount": 2,
-  "eventCount": 4,
+  "eventCount": 2,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Taste: A Physical AI Data Happy Hour",
-      "description": "",
-      "start": "2026-10-02T01:00:00.000Z",
-      "end": "2026-10-02T04:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/cnsyiwmm",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-01T18:26:42.504Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "SF Tech Week Agent Day",
-      "description": "",
-      "start": "2026-10-09T19:00:00.000Z",
-      "end": "2026-10-10T01:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/7wn8tsf7",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-01T18:26:42.504Z"
-    },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
       "title": "TechConfluence 2026",
@@ -52,7 +20,7 @@
       "url": "https://www.meetup.com/aws-sbg-at-iec-college-of-engineering-technology/events/316763215/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-01T18:26:42.504Z"
+      "verifiedAt": "2026-10-02T00:49:57.345Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -68,7 +36,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316633059/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-01T18:26:42.504Z"
+      "verifiedAt": "2026-10-02T00:49:57.345Z"
     }
   ]
 }
