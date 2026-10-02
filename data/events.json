@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T17:53:37.351Z",
+  "generatedAt": "2026-10-02T22:17:35.728Z",
   "sourceCount": 2,
   "eventCount": 3,
   "nextWindowDays": 31,
@@ -20,7 +20,7 @@
       "url": "https://lu.ma/1jtv7t7c",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-02T17:53:37.351Z"
+      "verifiedAt": "2026-10-02T22:17:35.728Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -36,7 +36,7 @@
       "url": "https://www.meetup.com/aws-sbg-at-iec-college-of-engineering-technology/events/316763215/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-02T17:53:37.351Z"
+      "verifiedAt": "2026-10-02T22:17:35.728Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -52,7 +52,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316633059/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-02T17:53:37.351Z"
+      "verifiedAt": "2026-10-02T22:17:35.728Z"
     }
   ]
 }
