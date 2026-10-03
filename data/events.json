@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-03T11:45:51.043Z",
+  "generatedAt": "2026-10-03T16:25:56.204Z",
   "sourceCount": 2,
-  "eventCount": 3,
+  "eventCount": 6,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,7 +20,55 @@
       "url": "https://lu.ma/0t73ngfz",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-03T11:45:51.043Z"
+      "verifiedAt": "2026-10-03T16:25:56.204Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "IVCA Bharat DeepTech Mixer",
+      "description": "",
+      "start": "2026-10-08T07:30:00.000Z",
+      "end": "2026-10-08T10:30:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/coiz9wrm",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-03T16:25:56.204Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Integrated marketing Communication & GTM",
+      "description": "",
+      "start": "2026-10-08T11:30:00.000Z",
+      "end": "2026-10-08T19:00:00.000+05:30",
+      "location": "Indian Startup School",
+      "city": "Indian Startup School Gurugram Haryana",
+      "lat": 28.451024,
+      "lng": 77.0968403,
+      "price": "See source",
+      "url": "https://lu.ma/5xmgahe2",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-03T16:25:56.204Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Governance, Risk and Compliance for AI startups | Webinar",
+      "description": "",
+      "start": "2026-10-08T12:00:00.000Z",
+      "end": "2026-10-08T13:30:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/5oj33tbe",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-03T16:25:56.204Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -36,7 +84,7 @@
       "url": "https://www.meetup.com/aws-sbg-at-iec-college-of-engineering-technology/events/316763215/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-03T11:45:51.043Z"
+      "verifiedAt": "2026-10-03T16:25:56.204Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -52,7 +100,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316633059/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-03T11:45:51.043Z"
+      "verifiedAt": "2026-10-03T16:25:56.204Z"
     }
   ]
 }
