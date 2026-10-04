@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-04T18:39:20.744Z",
+  "generatedAt": "2026-10-04T23:58:37.454Z",
   "sourceCount": 2,
-  "eventCount": 9,
+  "eventCount": 13,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,7 +20,39 @@
       "url": "https://lu.ma/0t73ngfz",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-04T18:39:20.744Z"
+      "verifiedAt": "2026-10-04T23:58:37.454Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "The SOLO Founder Club",
+      "description": "",
+      "start": "2026-10-06T23:00:00.000Z",
+      "end": "2026-10-07T02:00:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/ejwagfv9",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-04T23:58:37.454Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Open Source AI Stack: Models, Inference, and Agent Harness",
+      "description": "",
+      "start": "2026-10-08T00:30:00.000Z",
+      "end": "2026-10-08T03:30:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/novita-oas6",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-04T23:58:37.454Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -36,7 +68,7 @@
       "url": "https://lu.ma/coiz9wrm",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-04T18:39:20.744Z"
+      "verifiedAt": "2026-10-04T23:58:37.454Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +84,7 @@
       "url": "https://lu.ma/5xmgahe2",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-04T18:39:20.744Z"
+      "verifiedAt": "2026-10-04T23:58:37.454Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +100,23 @@
       "url": "https://lu.ma/5oj33tbe",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-04T18:39:20.744Z"
+      "verifiedAt": "2026-10-04T23:58:37.454Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Claude Founder Salon",
+      "description": "",
+      "start": "2026-10-08T20:45:00.000Z",
+      "end": "2026-10-09T03:00:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/claude-founder-salon",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-04T23:58:37.454Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +132,23 @@
       "url": "https://lu.ma/r9jrpi04",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-04T18:39:20.744Z"
+      "verifiedAt": "2026-10-04T23:58:37.454Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "SF Tech Week Agent Day",
+      "description": "",
+      "start": "2026-10-09T19:00:00.000Z",
+      "end": "2026-10-10T01:00:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/7wn8tsf7",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-04T23:58:37.454Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +164,7 @@
       "url": "https://lu.ma/m0e6pol7",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-04T18:39:20.744Z"
+      "verifiedAt": "2026-10-04T23:58:37.454Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -116,7 +180,7 @@
       "url": "https://www.meetup.com/aws-sbg-at-iec-college-of-engineering-technology/events/316763215/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-04T18:39:20.744Z"
+      "verifiedAt": "2026-10-04T23:58:37.454Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -132,7 +196,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316633059/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-04T18:39:20.744Z"
+      "verifiedAt": "2026-10-04T23:58:37.454Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -148,7 +212,7 @@
       "url": "https://www.meetup.com/bizowl-best-startup-meetups/events/316826167/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-04T18:39:20.744Z"
+      "verifiedAt": "2026-10-04T23:58:37.454Z"
     }
   ]
 }
