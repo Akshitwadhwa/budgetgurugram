@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-06T06:26:52.006Z",
+  "generatedAt": "2026-10-06T15:59:00.786Z",
   "sourceCount": 2,
-  "eventCount": 8,
+  "eventCount": 11,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,7 +20,7 @@
       "url": "https://lu.ma/coiz9wrm",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-06T06:26:52.006Z"
+      "verifiedAt": "2026-10-06T15:59:00.786Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -36,7 +36,7 @@
       "url": "https://lu.ma/5xmgahe2",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-06T06:26:52.006Z"
+      "verifiedAt": "2026-10-06T15:59:00.786Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +52,7 @@
       "url": "https://lu.ma/5oj33tbe",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-06T06:26:52.006Z"
+      "verifiedAt": "2026-10-06T15:59:00.786Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +68,7 @@
       "url": "https://lu.ma/r9jrpi04",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-06T06:26:52.006Z"
+      "verifiedAt": "2026-10-06T15:59:00.786Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +84,55 @@
       "url": "https://lu.ma/m0e6pol7",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-06T06:26:52.006Z"
+      "verifiedAt": "2026-10-06T15:59:00.786Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "The Wellness Reset: The Wellness Co. X The Charter",
+      "description": "Founders take care of everything except themselves.\nThis time, the whole day is about you. The Charter x The Wellness Co. presents The Wellness Reset, a day with a one-on-one doctor consultation, a few curated wellness therapies, a guided m",
+      "start": "2026-10-10T05:30:00.000Z",
+      "end": "2026-10-10T19:30:00.000+05:30",
+      "location": "Karma Lakelands",
+      "city": "Karma Lakelands Gurugram Haryana",
+      "lat": 28.362764199999997,
+      "lng": 76.95748139999999,
+      "price": "See source",
+      "url": "https://lu.ma/4usl0erc",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-06T15:59:00.786Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Anteroom Delhi NCR: Tech Leaders Edition",
+      "description": "",
+      "start": "2026-10-10T06:30:00.000Z",
+      "end": "2026-10-10T09:30:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/q8sh0vi8",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-06T15:59:00.786Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Founders Honest Room By Bizowl",
+      "description": "",
+      "start": "2026-10-10T08:30:00.000Z",
+      "end": "2026-10-10T12:30:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/vxjprq3t",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-06T15:59:00.786Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -100,7 +148,7 @@
       "url": "https://www.meetup.com/aws-sbg-at-iec-college-of-engineering-technology/events/316763215/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-06T06:26:52.006Z"
+      "verifiedAt": "2026-10-06T15:59:00.786Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -116,7 +164,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316633059/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-06T06:26:52.006Z"
+      "verifiedAt": "2026-10-06T15:59:00.786Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -132,7 +180,7 @@
       "url": "https://www.meetup.com/bizowl-best-startup-meetups/events/316826167/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-06T06:26:52.006Z"
+      "verifiedAt": "2026-10-06T15:59:00.786Z"
     }
   ]
 }
