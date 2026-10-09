@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-09T10:39:19.428Z",
+  "generatedAt": "2026-10-09T18:23:17.229Z",
   "sourceCount": 2,
-  "eventCount": 14,
+  "eventCount": 16,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,7 +20,7 @@
       "url": "https://lu.ma/h4h-delhi",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-09T10:39:19.428Z"
+      "verifiedAt": "2026-10-09T18:23:17.229Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -36,7 +36,7 @@
       "url": "https://lu.ma/4usl0erc",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-09T10:39:19.428Z"
+      "verifiedAt": "2026-10-09T18:23:17.229Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +52,7 @@
       "url": "https://lu.ma/q8sh0vi8",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-09T10:39:19.428Z"
+      "verifiedAt": "2026-10-09T18:23:17.229Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +68,7 @@
       "url": "https://lu.ma/vxjprq3t",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-09T10:39:19.428Z"
+      "verifiedAt": "2026-10-09T18:23:17.229Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,23 +84,7 @@
       "url": "https://lu.ma/lkr8517a",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-09T10:39:19.428Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Founders Adda",
-      "description": "",
-      "start": "2026-10-10T10:30:00.000Z",
-      "end": "2026-10-10T19:00:00.000+05:30",
-      "location": "Center of Excellence for IoT",
-      "city": "Center of Excellence for IoT Gurugram Haryana",
-      "lat": 28.5168498,
-      "lng": 77.08009919999999,
-      "price": "See source",
-      "url": "https://lu.ma/dz8pt8mr",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-09T10:39:19.428Z"
+      "verifiedAt": "2026-10-09T18:23:17.229Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -116,7 +100,7 @@
       "url": "https://lu.ma/zlm3rq2x",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-09T10:39:19.428Z"
+      "verifiedAt": "2026-10-09T18:23:17.229Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -132,7 +116,7 @@
       "url": "https://lu.ma/m0e6pol7",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-09T10:39:19.428Z"
+      "verifiedAt": "2026-10-09T18:23:17.229Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -148,7 +132,71 @@
       "url": "https://www.meetup.com/dine-dialog/events/316883282/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-09T10:39:19.428Z"
+      "verifiedAt": "2026-10-09T18:23:17.229Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "If Claude Can Design, Do Founders Still Need Designers?",
+      "description": "",
+      "start": "2026-10-11T14:30:00.000Z",
+      "end": "2026-10-11T15:30:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/ihzoo295",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-09T18:23:17.229Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "The Entrepreneurial Foundation: Cultivating the Founder's Mindset",
+      "description": "",
+      "start": "2026-10-12T09:30:00.000Z",
+      "end": "2026-10-12T17:00:00.000+05:30",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/tuf7h0p6",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-09T18:23:17.229Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "DCSTW Community Reception - Creating Global Startups",
+      "description": "",
+      "start": "2026-10-14T21:30:00.000Z",
+      "end": "2026-10-14T23:30:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/57jtalze",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-09T18:23:17.229Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Payment Systems in the Age of AI:The Asia-Pacific Experience",
+      "description": "",
+      "start": "2026-10-15T21:30:00.000Z",
+      "end": "2026-10-16T00:30:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/810llmpu",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-09T18:23:17.229Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -164,7 +212,7 @@
       "url": "https://www.meetup.com/aws-sbg-at-iec-college-of-engineering-technology/events/316763215/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-09T10:39:19.428Z"
+      "verifiedAt": "2026-10-09T18:23:17.229Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -180,7 +228,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316633059/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-09T10:39:19.428Z"
+      "verifiedAt": "2026-10-09T18:23:17.229Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -196,7 +244,7 @@
       "url": "https://www.meetup.com/bizowl-best-startup-meetups/events/316826167/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-09T10:39:19.428Z"
+      "verifiedAt": "2026-10-09T18:23:17.229Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -212,23 +260,7 @@
       "url": "https://www.meetup.com/expert-talks-gurgaon/events/316893488/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-09T10:39:19.428Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "TechWalk | Phoenix, 11/1",
-      "description": "",
-      "start": "2026-11-01T15:00:00.000Z",
-      "end": "2026-11-01T16:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/e2b7a24v",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-09T10:39:19.428Z"
+      "verifiedAt": "2026-10-09T18:23:17.229Z"
     }
   ]
 }
