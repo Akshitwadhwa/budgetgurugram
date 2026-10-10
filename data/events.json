@@ -1,91 +1,11 @@
 {
-  "generatedAt": "2026-10-10T09:55:22.402Z",
+  "generatedAt": "2026-10-10T17:21:48.296Z",
   "sourceCount": 2,
-  "eventCount": 18,
+  "eventCount": 14,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Hack for Humanity: Delhi",
-      "description": "",
-      "start": "2026-10-10T05:30:00.000Z",
-      "end": "2026-10-10T17:00:00.000+05:30",
-      "location": "Gurugram, India",
-      "city": "Gurugram, India Gurugram Haryana",
-      "lat": 28.45115521548387,
-      "lng": 77.07329287700561,
-      "price": "See source",
-      "url": "https://lu.ma/h4h-delhi",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-10T09:55:22.402Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "The Wellness Reset: The Wellness Co. X The Charter",
-      "description": "Founders take care of everything except themselves.\nThis time, the whole day is about you. The Charter x The Wellness Co. presents The Wellness Reset, a day with a one-on-one doctor consultation, a few curated wellness therapies, a guided m",
-      "start": "2026-10-10T05:30:00.000Z",
-      "end": "2026-10-10T19:30:00.000+05:30",
-      "location": "Karma Lakelands",
-      "city": "Karma Lakelands Gurugram Haryana",
-      "lat": 28.362764199999997,
-      "lng": 76.95748139999999,
-      "price": "See source",
-      "url": "https://lu.ma/4usl0erc",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-10T09:55:22.402Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Founders Honest Room By Bizowl",
-      "description": "",
-      "start": "2026-10-10T08:30:00.000Z",
-      "end": "2026-10-10T12:30:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/vxjprq3t",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-10T09:55:22.402Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Orientation: Welcoming the makers of tomorrow",
-      "description": "",
-      "start": "2026-10-10T10:00:00.000Z",
-      "end": "2026-10-10T17:00:00.000+05:30",
-      "location": "Indian Startup School",
-      "city": "Indian Startup School Gurugram Haryana",
-      "lat": 28.451024,
-      "lng": 77.0968403,
-      "price": "See source",
-      "url": "https://lu.ma/lkr8517a",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-10T09:55:22.402Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "ArthaShakti Business Connect",
-      "description": "ArthaShakti Business Connect\nJoin us for ArthaShakti Business Connect, an evening meetup designed for entrepreneurs, founders, and working professionals to connect, exchange ideas, explore collaborations, and build meaningful business relat",
-      "start": "2026-10-10T10:30:00.000Z",
-      "end": "2026-10-10T19:00:00.000+05:30",
-      "location": "Ofis Square Tower",
-      "city": "Ofis Square Tower Gurugram Haryana",
-      "lat": 28.478056499999997,
-      "lng": 77.08097769999999,
-      "price": "See source",
-      "url": "https://lu.ma/zlm3rq2x",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-10T09:55:22.402Z"
-    },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
       "title": "Burn/rate Community Run",
@@ -100,7 +20,7 @@
       "url": "https://lu.ma/m0e6pol7",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-10T09:55:22.402Z"
+      "verifiedAt": "2026-10-10T17:21:48.296Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -116,7 +36,7 @@
       "url": "https://www.meetup.com/dine-dialog/events/316883282/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-10T09:55:22.402Z"
+      "verifiedAt": "2026-10-10T17:21:48.296Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -132,7 +52,7 @@
       "url": "https://lu.ma/ihzoo295",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-10T09:55:22.402Z"
+      "verifiedAt": "2026-10-10T17:21:48.296Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -148,7 +68,7 @@
       "url": "https://lu.ma/tuf7h0p6",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-10T09:55:22.402Z"
+      "verifiedAt": "2026-10-10T17:21:48.296Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -164,7 +84,7 @@
       "url": "https://lu.ma/27ijzr4q",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-10T09:55:22.402Z"
+      "verifiedAt": "2026-10-10T17:21:48.296Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -180,7 +100,7 @@
       "url": "https://lu.ma/n8n-syvw",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-10T09:55:22.402Z"
+      "verifiedAt": "2026-10-10T17:21:48.296Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -196,39 +116,55 @@
       "url": "https://lu.ma/esdiw4jm",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-10T09:55:22.402Z"
+      "verifiedAt": "2026-10-10T17:21:48.296Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "DCSTW Community Reception - Creating Global Startups",
+      "title": "Founders & Builders Over Coffee☕ | Delhi NCR",
       "description": "",
-      "start": "2026-10-14T21:30:00.000Z",
-      "end": "2026-10-14T23:30:00.000Z",
+      "start": "2026-10-15T10:30:00.000Z",
+      "end": "2026-10-15T19:00:00.000+05:30",
       "location": "Location listed on CommunityMeetups India",
       "city": "Gurugram",
       "lat": null,
       "lng": null,
       "price": "See source",
-      "url": "https://lu.ma/57jtalze",
+      "url": "https://lu.ma/589m955f",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-10T09:55:22.402Z"
+      "verifiedAt": "2026-10-10T17:21:48.296Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Payment Systems in the Age of AI:The Asia-Pacific Experience",
+      "title": "[INVITE ONLY] AI Agents for AEO GEO SEO · Workshop, Live Demo & Networking",
       "description": "",
-      "start": "2026-10-15T21:30:00.000Z",
-      "end": "2026-10-16T00:30:00.000Z",
+      "start": "2026-10-15T12:00:00.000Z",
+      "end": "2026-10-15T21:30:00.000+05:30",
+      "location": "DLF Golf and Country Club",
+      "city": "DLF Golf and Country Club Gurugram Haryana",
+      "lat": 28.454721499999998,
+      "lng": 77.1059172,
+      "price": "See source",
+      "url": "https://lu.ma/nmgdigital-15oct26",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-10T17:21:48.296Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Titan Capital X V3 Ventures Consumer Mixer 🍸",
+      "description": "",
+      "start": "2026-10-16T14:00:00.000Z",
+      "end": "2026-10-16T18:00:00.000Z",
       "location": "Location listed on CommunityMeetups India",
       "city": "Gurugram",
       "lat": null,
       "lng": null,
       "price": "See source",
-      "url": "https://lu.ma/810llmpu",
+      "url": "https://lu.ma/ubulpdq7",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-10T09:55:22.402Z"
+      "verifiedAt": "2026-10-10T17:21:48.296Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -244,7 +180,7 @@
       "url": "https://www.meetup.com/aws-sbg-at-iec-college-of-engineering-technology/events/316763215/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-10T09:55:22.402Z"
+      "verifiedAt": "2026-10-10T17:21:48.296Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -260,7 +196,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316633059/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-10T09:55:22.402Z"
+      "verifiedAt": "2026-10-10T17:21:48.296Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -276,7 +212,7 @@
       "url": "https://www.meetup.com/bizowl-best-startup-meetups/events/316826167/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-10T09:55:22.402Z"
+      "verifiedAt": "2026-10-10T17:21:48.296Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -292,7 +228,7 @@
       "url": "https://www.meetup.com/expert-talks-gurgaon/events/316893488/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-10T09:55:22.402Z"
+      "verifiedAt": "2026-10-10T17:21:48.296Z"
     }
   ]
 }
