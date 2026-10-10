@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-10T00:55:37.808Z",
+  "generatedAt": "2026-10-10T09:55:22.402Z",
   "sourceCount": 2,
-  "eventCount": 14,
+  "eventCount": 18,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,7 +20,7 @@
       "url": "https://lu.ma/h4h-delhi",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-10T00:55:37.808Z"
+      "verifiedAt": "2026-10-10T09:55:22.402Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -36,23 +36,7 @@
       "url": "https://lu.ma/4usl0erc",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-10T00:55:37.808Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Anteroom Delhi NCR: Tech Leaders Edition",
-      "description": "",
-      "start": "2026-10-10T06:30:00.000Z",
-      "end": "2026-10-10T09:30:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/q8sh0vi8",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-10T00:55:37.808Z"
+      "verifiedAt": "2026-10-10T09:55:22.402Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +52,7 @@
       "url": "https://lu.ma/vxjprq3t",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-10T00:55:37.808Z"
+      "verifiedAt": "2026-10-10T09:55:22.402Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +68,7 @@
       "url": "https://lu.ma/lkr8517a",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-10T00:55:37.808Z"
+      "verifiedAt": "2026-10-10T09:55:22.402Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +84,7 @@
       "url": "https://lu.ma/zlm3rq2x",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-10T00:55:37.808Z"
+      "verifiedAt": "2026-10-10T09:55:22.402Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -116,7 +100,7 @@
       "url": "https://lu.ma/m0e6pol7",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-10T00:55:37.808Z"
+      "verifiedAt": "2026-10-10T09:55:22.402Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -132,7 +116,7 @@
       "url": "https://www.meetup.com/dine-dialog/events/316883282/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-10T00:55:37.808Z"
+      "verifiedAt": "2026-10-10T09:55:22.402Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -148,7 +132,7 @@
       "url": "https://lu.ma/ihzoo295",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-10T00:55:37.808Z"
+      "verifiedAt": "2026-10-10T09:55:22.402Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -164,7 +148,87 @@
       "url": "https://lu.ma/tuf7h0p6",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-10T00:55:37.808Z"
+      "verifiedAt": "2026-10-10T09:55:22.402Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Build in Public #01 — DelhiNCR",
+      "description": "Not another networking event. Not another panel.\nBuild in Public is a small, focused gathering for people who are actually building something.\nBring your laptop, pick a spot, and spend a few hours working on whatever you're building a start",
+      "start": "2026-10-14T06:30:00.000Z",
+      "end": "2026-10-14T16:00:00.000+05:30",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/27ijzr4q",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-10T09:55:22.402Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "n8n Udaipur Meetup",
+      "description": "",
+      "start": "2026-10-14T07:30:00.000Z",
+      "end": "2026-10-14T10:30:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/n8n-syvw",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-10T09:55:22.402Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Founder fireside & Book Signing,Version Infinity, ft. Akash Gupta, Zypp electric",
+      "description": "",
+      "start": "2026-10-14T11:30:00.000Z",
+      "end": "2026-10-14T19:00:00.000+05:30",
+      "location": "Indian Startup School",
+      "city": "Indian Startup School Gurugram Haryana",
+      "lat": 28.451024,
+      "lng": 77.0968403,
+      "price": "See source",
+      "url": "https://lu.ma/esdiw4jm",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-10T09:55:22.402Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "DCSTW Community Reception - Creating Global Startups",
+      "description": "",
+      "start": "2026-10-14T21:30:00.000Z",
+      "end": "2026-10-14T23:30:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/57jtalze",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-10T09:55:22.402Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Payment Systems in the Age of AI:The Asia-Pacific Experience",
+      "description": "",
+      "start": "2026-10-15T21:30:00.000Z",
+      "end": "2026-10-16T00:30:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/810llmpu",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-10T09:55:22.402Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -180,7 +244,7 @@
       "url": "https://www.meetup.com/aws-sbg-at-iec-college-of-engineering-technology/events/316763215/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-10T00:55:37.808Z"
+      "verifiedAt": "2026-10-10T09:55:22.402Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -196,7 +260,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316633059/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-10T00:55:37.808Z"
+      "verifiedAt": "2026-10-10T09:55:22.402Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -212,7 +276,7 @@
       "url": "https://www.meetup.com/bizowl-best-startup-meetups/events/316826167/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-10T00:55:37.808Z"
+      "verifiedAt": "2026-10-10T09:55:22.402Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -228,7 +292,7 @@
       "url": "https://www.meetup.com/expert-talks-gurgaon/events/316893488/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-10T00:55:37.808Z"
+      "verifiedAt": "2026-10-10T09:55:22.402Z"
     }
   ]
 }
