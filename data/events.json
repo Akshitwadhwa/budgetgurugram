@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-12T00:35:58.183Z",
+  "generatedAt": "2026-10-12T10:57:23.722Z",
   "sourceCount": 2,
-  "eventCount": 11,
+  "eventCount": 12,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,7 +20,7 @@
       "url": "https://lu.ma/tuf7h0p6",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-12T00:35:58.183Z"
+      "verifiedAt": "2026-10-12T10:57:23.722Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -36,7 +36,7 @@
       "url": "https://lu.ma/27ijzr4q",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-12T00:35:58.183Z"
+      "verifiedAt": "2026-10-12T10:57:23.722Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +52,7 @@
       "url": "https://lu.ma/n8n-syvw",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-12T00:35:58.183Z"
+      "verifiedAt": "2026-10-12T10:57:23.722Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +68,7 @@
       "url": "https://lu.ma/esdiw4jm",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-12T00:35:58.183Z"
+      "verifiedAt": "2026-10-12T10:57:23.722Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +84,7 @@
       "url": "https://lu.ma/589m955f",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-12T00:35:58.183Z"
+      "verifiedAt": "2026-10-12T10:57:23.722Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +100,7 @@
       "url": "https://lu.ma/nmgdigital-15oct26",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-12T00:35:58.183Z"
+      "verifiedAt": "2026-10-12T10:57:23.722Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -116,7 +116,7 @@
       "url": "https://lu.ma/ubulpdq7",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-12T00:35:58.183Z"
+      "verifiedAt": "2026-10-12T10:57:23.722Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -132,7 +132,7 @@
       "url": "https://www.meetup.com/aws-sbg-at-iec-college-of-engineering-technology/events/316763215/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-12T00:35:58.183Z"
+      "verifiedAt": "2026-10-12T10:57:23.722Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -148,7 +148,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/316633059/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-12T00:35:58.183Z"
+      "verifiedAt": "2026-10-12T10:57:23.722Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -164,7 +164,23 @@
       "url": "https://www.meetup.com/bizowl-best-startup-meetups/events/316826167/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-12T00:35:58.183Z"
+      "verifiedAt": "2026-10-12T10:57:23.722Z"
+    },
+    {
+      "id": "meetup-aHR0cHM6Ly93d3cubW",
+      "title": "The AI Social Club 🚀",
+      "description": "",
+      "start": "2026-10-17T11:30:00.000Z",
+      "end": "2026-10-17T16:30:00.000Z",
+      "location": "to be decided somewhere in gurgaon",
+      "city": "to be decided somewhere in gurgaon Gurgaon",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://www.meetup.com/ai-after-hours-ideas-people-good-times/events/316936235/",
+      "source": "Meetup",
+      "sourceName": "Meetup Gurgaon public listings",
+      "verifiedAt": "2026-10-12T10:57:23.722Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -180,7 +196,7 @@
       "url": "https://www.meetup.com/expert-talks-gurgaon/events/316893488/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-12T00:35:58.183Z"
+      "verifiedAt": "2026-10-12T10:57:23.722Z"
     }
   ]
 }
