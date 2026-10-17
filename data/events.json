@@ -1,27 +1,11 @@
 {
-  "generatedAt": "2026-10-16T23:40:44.632Z",
+  "generatedAt": "2026-10-17T04:33:53.194Z",
   "sourceCount": 2,
-  "eventCount": 17,
+  "eventCount": 11,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
-    {
-      "id": "meetup-aHR0cHM6Ly93d3cubW",
-      "title": "TechConfluence 2026",
-      "description": "",
-      "start": "2026-10-17T05:30:00.000Z",
-      "end": "2026-10-17T09:30:00.000Z",
-      "location": "ThoughtWorks Technologies",
-      "city": "ThoughtWorks Technologies Gurugram HR",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://www.meetup.com/aws-sbg-at-iec-college-of-engineering-technology/events/316763215/",
-      "source": "Meetup",
-      "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-16T23:40:44.632Z"
-    },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
       "title": "Graduation and The Future Ahead",
@@ -36,23 +20,7 @@
       "url": "https://lu.ma/505sbclz",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-16T23:40:44.632Z"
-    },
-    {
-      "id": "meetup-aHR0cHM6Ly93d3cubW",
-      "title": "Primewise Founders Club Networking Event- Gurgaon(Online)",
-      "description": "",
-      "start": "2026-10-17T06:30:00.000Z",
-      "end": "2026-10-17T08:00:00.000Z",
-      "location": "Gurgaon",
-      "city": "Gurgaon Gurgaon",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://www.meetup.com/founders-club-gurgaon/events/316633059/",
-      "source": "Meetup",
-      "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-16T23:40:44.632Z"
+      "verifiedAt": "2026-10-17T04:33:53.194Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +36,7 @@
       "url": "https://lu.ma/7fs2pxfn",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-16T23:40:44.632Z"
+      "verifiedAt": "2026-10-17T04:33:53.194Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -84,7 +52,7 @@
       "url": "https://www.meetup.com/ai-after-hours-ideas-people-good-times/events/316936235/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-16T23:40:44.632Z"
+      "verifiedAt": "2026-10-17T04:33:53.194Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +68,7 @@
       "url": "https://lu.ma/27ijzr4q",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-16T23:40:44.632Z"
+      "verifiedAt": "2026-10-17T04:33:53.194Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -116,71 +84,7 @@
       "url": "https://www.meetup.com/dine-dialog/events/316959729/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-16T23:40:44.632Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Open Source AI Week 2026 | Open Weight Debate Night",
-      "description": "",
-      "start": "2026-10-20T00:00:00.000Z",
-      "end": "2026-10-20T04:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/592fcwx2",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-16T23:40:44.632Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "GTM & Marketing Hackathon by Granola x Anthropic",
-      "description": "",
-      "start": "2026-10-21T00:30:00.000Z",
-      "end": "2026-10-21T03:30:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/granola-gtm-hackathon",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-16T23:40:44.632Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "AI Infra Night @PyTorchCon with dstack, Crusoe, and SGLang",
-      "description": "",
-      "start": "2026-10-21T01:30:00.000Z",
-      "end": "2026-10-21T04:30:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/6j69xyal",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-16T23:40:44.632Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Founders Panel: The Agentic Stack",
-      "description": "",
-      "start": "2026-10-21T01:30:00.000Z",
-      "end": "2026-10-21T03:30:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/laravel-43ty",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-16T23:40:44.632Z"
+      "verifiedAt": "2026-10-17T04:33:53.194Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -196,7 +100,7 @@
       "url": "https://lu.ma/8unv2x46",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-16T23:40:44.632Z"
+      "verifiedAt": "2026-10-17T04:33:53.194Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -212,7 +116,7 @@
       "url": "https://lu.ma/9szqxl7w",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-16T23:40:44.632Z"
+      "verifiedAt": "2026-10-17T04:33:53.194Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -228,7 +132,7 @@
       "url": "https://lu.ma/sqypb0g7",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-16T23:40:44.632Z"
+      "verifiedAt": "2026-10-17T04:33:53.194Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -244,7 +148,7 @@
       "url": "https://lu.ma/n8n-0688",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-16T23:40:44.632Z"
+      "verifiedAt": "2026-10-17T04:33:53.194Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -260,7 +164,7 @@
       "url": "https://www.meetup.com/expert-talks-gurgaon/events/316893488/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-16T23:40:44.632Z"
+      "verifiedAt": "2026-10-17T04:33:53.194Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -276,7 +180,7 @@
       "url": "https://www.meetup.com/bizowl-best-startup-meetups/events/316826167/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-16T23:40:44.632Z"
+      "verifiedAt": "2026-10-17T04:33:53.194Z"
     }
   ]
 }
