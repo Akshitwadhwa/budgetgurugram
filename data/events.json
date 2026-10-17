@@ -1,27 +1,11 @@
 {
-  "generatedAt": "2026-10-17T10:50:02.127Z",
+  "generatedAt": "2026-10-17T15:39:23.634Z",
   "sourceCount": 2,
   "eventCount": 9,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Founder Reset by Unfold",
-      "description": "",
-      "start": "2026-10-17T09:30:00.000Z",
-      "end": "2026-10-17T12:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/7fs2pxfn",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-17T10:50:02.127Z"
-    },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
       "title": "Build in Public #01 — DelhiNCR",
@@ -36,7 +20,7 @@
       "url": "https://lu.ma/27ijzr4q",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-17T10:50:02.127Z"
+      "verifiedAt": "2026-10-17T15:39:23.634Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -52,7 +36,7 @@
       "url": "https://www.meetup.com/dine-dialog/events/316959729/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-17T10:50:02.127Z"
+      "verifiedAt": "2026-10-17T15:39:23.634Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +52,7 @@
       "url": "https://lu.ma/8unv2x46",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-17T10:50:02.127Z"
+      "verifiedAt": "2026-10-17T15:39:23.634Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -84,7 +68,7 @@
       "url": "https://lu.ma/9szqxl7w",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-17T10:50:02.127Z"
+      "verifiedAt": "2026-10-17T15:39:23.634Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +84,7 @@
       "url": "https://lu.ma/sqypb0g7",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-17T10:50:02.127Z"
+      "verifiedAt": "2026-10-17T15:39:23.634Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -116,7 +100,7 @@
       "url": "https://lu.ma/n8n-0688",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-17T10:50:02.127Z"
+      "verifiedAt": "2026-10-17T15:39:23.634Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -132,7 +116,23 @@
       "url": "https://www.meetup.com/expert-talks-gurgaon/events/316893488/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-17T10:50:02.127Z"
+      "verifiedAt": "2026-10-17T15:39:23.634Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Design Thinking",
+      "description": "",
+      "start": "2026-10-26T09:30:00.000Z",
+      "end": "2026-10-26T17:00:00.000+05:30",
+      "location": "Indian Startup School",
+      "city": "Indian Startup School Gurugram Haryana",
+      "lat": 28.451024,
+      "lng": 77.0968403,
+      "price": "See source",
+      "url": "https://lu.ma/wzyoy1hj",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-17T15:39:23.634Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -148,7 +148,7 @@
       "url": "https://www.meetup.com/bizowl-best-startup-meetups/events/316826167/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-17T10:50:02.127Z"
+      "verifiedAt": "2026-10-17T15:39:23.634Z"
     }
   ]
 }
