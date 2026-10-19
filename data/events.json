@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-19T04:47:35.997Z",
+  "generatedAt": "2026-10-19T13:25:40.798Z",
   "sourceCount": 2,
-  "eventCount": 7,
+  "eventCount": 8,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,7 +20,7 @@
       "url": "https://lu.ma/8unv2x46",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-19T04:47:35.997Z"
+      "verifiedAt": "2026-10-19T13:25:40.798Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -36,11 +36,11 @@
       "url": "https://lu.ma/9szqxl7w",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-19T04:47:35.997Z"
+      "verifiedAt": "2026-10-19T13:25:40.798Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Business Systems and Processes: Team Building, KPI & MIS",
+      "title": "Financial Prudence: Navigating Compliance, Tax, Balance Sheet & Budgeting",
       "description": "",
       "start": "2026-10-22T11:30:00.000Z",
       "end": "2026-10-22T19:00:00.000+05:30",
@@ -52,7 +52,7 @@
       "url": "https://lu.ma/sqypb0g7",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-19T04:47:35.997Z"
+      "verifiedAt": "2026-10-19T13:25:40.798Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +68,7 @@
       "url": "https://lu.ma/n8n-0688",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-19T04:47:35.997Z"
+      "verifiedAt": "2026-10-19T13:25:40.798Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -84,7 +84,23 @@
       "url": "https://www.meetup.com/expert-talks-gurgaon/events/316893488/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-19T04:47:35.997Z"
+      "verifiedAt": "2026-10-19T13:25:40.798Z"
+    },
+    {
+      "id": "meetup-aHR0cHM6Ly93d3cubW",
+      "title": "BHASMA ft. TECHNAARI - 24th Oct Saturday",
+      "description": "",
+      "start": "2026-10-24T16:30:00.000Z",
+      "end": "2026-10-24T23:30:00.000Z",
+      "location": "airbar rooftop",
+      "city": "airbar rooftop Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://www.meetup.com/pfo-nights-gurgaon-techno-party-crew/events/317031434/",
+      "source": "Meetup",
+      "sourceName": "Meetup Gurgaon public listings",
+      "verifiedAt": "2026-10-19T13:25:40.798Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -100,7 +116,7 @@
       "url": "https://lu.ma/wzyoy1hj",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-19T04:47:35.997Z"
+      "verifiedAt": "2026-10-19T13:25:40.798Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -116,7 +132,7 @@
       "url": "https://www.meetup.com/bizowl-best-startup-meetups/events/316826167/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-19T04:47:35.997Z"
+      "verifiedAt": "2026-10-19T13:25:40.798Z"
     }
   ]
 }
