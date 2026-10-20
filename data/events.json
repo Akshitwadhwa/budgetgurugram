@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-20T19:19:03.140Z",
+  "generatedAt": "2026-10-20T23:55:54.323Z",
   "sourceCount": 2,
-  "eventCount": 11,
+  "eventCount": 10,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,7 +20,7 @@
       "url": "https://lu.ma/8unv2x46",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-20T19:19:03.140Z"
+      "verifiedAt": "2026-10-20T23:55:54.323Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -36,7 +36,7 @@
       "url": "https://lu.ma/9szqxl7w",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-20T19:19:03.140Z"
+      "verifiedAt": "2026-10-20T23:55:54.323Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +52,7 @@
       "url": "https://lu.ma/sqypb0g7",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-20T19:19:03.140Z"
+      "verifiedAt": "2026-10-20T23:55:54.323Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +68,7 @@
       "url": "https://lu.ma/n8n-0688",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-20T19:19:03.140Z"
+      "verifiedAt": "2026-10-20T23:55:54.323Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -84,7 +84,7 @@
       "url": "https://www.meetup.com/expert-talks-gurgaon/events/316893488/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-20T19:19:03.140Z"
+      "verifiedAt": "2026-10-20T23:55:54.323Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -100,7 +100,7 @@
       "url": "https://www.meetup.com/pfo-nights-gurgaon-techno-party-crew/events/317031434/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-20T19:19:03.140Z"
+      "verifiedAt": "2026-10-20T23:55:54.323Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -116,7 +116,7 @@
       "url": "https://www.meetup.com/dine-dialog/events/316976208/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-20T19:19:03.140Z"
+      "verifiedAt": "2026-10-20T23:55:54.323Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -132,23 +132,7 @@
       "url": "https://lu.ma/wzyoy1hj",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-20T19:19:03.140Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Who’s Afraid of the Ghost in the Machine? Sibarium v Hammond...",
-      "description": "",
-      "start": "2026-10-29T23:15:00.000Z",
-      "end": "2026-10-30T02:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/ghostinthemachine",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-20T19:19:03.140Z"
+      "verifiedAt": "2026-10-20T23:55:54.323Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -164,7 +148,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/317044372/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-20T19:19:03.140Z"
+      "verifiedAt": "2026-10-20T23:55:54.323Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -180,7 +164,7 @@
       "url": "https://www.meetup.com/bizowl-best-startup-meetups/events/316826167/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-20T19:19:03.140Z"
+      "verifiedAt": "2026-10-20T23:55:54.323Z"
     }
   ]
 }
