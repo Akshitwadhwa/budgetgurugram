@@ -1,11 +1,43 @@
 {
-  "generatedAt": "2026-10-20T08:37:35.777Z",
+  "generatedAt": "2026-10-20T14:20:26.549Z",
   "sourceCount": 2,
-  "eventCount": 10,
+  "eventCount": 13,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "GTM & Marketing Hackathon by Granola x Anthropic",
+      "description": "",
+      "start": "2026-10-21T00:30:00.000Z",
+      "end": "2026-10-21T03:30:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/granola-gtm-hackathon",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-20T14:20:26.549Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "AI Infra Night @PyTorchCon with dstack, Crusoe, and SGLang",
+      "description": "",
+      "start": "2026-10-21T01:30:00.000Z",
+      "end": "2026-10-21T04:30:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/6j69xyal",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-20T14:20:26.549Z"
+    },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
       "title": "n8n Workshop Rio de Janeiro - Self-host de verdade: Docker, webhook, memória e update sem drama",
@@ -20,7 +52,7 @@
       "url": "https://lu.ma/8unv2x46",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-20T08:37:35.777Z"
+      "verifiedAt": "2026-10-20T14:20:26.549Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -36,7 +68,7 @@
       "url": "https://lu.ma/9szqxl7w",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-20T08:37:35.777Z"
+      "verifiedAt": "2026-10-20T14:20:26.549Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +84,7 @@
       "url": "https://lu.ma/sqypb0g7",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-20T08:37:35.777Z"
+      "verifiedAt": "2026-10-20T14:20:26.549Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +100,7 @@
       "url": "https://lu.ma/n8n-0688",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-20T08:37:35.777Z"
+      "verifiedAt": "2026-10-20T14:20:26.549Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -84,7 +116,7 @@
       "url": "https://www.meetup.com/expert-talks-gurgaon/events/316893488/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-20T08:37:35.777Z"
+      "verifiedAt": "2026-10-20T14:20:26.549Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -100,7 +132,7 @@
       "url": "https://www.meetup.com/pfo-nights-gurgaon-techno-party-crew/events/317031434/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-20T08:37:35.777Z"
+      "verifiedAt": "2026-10-20T14:20:26.549Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -116,7 +148,7 @@
       "url": "https://www.meetup.com/dine-dialog/events/316976208/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-20T08:37:35.777Z"
+      "verifiedAt": "2026-10-20T14:20:26.549Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -132,7 +164,23 @@
       "url": "https://lu.ma/wzyoy1hj",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-20T08:37:35.777Z"
+      "verifiedAt": "2026-10-20T14:20:26.549Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Women in AI | Factory x Sapienne x Sequoia",
+      "description": "",
+      "start": "2026-10-28T02:00:00.000Z",
+      "end": "2026-10-28T04:00:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/factoryai-sdkw",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-20T14:20:26.549Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -148,7 +196,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/317044372/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-20T08:37:35.777Z"
+      "verifiedAt": "2026-10-20T14:20:26.549Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -164,7 +212,7 @@
       "url": "https://www.meetup.com/bizowl-best-startup-meetups/events/316826167/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-20T08:37:35.777Z"
+      "verifiedAt": "2026-10-20T14:20:26.549Z"
     }
   ]
 }
