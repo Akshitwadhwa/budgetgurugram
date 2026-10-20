@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-20T00:24:07.036Z",
+  "generatedAt": "2026-10-20T08:37:35.777Z",
   "sourceCount": 2,
-  "eventCount": 8,
+  "eventCount": 10,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
@@ -20,7 +20,7 @@
       "url": "https://lu.ma/8unv2x46",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-20T00:24:07.036Z"
+      "verifiedAt": "2026-10-20T08:37:35.777Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -36,7 +36,7 @@
       "url": "https://lu.ma/9szqxl7w",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-20T00:24:07.036Z"
+      "verifiedAt": "2026-10-20T08:37:35.777Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +52,7 @@
       "url": "https://lu.ma/sqypb0g7",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-20T00:24:07.036Z"
+      "verifiedAt": "2026-10-20T08:37:35.777Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +68,7 @@
       "url": "https://lu.ma/n8n-0688",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-20T00:24:07.036Z"
+      "verifiedAt": "2026-10-20T08:37:35.777Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -84,7 +84,7 @@
       "url": "https://www.meetup.com/expert-talks-gurgaon/events/316893488/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-20T00:24:07.036Z"
+      "verifiedAt": "2026-10-20T08:37:35.777Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -100,7 +100,23 @@
       "url": "https://www.meetup.com/pfo-nights-gurgaon-techno-party-crew/events/317031434/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-20T00:24:07.036Z"
+      "verifiedAt": "2026-10-20T08:37:35.777Z"
+    },
+    {
+      "id": "meetup-aHR0cHM6Ly93d3cubW",
+      "title": "dine dialog | Table for 6",
+      "description": "",
+      "start": "2026-10-25T12:30:00.000Z",
+      "end": "2026-10-25T14:30:00.000Z",
+      "location": "Mustard Madras - Cyber Hub",
+      "city": "Mustard Madras - Cyber Hub Gurugram HR",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://www.meetup.com/dine-dialog/events/316976208/",
+      "source": "Meetup",
+      "sourceName": "Meetup Gurgaon public listings",
+      "verifiedAt": "2026-10-20T08:37:35.777Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -116,7 +132,23 @@
       "url": "https://lu.ma/wzyoy1hj",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-20T00:24:07.036Z"
+      "verifiedAt": "2026-10-20T08:37:35.777Z"
+    },
+    {
+      "id": "meetup-aHR0cHM6Ly93d3cubW",
+      "title": "Primewise Founders Club Networking Event- Gurgaon(Online)",
+      "description": "",
+      "start": "2026-10-31T06:30:00.000Z",
+      "end": "2026-10-31T08:00:00.000Z",
+      "location": "Gurgaon",
+      "city": "Gurgaon Gurgaon",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://www.meetup.com/founders-club-gurgaon/events/317044372/",
+      "source": "Meetup",
+      "sourceName": "Meetup Gurgaon public listings",
+      "verifiedAt": "2026-10-20T08:37:35.777Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -132,7 +164,7 @@
       "url": "https://www.meetup.com/bizowl-best-startup-meetups/events/316826167/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-20T00:24:07.036Z"
+      "verifiedAt": "2026-10-20T08:37:35.777Z"
     }
   ]
 }
