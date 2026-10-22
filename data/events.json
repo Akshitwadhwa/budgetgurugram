@@ -1,27 +1,11 @@
 {
-  "generatedAt": "2026-10-21T21:46:05.249Z",
+  "generatedAt": "2026-10-22T04:55:34.230Z",
   "sourceCount": 2,
-  "eventCount": 11,
+  "eventCount": 10,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "n8n Workshop Rio de Janeiro - Self-host de verdade: Docker, webhook, memória e update sem drama",
-      "description": "",
-      "start": "2026-10-21T22:00:00.000Z",
-      "end": "2026-10-22T00:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/8unv2x46",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-21T21:46:05.249Z"
-    },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
       "title": "Startup Mixer — Gurgaon",
@@ -36,7 +20,7 @@
       "url": "https://lu.ma/9szqxl7w",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-21T21:46:05.249Z"
+      "verifiedAt": "2026-10-22T04:55:34.230Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -52,7 +36,7 @@
       "url": "https://lu.ma/sqypb0g7",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-21T21:46:05.249Z"
+      "verifiedAt": "2026-10-22T04:55:34.230Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -68,7 +52,7 @@
       "url": "https://lu.ma/n8n-0688",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-21T21:46:05.249Z"
+      "verifiedAt": "2026-10-22T04:55:34.230Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -84,7 +68,7 @@
       "url": "https://www.meetup.com/expert-talks-gurgaon/events/316893488/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-21T21:46:05.249Z"
+      "verifiedAt": "2026-10-22T04:55:34.230Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -100,7 +84,7 @@
       "url": "https://www.meetup.com/pfo-nights-gurgaon-techno-party-crew/events/317031434/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-21T21:46:05.249Z"
+      "verifiedAt": "2026-10-22T04:55:34.230Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -116,7 +100,7 @@
       "url": "https://www.meetup.com/dine-dialog/events/316976208/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-21T21:46:05.249Z"
+      "verifiedAt": "2026-10-22T04:55:34.230Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -132,7 +116,23 @@
       "url": "https://lu.ma/wzyoy1hj",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-21T21:46:05.249Z"
+      "verifiedAt": "2026-10-22T04:55:34.230Z"
+    },
+    {
+      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
+      "title": "Namma Mysuru Startups Meetup by CEDAT",
+      "description": "",
+      "start": "2026-10-29T09:30:00.000Z",
+      "end": "2026-10-29T12:30:00.000Z",
+      "location": "Location listed on CommunityMeetups India",
+      "city": "Gurugram",
+      "lat": null,
+      "lng": null,
+      "price": "See source",
+      "url": "https://lu.ma/baenm0rc",
+      "source": "CommunityMeetups India",
+      "sourceName": "CommunityMeetups India",
+      "verifiedAt": "2026-10-22T04:55:34.230Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -148,7 +148,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/317044372/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-21T21:46:05.249Z"
+      "verifiedAt": "2026-10-22T04:55:34.230Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -164,23 +164,7 @@
       "url": "https://www.meetup.com/bizowl-best-startup-meetups/events/316826167/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-21T21:46:05.249Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "TechWalk | Phoenix, 11/1",
-      "description": "",
-      "start": "2026-11-01T15:00:00.000Z",
-      "end": "2026-11-01T16:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/e2b7a24v",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-21T21:46:05.249Z"
+      "verifiedAt": "2026-10-22T04:55:34.230Z"
     }
   ]
 }
