@@ -1,43 +1,11 @@
 {
-  "generatedAt": "2026-10-22T11:58:49.774Z",
+  "generatedAt": "2026-10-22T17:14:41.763Z",
   "sourceCount": 2,
-  "eventCount": 11,
+  "eventCount": 8,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Startup Mixer — Gurgaon",
-      "description": "",
-      "start": "2026-10-22T08:30:00.000Z",
-      "end": "2026-10-22T18:00:00.000+05:30",
-      "location": "Gurugram, India",
-      "city": "Gurugram, India Gurugram Haryana",
-      "lat": 28.461704904971903,
-      "lng": 77.02690185267988,
-      "price": "See source",
-      "url": "https://lu.ma/9szqxl7w",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-22T11:58:49.774Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Financial Prudence: Navigating Compliance, Tax, Balance Sheet & Budgeting",
-      "description": "",
-      "start": "2026-10-22T11:30:00.000Z",
-      "end": "2026-10-22T19:00:00.000+05:30",
-      "location": "Indian Startup School",
-      "city": "Indian Startup School Gurugram Haryana",
-      "lat": 28.451024,
-      "lng": 77.0968403,
-      "price": "See source",
-      "url": "https://lu.ma/sqypb0g7",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-22T11:58:49.774Z"
-    },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
       "title": "n8n Women+ in Automation Nairobi 🌸: Build your first Workflow",
@@ -52,7 +20,7 @@
       "url": "https://lu.ma/n8n-0688",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-22T11:58:49.774Z"
+      "verifiedAt": "2026-10-22T17:14:41.763Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -68,7 +36,7 @@
       "url": "https://www.meetup.com/expert-talks-gurgaon/events/316893488/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-22T11:58:49.774Z"
+      "verifiedAt": "2026-10-22T17:14:41.763Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -84,7 +52,7 @@
       "url": "https://www.meetup.com/pfo-nights-gurgaon-techno-party-crew/events/317031434/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-22T11:58:49.774Z"
+      "verifiedAt": "2026-10-22T17:14:41.763Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -100,7 +68,7 @@
       "url": "https://www.meetup.com/dine-dialog/events/316976208/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-22T11:58:49.774Z"
+      "verifiedAt": "2026-10-22T17:14:41.763Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -116,23 +84,7 @@
       "url": "https://lu.ma/wzyoy1hj",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-22T11:58:49.774Z"
-    },
-    {
-      "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
-      "title": "Women in AI | Factory x Sapienne x Sequoia",
-      "description": "",
-      "start": "2026-10-28T02:00:00.000Z",
-      "end": "2026-10-28T04:00:00.000Z",
-      "location": "Location listed on CommunityMeetups India",
-      "city": "Gurugram",
-      "lat": null,
-      "lng": null,
-      "price": "See source",
-      "url": "https://lu.ma/factoryai-sdkw",
-      "source": "CommunityMeetups India",
-      "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-22T11:58:49.774Z"
+      "verifiedAt": "2026-10-22T17:14:41.763Z"
     },
     {
       "id": "communitymeetups-india-aHR0cHM6Ly9sdS5tYS",
@@ -148,7 +100,7 @@
       "url": "https://lu.ma/baenm0rc",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-22T11:58:49.774Z"
+      "verifiedAt": "2026-10-22T17:14:41.763Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -164,7 +116,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/317044372/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-22T11:58:49.774Z"
+      "verifiedAt": "2026-10-22T17:14:41.763Z"
     },
     {
       "id": "meetup-aHR0cHM6Ly93d3cubW",
@@ -180,7 +132,7 @@
       "url": "https://www.meetup.com/bizowl-best-startup-meetups/events/316826167/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-22T11:58:49.774Z"
+      "verifiedAt": "2026-10-22T17:14:41.763Z"
     }
   ]
 }
