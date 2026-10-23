@@ -1,19 +1,28 @@
 [
   {
+    "name": "Luma Gurugram",
+    "displayName": "Luma",
+    "type": "lumaDiscover",
+    "queries": ["gurugram", "gurgaon"],
+    "techOnly": false,
+    "excludeKeywords": ["Seoul", "Taipei", "Tel Aviv", "Hawaii", "Melbourne", "Manila", "Jakarta", "Bengaluru", "Bangalore", "Chennai", "Mumbai", "Hyderabad", "Pune"],
+    "enabled": true
+  },
+  {
     "name": "CommunityMeetups India",
     "url": "https://lu.ma/CommunityMeetups",
-    "cityKeywords": ["Gurugram", "Gurgaon", "DelhiNCR", "Delhi NCR"],
-    "techOnly": true,
-    "excludeKeywords": ["Noida", "Chennai", "Mumbai", "Bangalore", "Bengaluru", "Hyderabad", "Pune", "Kolkata", "Jaipur", "Chicago"],
+    "cityKeywords": ["Gurugram", "Gurgaon", "GGN"],
+    "techOnly": false,
+    "excludeKeywords": ["Chennai", "Mumbai", "Bangalore", "Bengaluru", "Hyderabad", "Pune", "Kolkata", "Jaipur", "Seoul", "Taipei"],
     "enabled": true
   },
   {
     "name": "Meetup Gurgaon public listings",
     "displayName": "Meetup",
     "url": "https://www.meetup.com/find/in--gurgaon/",
-    "cityKeywords": ["Gurugram", "Gurgaon", "Delhi NCR", "Delhi-NCR"],
-    "techOnly": true,
-    "excludeKeywords": ["Chennai", "Mumbai", "Noida", "Theatre", "Theater", "Chai Pe Charchaa", "Chess", "Potluck", "Couples", "Breakfast", "Riding", "Thailand", "Australia"],
+    "cityKeywords": ["Gurugram", "Gurgaon", "GGN"],
+    "techOnly": false,
+    "excludeKeywords": ["Chennai", "Mumbai", "Theatre", "Theater", "Seoul", "Taipei"],
     "structuredOnly": true,
     "enabled": true
   }

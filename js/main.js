@@ -38,7 +38,7 @@
     onboardingStep: 1, motives: storedProfile && Array.isArray(storedProfile.motives) && storedProfile.motives.length ? storedProfile.motives : ["explore"], role: storedProfile && typeof storedProfile.role === "string" ? storedProfile.role : "", displayName: storedProfile?.displayName || "", email: storedProfile?.email || "", preferredArea: storedProfile?.preferredArea || "", budgetRange: storedProfile?.budgetRange || "", genderPreference: storedProfile?.genderPreference || "", interests: Array.isArray(storedProfile?.interests) ? storedProfile.interests : [], accessibilityPreferences: Array.isArray(storedProfile?.accessibilityPreferences) ? storedProfile.accessibilityPreferences : [], locationMode: storedProfile && storedProfile.locationMode === "current" ? "current" : "area", neighbourhood: storedProfile && typeof storedProfile.neighbourhood === "string" ? storedProfile.neighbourhood : "Cyber City",
     coords: storedCoords, weather: {temp: 29, icon: "☼", label: "Clear skies · Good to be out"},
     showCuratedPins: false,
-    activeCategory: "all", mapCategory: "all", areaFilter: "all", eventFilter: "all", query: "", price: "all", tags: [], saved: new Set(JSON.parse(localStorage.getItem("gc-saved") || "[]")), savedOnly: false
+    activeCategory: "all", mapCategory: "all", areaFilter: "all", eventFilter: "best", query: "", price: "all", tags: [], saved: new Set(JSON.parse(localStorage.getItem("gc-saved") || "[]")), savedOnly: false
   };
   const $ = (selector, root) => (root || document).querySelector(selector);
   const $$ = (selector, root) => Array.from((root || document).querySelectorAll(selector));
@@ -46,10 +46,12 @@
   const app = $("[data-app]");
   const onboardingForm = $("[data-onboarding-form]");
   let liveMap = null;
-  let mapMarkers = [];
+  let eventsMap = null;
   let userMarker = null;
+  const GURUGRAM_BOUNDS = [[76.78, 28.22], [77.28, 28.64]];
+  const PIN_COLORS = {food:"#ef3340", coffee:"#936037", work:"#0ea5e9", public:"#789c68", events:"#7c3aed", services:"#171827", bars:"#d44778", grocery:"#2ca292", gym:"#171827"};
   let liveEvents = Array.isArray(window.GC_EVENTS) ? window.GC_EVENTS.filter(isEventUpcoming) : [];
-  let eventsMeta = {generatedAt:null, eventCount:liveEvents.length, error:false, live:false, stale:false};
+  let eventsMeta = {generatedAt:null, eventCount:liveEvents.length, geocodedCount:0, enriched:false, error:false, live:false, stale:false};
   let nearbyPlaces = [];
   let nearbyMeta = {status:"idle", fetchedAt:null, count:0, error:false};
   let toastTimer;
@@ -227,11 +229,108 @@
     const interestText = interests.length ? interests.join(" + ") : "Explore the city";
     return interestText + " · " + state.neighbourhood + ", Gurugram";
   }
+  function eventSearchText(event) {
+    const location = isPlaceholderLocation(event.location) ? "" : event.location;
+    const stampedCity = /^gurugram$/i.test(String(event.city || "").trim()) && !location;
+    return [event.title, event.description, event.aiSummary, location, stampedCity ? "" : event.city].join(" ");
+  }
+  function isPlaceholderLocation(value) {
+    return !value || /^location listed/i.test(String(value).trim());
+  }
+  function isInGurugramBounds(lat, lng) {
+    return Number.isFinite(lat) && Number.isFinite(lng) && lat >= 28.35 && lat <= 28.56 && lng >= 76.92 && lng <= 77.16;
+  }
+  function isGurugramEvent(event) {
+    if (/gurugram|gurgaon/i.test(String(event.city || ""))) return true;
+    if (hasRealEventCoords(event)) return true;
+    const searchable = eventSearchText(event);
+    if (/seoul|taipei|tel aviv|hawaii|melbourne|manila|jakarta|singapore|bangkok|tokyo|london|paris|berlin|chicago|san francisco|new york|sydney|dubai|jaipur|chennai|mumbai|bangalore|bengaluru|hyderabad|pune|kolkata/i.test(searchable) && !/gurugram|gurgaon|\bggn\b/i.test(searchable)) return false;
+    if (/\b(delhi|new delhi|noida|faridabad|ghaziabad)\b/i.test(searchable) && !/gurugram|gurgaon|\bggn\b|cyber ?city|cyber ?hub|udyog vihar|mg road|golf course|sohna road|sector 29/i.test(searchable)) return false;
+    return /gurugram|gurgaon|\bggn\b|cyber ?city|cyber ?hub|udyog vihar|mg road|golf course|sohna road|sector 29|dlf phase|huda city|leisure valley|old gurgaon/i.test(searchable);
+  }
+  function hasRealEventCoords(event) {
+    return isInGurugramBounds(event.lat, event.lng) && event.geocoded !== "city-default" && event.geocoded !== "unlocated" && !isPlaceholderLocation(event.location);
+  }
   function eventDistanceValue(event) {
-    if (!Number.isFinite(event.lat) || !Number.isFinite(event.lng)) return 6;
+    if (!hasRealEventCoords(event)) return 6;
     const latDelta = (event.lat - state.coords.lat) * 111;
     const lngDelta = (event.lng - state.coords.lng) * 111 * Math.cos(state.coords.lat * Math.PI / 180);
     return Math.max(.1, Math.sqrt(latDelta * latDelta + lngDelta * lngDelta));
+  }
+  function eventFitScore(event) {
+    const selected = new Set(state.motives);
+    const role = state.role.toLowerCase();
+    const searchable = [event.title, event.description, event.aiSummary, event.city, event.location].join(" ").toLowerCase();
+    const start = new Date(event.start);
+    const now = new Date();
+    let score = 16;
+    if (selected.has("events")) score += 48;
+    if (selected.has("explore")) score += 10;
+    if (/tech|startup|founder|freelancer/.test(role) && /ai|hack|startup|founder|developer|tech|builder|career|vc|marketing|product|cloud|data/.test(searchable)) score += 28;
+    if (/fitness|yoga|run|pickle|gym|wellness|health|sports|sunrise/.test(searchable) && (state.motives.includes("public") || state.motives.includes("explore") || /fitness|health|sport/i.test(role))) score += 22;
+    if (/student/.test(role) && /workshop|learn|career|student|campus|intern/.test(searchable)) score += 18;
+    if (/gurugram|gurgaon|delhi ncr|delhi-ncr|cyber city|sector 29|mg road/.test(searchable)) score += 12;
+    if (start.toDateString() === now.toDateString()) score += 18;
+    else if (start.getTime() - now.getTime() <= 7 * 86400000) score += 10;
+    if (/free|₹0|rs 0|zero cost/.test((event.price || "").toLowerCase())) score += 8;
+    if (event.enriched || event.aiSummary) score += 6;
+    if (Number.isFinite(event.lat) && Number.isFinite(event.lng)) score += 10;
+    score += Math.max(0, 12 - eventDistanceValue(event));
+    return score;
+  }
+  function eventFitPercent(score, maxScore) {
+    const baseline = Math.max(maxScore || score, 72);
+    return Math.min(99, Math.max(42, Math.round((score / baseline) * 100)));
+  }
+  function sortedFilteredEvents() {
+    const filtered = liveEvents.filter(eventMatchesFilter);
+    const scored = filtered.map((event) => ({event, score: eventFitScore(event)}));
+    const maxScore = scored.reduce((best, item) => Math.max(best, item.score), 0);
+    const sorter = state.eventFilter === "best"
+      ? (a, b) => b.score - a.score || new Date(a.event.start) - new Date(b.event.start)
+      : (a, b) => new Date(a.event.start) - new Date(b.event.start) || b.score - a.score;
+    return scored.sort(sorter).map((item) => ({
+      ...item.event,
+      fitScore: item.score,
+      fitPercent: eventFitPercent(item.score, maxScore)
+    }));
+  }
+  function eventAreaCoords(event) {
+    const haystack = `${event.location || ""} ${event.city || ""}`.toLowerCase();
+    const areas = [
+      ["cyber city", 28.4952, 77.0894], ["cyber hub", 28.4952, 77.0894], ["sector 29", 28.4672, 77.0323],
+      ["mg road", 28.4593, 77.0721], ["golf course", 28.4425, 77.0941], ["udyog vihar", 28.5122, 77.0472],
+      ["old gurgaon", 28.4605, 77.0167], ["delhi", 28.6139, 77.209], ["noida", 28.5355, 77.391]
+    ];
+    for (const [keyword, lat, lng] of areas) {
+      if (haystack.includes(keyword)) return {lat, lng};
+    }
+    return {lat: 28.4595, lng: 77.0266};
+  }
+  function eventToMapPoint(event) {
+    if (!hasRealEventCoords(event)) return null;
+    const lat = event.lat;
+    const lng = event.lng;
+    return {
+      id: event.id,
+      name: event.title,
+      title: event.title,
+      lat,
+      lng,
+      area: event.location || event.city || "Gurugram",
+      url: event.url,
+      source: event.source,
+      description: event.description || event.aiSummary || "",
+      start: event.start,
+      fitPercent: event.fitPercent || eventFitPercent(eventFitScore(event)),
+      isEvent: true,
+      category: "events",
+      accent: "#7c3aed",
+      glyph: "✦"
+    };
+  }
+  function mappedEvents() {
+    return sortedFilteredEvents().map(eventToMapPoint).filter(Boolean);
   }
   function recommendationItems() {
     const selected = new Set(state.motives), role = state.role.toLowerCase(), weather = state.weather.label.toLowerCase();
@@ -253,17 +352,8 @@
       if (/clear|good to be out/.test(weather) && /outdoor|walk|nature|park/.test(searchable)) score += 8;
       return {kind:"place", item:place, score, distance:distanceFor(place)};
     });
-    liveEvents.filter(isEventUpcoming).forEach((event) => {
-      const searchable = [event.title, event.description, event.city, event.location].join(" ").toLowerCase();
-      const start = new Date(event.start), now = new Date();
-      let score = 16;
-      if (selected.has("events")) score += 48;
-      if (selected.has("explore")) score += 10;
-      if (/tech|startup|founder|freelancer/.test(role) && /ai|hack|startup|founder|developer|tech|builder|career|vc|marketing/.test(searchable)) score += 28;
-      if (/gurugram|gurgaon|delhi ncr/.test(searchable)) score += 12;
-      if (start.toDateString() === now.toDateString()) score += 18;
-      else if (start.getTime() - now.getTime() <= 7 * 86400000) score += 10;
-      score += Math.max(0, 12 - eventDistanceValue(event));
+    liveEvents.filter((event) => isEventUpcoming(event) && isGurugramEvent(event)).forEach((event) => {
+      const score = eventFitScore(event);
       items.push({kind:"event", item:event, score, distance:eventDistanceValue(event)});
     });
     return items.sort((a, b) => b.score - a.score || a.distance - b.distance).slice(0, 4);
@@ -310,37 +400,41 @@
   }
   function eventMatchesFilter(event) {
     const date = new Date(event.start), now = new Date();
-    if (!isEventUpcoming(event)) return false;
+    if (!isGurugramEvent(event) || !isEventUpcoming(event)) return false;
     if (state.eventFilter === "free") return /free|₹0|0\b/i.test(event.price || "");
     if (state.eventFilter === "today") return date.toDateString() === now.toDateString();
     if (state.eventFilter === "week") return date >= now && date <= new Date(now.getTime() + 7 * 86400000);
     return true;
   }
   function eventDistance(event) {
-    if (!Number.isFinite(event.lat) || !Number.isFinite(event.lng)) return "Location listed on " + (event.source || "source");
-    const latDelta = (event.lat - state.coords.lat) * 111;
-    const lngDelta = (event.lng - state.coords.lng) * 111 * Math.cos(state.coords.lat * Math.PI / 180);
-    return `${Math.max(.1, Math.sqrt(latDelta * latDelta + lngDelta * lngDelta)).toFixed(1)} km away`;
+    if (!hasRealEventCoords(event)) return "Confirm venue on source";
+    return eventDistanceValue(event).toFixed(1) + " km away";
   }
   function renderEventCard(event) {
     const sourceLabel = escapeHtml(event.source || "Event source");
     const viewLabel = "View on " + sourceLabel + " ↗";
-    return `<article class="event-card"><div class="event-card__top"><span class="event-card__source">${sourceLabel}</span><span class="event-card__date">${escapeHtml(formatEventDate(event))}</span></div><h3>${escapeHtml(event.title)}</h3><p class="event-card__location">⌖ ${escapeHtml(event.location || event.city || "Gurugram")} · ${escapeHtml(eventDistance(event))}</p>${event.description ? `<p class="event-card__description">${escapeHtml(event.description)}</p>` : ""}<div class="event-card__footer"><span class="event-card__price">${escapeHtml(event.price || "See source")}</span><a class="event-card__link" href="${escapeHtml(event.url)}" target="_blank" rel="noreferrer">${viewLabel}</a></div></article>`;
+    const summary = event.aiSummary || event.description || "";
+    const fitBadge = event.fitPercent ? `<span class="event-card__match">${event.fitPercent}% match</span>` : "";
+    return `<article class="event-card" data-event-id="${escapeHtml(event.id)}"><div class="event-card__top"><span class="event-card__source">${sourceLabel}</span><span class="event-card__date">${escapeHtml(formatEventDate(event))}</span></div>${fitBadge}<h3>${escapeHtml(event.title)}</h3><p class="event-card__location">⌖ ${escapeHtml(event.location || event.city || "Gurugram")} · ${escapeHtml(eventDistance(event))}</p>${summary ? `<p class="event-card__description">${escapeHtml(summary)}</p>` : ""}<div class="event-card__footer"><span class="event-card__price">${escapeHtml(event.price || "See source")}</span><a class="event-card__link" href="${escapeHtml(event.url)}" target="_blank" rel="noreferrer">${viewLabel}</a></div></article>`;
   }
   function renderEvents() {
     const root = $("[data-events-grid]"), status = $("[data-events-status]");
     if (!root) return;
-    const items = liveEvents.filter(eventMatchesFilter);
+    const items = sortedFilteredEvents();
     if (status) {
       if (eventsMeta.error) status.textContent = "Event sync unavailable";
-      else if (eventsMeta.generatedAt) status.textContent = (eventsMeta.live ? "Live · " : "") + liveEvents.length + " upcoming · Updated " + formatRelativeTime(eventsMeta.generatedAt) + (eventsMeta.stale ? " · Refresh needed" : "");
-      else status.textContent = "Waiting for the first public sync";
+      else if (eventsMeta.generatedAt) {
+        const mappedCount = items.filter((event) => Number.isFinite(event.lat) && Number.isFinite(event.lng)).length;
+        status.textContent = (eventsMeta.live ? "Live · " : "") + liveEvents.length + " upcoming · " + mappedCount + " mapped · Updated " + formatRelativeTime(eventsMeta.generatedAt) + (eventsMeta.stale ? " · Refresh needed" : "");
+      } else status.textContent = "Waiting for the first public sync";
     }
     if (!items.length) {
       root.innerHTML = `<div class="events-empty"><strong>${liveEvents.length ? "No events match this filter." : "No upcoming public tech events yet."}</strong><span>${eventsMeta.error ? "The last sync could not be read. Try refreshing in a moment." : "Add an approved public event source in data/event-sources.json, then run the sync workflow."}</span></div>`;
+      renderEventsMap();
       return;
     }
     root.innerHTML = items.map(renderEventCard).join("");
+    renderEventsMap();
   }
   function formatRelativeTime(value) {
     const date = new Date(value), minutes = Math.max(0, Math.round((Date.now() - date.getTime()) / 60000));
@@ -362,24 +456,24 @@
   function mapPlaces(items) {
     const curated = items.filter(mapCategoryMatches);
     const live = nearbyPlaces.filter(mapCategoryMatches);
-    if (nearbyMeta.status === "loaded" && live.length) return (state.showCuratedPins ? live.concat(curated) : live).slice(0, 80);
-    return curated.slice(0, 80);
+    if (nearbyMeta.status === "loaded" && live.length) return (state.showCuratedPins ? live.concat(curated) : live).slice(0, 150);
+    return curated.slice(0, 150);
   }
   function renderMapStatus() {
     const status = $("[data-map-source-status]"), toggle = $("[data-toggle-curated-pins]"), note = $("[data-data-status-text]"), empty = $("[data-map-data-empty]");
-    let message = "Loading public nearby map data…";
+    let message = "Loading nearby places from Geoapify…";
     const liveUsefulCount = nearbyPlaces.filter(mapCategoryMatches).length;
     if (nearbyMeta.status === "loaded" && liveUsefulCount) message = "Live map data · " + liveUsefulCount + " useful places · refreshed " + formatRelativeTime(nearbyMeta.fetchedAt);
     if (nearbyMeta.status === "loaded" && !liveUsefulCount) message = "No live matching places returned · showing the Gurugram guide pins";
     if (nearbyMeta.status === "unavailable") message = "Live map data is unavailable right now · editorial pins are marked separately";
     if (status) status.textContent = message;
-    if (note) note.textContent = nearbyMeta.status === "loaded" ? "Live nearby pins come from OpenStreetMap and show their fetch time. Curated pins are separate and should be confirmed before visiting." : "The live nearby layer could not be reached. Curated pins are editorial samples, not a guarantee of current hours, price or availability.";
+    if (note) note.textContent = nearbyMeta.status === "loaded" ? "Live nearby pins come from Geoapify and show their fetch time. Curated pins are separate and should be confirmed before visiting." : "The live nearby layer could not be reached. Curated pins are editorial samples, not a guarantee of current hours, price or availability.";
     if (toggle) {
       toggle.hidden = nearbyMeta.status !== "loaded" && nearbyMeta.status !== "unavailable";
       toggle.textContent = state.showCuratedPins ? "Hide guide pins" : "Show guide pins";
       toggle.setAttribute("aria-pressed", String(state.showCuratedPins));
     }
-    if (empty) empty.hidden = nearbyMeta.status !== "unavailable" || state.showCuratedPins;
+    if (empty) empty.hidden = nearbyMeta.status !== "unavailable" || state.showCuratedPins || mapPlaces(visiblePlaces()).length > 0;
   }
   function renderTodayLabel() {
     const label = $("[data-today-label]");
@@ -390,26 +484,34 @@
     if (button) button.textContent = (state.displayName || state.email || "A").trim().charAt(0).toUpperCase();
   }
   async function loadEvents() {
-    const endpoints = [`/api/luma-events?ts=${Date.now()}`, `data/events.json?ts=${Date.now()}`];
+    const roleParam = state.role ? "&role=" + encodeURIComponent(state.role) : "";
+    const endpoints = [`/api/luma-events?ts=${Date.now()}${roleParam}`, `data/events.json?ts=${Date.now()}`];
     let loaded = false;
     for (const endpoint of endpoints) {
       try {
         const response = await fetch(endpoint, {cache:"no-store"});
         if (!response.ok) continue;
         const payload = await response.json();
-        liveEvents = Array.isArray(payload.events) ? payload.events.filter(isEventUpcoming) : [];
+        liveEvents = Array.isArray(payload.events) ? payload.events.filter((event) => isEventUpcoming(event) && isGurugramEvent(event)) : [];
         const generatedAt = payload.generatedAt || null;
         const generatedDate = generatedAt ? new Date(generatedAt) : null;
         const stale = !generatedDate || !Number.isFinite(generatedDate.getTime()) || Date.now() - generatedDate.getTime() > 6 * 60 * 60 * 1000;
-        eventsMeta = {generatedAt, eventCount:liveEvents.length, error:false, live:Boolean(payload.live), stale};
+        eventsMeta = {
+          generatedAt,
+          eventCount: liveEvents.length,
+          geocodedCount: payload.geocodedCount || liveEvents.filter((event) => Number.isFinite(event.lat) && Number.isFinite(event.lng)).length,
+          enriched: Boolean(payload.enriched),
+          error: false,
+          live: Boolean(payload.live),
+          stale
+        };
         loaded = true;
         break;
       } catch (error) { /* Try the generated static fallback. */ }
     }
-    if (!loaded) eventsMeta = {generatedAt:null, eventCount:liveEvents.length, error:true, live:false, stale:true};
+    if (!loaded) eventsMeta = {generatedAt:null, eventCount:liveEvents.length, geocodedCount:0, enriched:false, error:true, live:false, stale:true};
     renderEvents();
     renderRecommendations();
-    if (liveMap) renderMapMarkers(visiblePlaces());
   }
   async function loadNearbyPlaces() {
     nearbyMeta = {status:"loading", fetchedAt:null, count:0, error:false};
@@ -426,6 +528,10 @@
     } catch (error) {
       nearbyPlaces = [];
       nearbyMeta = {status:"unavailable", fetchedAt:null, count:0, error:true};
+      if (!state.showCuratedPins) {
+        state.showCuratedPins = true;
+        announce("Live map data is unavailable. Showing editorial guide pins instead.");
+      }
     }
     renderMapStatus();
     if (liveMap) renderMapMarkers(visiblePlaces());
@@ -444,6 +550,184 @@
   function mapPinGlyph(place) {
     return ({food:"◒", coffee:"☕", work:"▣", public:"✦", events:"✦", services:"⌖", bars:"◈", grocery:"▦", gym:"●"})[mapPinVariant(place)] || place.glyph || "•";
   }
+  function placePopupContent(place) {
+    if (place.isEvent) {
+      return '<div class="map-popup"><strong>' + escapeHtml(place.name) + '</strong><span>' + escapeHtml(place.area) + " · " + escapeHtml(formatEventDate(place)) + '</span><small>' + escapeHtml(place.fitPercent ? place.fitPercent + "% match for you" : "Tech event") + '</small><small><a href="' + escapeHtml(place.url) + '" target="_blank" rel="noreferrer">' + escapeHtml(place.source || "source") + ' ↗</a></small></div>';
+    }
+    if (place.isLiveSource) {
+      return '<div class="map-popup"><strong>' + escapeHtml(place.name) + '</strong><span>' + escapeHtml(place.area) + " · " + escapeHtml(place.categoryLabel) + '</span><small>' + escapeHtml(place.open) + '</small><small>' + escapeHtml(place.source || "Geoapify") + ' · refreshed ' + escapeHtml(formatRelativeTime(place.verifiedAt)) + '</small><small><a href="' + escapeHtml(place.sourceUrl) + '" target="_blank" rel="noreferrer">Open source ↗</a></small></div>';
+    }
+    return '<div class="map-popup"><strong>' + escapeHtml(place.name) + '</strong><span>' + escapeHtml(place.area) + " · " + escapeHtml(place.price) + '</span><small>Editorial guide pin · confirm before visiting</small></div>';
+  }
+  function popupPayload(place) {
+    return {
+      id: place.id || "",
+      name: place.name || "",
+      area: place.area || "",
+      isEvent: Boolean(place.isEvent),
+      isLiveSource: Boolean(place.isLiveSource),
+      url: place.url || "",
+      sourceUrl: place.sourceUrl || "",
+      source: place.source || "",
+      categoryLabel: place.categoryLabel || "",
+      open: place.open || "",
+      price: place.price || "",
+      start: place.start || "",
+      fitPercent: place.fitPercent || 0,
+      verifiedAt: place.verifiedAt || ""
+    };
+  }
+  function pointsToGeoJSON(points) {
+    return {
+      type: "FeatureCollection",
+      features: points.filter((point) => Number.isFinite(point.lat) && Number.isFinite(point.lng)).map((point) => ({
+        type: "Feature",
+        properties: {
+          id: String(point.id || ""),
+          color: PIN_COLORS[mapPinVariant(point)] || "#ef3340",
+          payload: JSON.stringify(popupPayload(point))
+        },
+        geometry: {type: "Point", coordinates: [point.lng, point.lat]}
+      }))
+    };
+  }
+  function createMap(container, center, zoom) {
+    return new maplibregl.Map({
+      container,
+      style: "https://tiles.openfreemap.org/styles/liberty",
+      center,
+      zoom,
+      minZoom: 10,
+      maxZoom: 17,
+      maxBounds: GURUGRAM_BOUNDS,
+      attributionControl: true,
+      antialias: false,
+      fadeDuration: 0,
+      maxPitch: 0,
+      dragRotate: false,
+      pitchWithRotate: false,
+      touchPitch: false,
+      renderWorldCopies: false,
+      refreshExpiredTiles: false,
+      pixelRatio: Math.min(window.devicePixelRatio || 1, 1.75)
+    });
+  }
+  function pauseMap(map) {
+    if (map) map.stop();
+  }
+  function resumeMap(map) {
+    if (!map) return;
+    window.requestAnimationFrame(() => {
+      map.resize();
+      map.triggerRepaint();
+    });
+  }
+  function bindClusterInteractions(map, sourceId) {
+    if (!map.__clusterBindings) map.__clusterBindings = {};
+    if (map.__clusterBindings[sourceId]) return;
+    map.__clusterBindings[sourceId] = true;
+    const clusterLayer = sourceId + "-clusters";
+    const pointLayer = sourceId + "-points";
+    map.on("click", clusterLayer, (event) => {
+      const feature = event.features && event.features[0];
+      if (!feature) return;
+      const clusterId = feature.properties.cluster_id;
+      map.getSource(sourceId).getClusterExpansionZoom(clusterId, (error, zoom) => {
+        if (error) return;
+        map.easeTo({center: feature.geometry.coordinates, zoom: Math.min(zoom, 16), duration: 280, essential: true});
+      });
+    });
+    map.on("click", pointLayer, (event) => {
+      const feature = event.features && event.features[0];
+      if (!feature) return;
+      let place = {};
+      try { place = JSON.parse(feature.properties.payload || "{}"); } catch (error) { place = feature.properties || {}; }
+      if (map.__placePopup) map.__placePopup.remove();
+      map.__placePopup = new maplibregl.Popup({offset: 14, closeButton: true, maxWidth: "240px"})
+        .setLngLat(feature.geometry.coordinates)
+        .setHTML(placePopupContent(place))
+        .addTo(map);
+    });
+    [clusterLayer, pointLayer].forEach((layer) => {
+      map.on("mouseenter", layer, () => { map.getCanvas().style.cursor = "pointer"; });
+      map.on("mouseleave", layer, () => { map.getCanvas().style.cursor = ""; });
+    });
+  }
+  function addClusterSourceAndLayers(map, sourceId, data) {
+    map.addSource(sourceId, {
+      type: "geojson",
+      data,
+      cluster: true,
+      clusterMaxZoom: 14,
+      clusterRadius: 56,
+      clusterMinPoints: 3
+    });
+    map.addLayer({
+      id: sourceId + "-clusters",
+      type: "circle",
+      source: sourceId,
+      filter: ["has", "point_count"],
+      paint: {
+        "circle-color": sourceId === "events" ? "#7c3aed" : "#1e3b35",
+        "circle-radius": ["step", ["get", "point_count"], 16, 8, 20, 20, 26],
+        "circle-stroke-width": 2,
+        "circle-stroke-color": "#ffffff",
+        "circle-opacity": 0.94
+      }
+    });
+    map.addLayer({
+      id: sourceId + "-cluster-count",
+      type: "symbol",
+      source: sourceId,
+      filter: ["has", "point_count"],
+      layout: {
+        "text-field": ["get", "point_count_abbreviated"],
+        "text-font": ["Noto Sans Regular"],
+        "text-size": 12,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true
+      },
+      paint: {"text-color": "#ffffff"}
+    });
+    map.addLayer({
+      id: sourceId + "-points",
+      type: "circle",
+      source: sourceId,
+      filter: ["!", ["has", "point_count"]],
+      paint: {
+        "circle-color": ["coalesce", ["get", "color"], "#ef3340"],
+        "circle-radius": 7.5,
+        "circle-stroke-width": 2,
+        "circle-stroke-color": "#ffffff"
+      }
+    });
+    bindClusterInteractions(map, sourceId);
+  }
+  function setClusteredPoints(map, sourceId, points) {
+    if (!map || !window.maplibregl) return;
+    if (!map.__pendingPoints) map.__pendingPoints = {};
+    map.__pendingPoints[sourceId] = points;
+    const applyAll = () => {
+      Object.keys(map.__pendingPoints).forEach((id) => {
+        const data = pointsToGeoJSON(map.__pendingPoints[id] || []);
+        const source = map.getSource(id);
+        if (source) source.setData(data);
+        else addClusterSourceAndLayers(map, id, data);
+      });
+    };
+    if (map.isStyleLoaded()) applyAll();
+    else if (!map.__pendingApplyBound) {
+      map.__pendingApplyBound = true;
+      map.once("load", () => {
+        map.__pendingApplyBound = false;
+        applyAll();
+      });
+    }
+  }
+  function isEventsViewVisible() {
+    const view = $("[data-events-view]");
+    return Boolean(view && !view.hidden);
+  }
   function renderMapPins(items) {
     if (liveMap) { renderMapMarkers(items); return; }
     const root = $("[data-map-pins]");
@@ -452,19 +736,32 @@
   }
   function renderMapMarkers(items) {
     if (!liveMap) return;
-    mapMarkers.forEach((marker) => marker.remove());
-    mapMarkers = mapPlaces(items).filter((place) => place.lat && place.lng).map((place) => {
-      const element = document.createElement("button");
-      element.className = "premium-map-pin premium-map-pin--" + mapPinVariant(place) + (place.isLiveSource ? " premium-map-pin--live" : "");
-      element.type = "button";
-      element.innerHTML = "<span aria-hidden=\"true\">" + mapPinGlyph(place) + "</span>";
-      element.setAttribute("aria-label", "Open " + place.name);
-      const popupContent = place.isEvent ? '<div class="map-popup"><strong>' + escapeHtml(place.name) + '</strong><span>' + escapeHtml(place.area) + " · " + escapeHtml(formatEventDate(place)) + '</span><small><a href="' + escapeHtml(place.url) + '" target="_blank" rel="noreferrer">' + escapeHtml(place.source || "source") + ' ↗</a></small></div>' : place.isLiveSource ? '<div class="map-popup"><strong>' + escapeHtml(place.name) + '</strong><span>' + escapeHtml(place.area) + " · " + escapeHtml(place.categoryLabel) + '</span><small>' + escapeHtml(place.open) + '</small><small>OpenStreetMap · refreshed ' + escapeHtml(formatRelativeTime(place.verifiedAt)) + '</small><small><a href="' + escapeHtml(place.sourceUrl) + '" target="_blank" rel="noreferrer">Open source ↗</a></small></div>' : '<div class="map-popup"><strong>' + escapeHtml(place.name) + '</strong><span>' + escapeHtml(place.area) + " · " + escapeHtml(place.price) + '</span><small>Editorial guide pin · confirm before visiting</small></div>';
-      const popup = new maplibregl.Popup({offset: 18, closeButton: true}).setHTML(popupContent);
-      const marker = new maplibregl.Marker({element: element, anchor: "bottom"}).setLngLat([place.lng, place.lat]).setPopup(popup).addTo(liveMap);
-      element.addEventListener("dblclick", () => place.isEvent ? window.open(place.url, "_blank", "noopener,noreferrer") : place.isLiveSource ? window.open(place.sourceUrl, "_blank", "noopener,noreferrer") : openPlace(place.id));
-      return marker;
-    });
+    setClusteredPoints(liveMap, "places", mapPlaces(items));
+  }
+  function renderEventsMapStatus(mappedCount) {
+    const status = $("[data-events-map-status]");
+    const empty = $("[data-events-map-empty]");
+    if (status) {
+      status.textContent = mappedCount
+        ? mappedCount + " mapped events · clustered by area"
+        : "No mapped coordinates yet · refresh to geocode locations";
+    }
+    if (empty) empty.hidden = mappedCount > 0;
+  }
+  function initEventsMap() {
+    const container = $("#events-map");
+    if (!container || !window.maplibregl || eventsMap) return;
+    eventsMap = createMap(container, [state.coords.lng, state.coords.lat], 11.4);
+    eventsMap.addControl(new maplibregl.NavigationControl({showCompass: false, visualizePitch: false}), "top-right");
+    eventsMap.on("load", () => { renderEventsMap(); eventsMap.resize(); });
+  }
+  function renderEventsMap() {
+    if (!isEventsViewVisible()) return;
+    if (!eventsMap) initEventsMap();
+    if (!eventsMap) return;
+    const points = mappedEvents();
+    renderEventsMapStatus(points.length);
+    setClusteredPoints(eventsMap, "events", points);
   }
   function renderUserLocation() {
     if (!liveMap || state.locationMode !== "current") return;
@@ -485,8 +782,8 @@
     }
     const center = state.locationMode === "current" ? [state.coords.lng, state.coords.lat] : [77.0894, 28.4952];
     const zoom = state.locationMode === "current" ? 14.2 : 11.7;
-    liveMap = new maplibregl.Map({container: container, style: "https://tiles.openfreemap.org/styles/liberty", center: center, zoom: zoom, attributionControl: true});
-    liveMap.addControl(new maplibregl.NavigationControl({showCompass: false}), "top-right");
+    liveMap = createMap(container, center, zoom);
+    liveMap.addControl(new maplibregl.NavigationControl({showCompass: false, visualizePitch: false}), "top-right");
     liveMap.addControl(new maplibregl.GeolocateControl({positionOptions: {enableHighAccuracy: false}, trackUserLocation: false, showUserLocation: true}), "top-right");
     liveMap.on("load", () => { if (loadingNote) loadingNote.hidden = true; renderMapMarkers(visiblePlaces()); renderUserLocation(); liveMap.resize(); });
   }
@@ -495,7 +792,7 @@
     $("[data-place-list]").hidden = true;
     $("[data-map-panel]").hidden = false;
     $$('[data-view]').forEach((button) => button.classList.toggle("is-active", button.dataset.view === "map"));
-    window.setTimeout(() => { liveMap.resize(); liveMap.flyTo({center: [place.lng, place.lat], zoom: 15, essential: true}); }, 0);
+    window.setTimeout(() => { liveMap.resize(); liveMap.easeTo({center: [place.lng, place.lat], zoom: 15, duration: 320, essential: true}); }, 0);
   }
   function renderActiveFilters() {
     const root = $("[data-active-filters]"), filters = [];
@@ -557,7 +854,7 @@
     navigator.geolocation.getCurrentPosition((position) => {
       state.locationMode = "current"; state.coords = {lat: position.coords.latitude, lng: position.coords.longitude}; state.neighbourhood = getNearestNeighbourhood(state.coords);
       announce("Showing places near " + state.neighbourhood + "."); renderApp(); loadNearbyPlaces(); updateWeather();
-      if (liveMap) { renderUserLocation(); liveMap.flyTo({center: [state.coords.lng, state.coords.lat], zoom: 14.2, essential: true}); }
+      if (liveMap) { renderUserLocation(); liveMap.easeTo({center: [state.coords.lng, state.coords.lat], zoom: 14.2, duration: 320, essential: true}); }
     }, () => announce("We couldn’t access your location. Showing Cyber City instead."), {enableHighAccuracy:false, timeout:7000, maximumAge:300000});
   }
   async function updateWeather() {
@@ -596,6 +893,19 @@
     $$("[data-explore-link]").forEach((link) => link.classList.toggle("is-active", exploreMode));
     $$("[data-near-you-link]").forEach((link) => link.classList.toggle("is-active", nearMode));
     $$("[data-events-link]").forEach((link) => link.classList.toggle("is-active", eventsMode));
+    if (eventsMode) {
+      pauseMap(liveMap);
+      initEventsMap();
+      renderEvents();
+      renderEventsMap();
+      loadEvents();
+    } else if (exploreMode) {
+      pauseMap(eventsMap);
+      resumeMap(liveMap);
+    } else {
+      pauseMap(liveMap);
+      pauseMap(eventsMap);
+    }
     window.scrollTo({top:0, behavior:"smooth"});
   }
   function bindEvents() {
@@ -634,7 +944,7 @@
         $("#explore").scrollIntoView({behavior:"smooth", block:"start"});
         if (liveMap) {
           const focusPlace = places.find((place) => place.area === state.areaFilter);
-          if (focusPlace && focusPlace.lng && focusPlace.lat) liveMap.flyTo({center:[focusPlace.lng, focusPlace.lat], zoom:13.5, essential:true});
+          if (focusPlace && focusPlace.lng && focusPlace.lat) liveMap.easeTo({center:[focusPlace.lng, focusPlace.lat], zoom:13.5, duration:320, essential:true});
         }
         return;
       }
@@ -652,7 +962,14 @@
       if (event.target.closest("[data-add-place]")) { $("[data-add-modal]").hidden = false; document.body.classList.add("is-locked"); return; }
       if (event.target.closest("[data-close-add]") || event.target === $("[data-add-modal]")) { closeModal("[data-add-modal]"); return; }
       const view = event.target.closest("[data-view]");
-      if (view) { $$('[data-view]').forEach((button) => button.classList.toggle("is-active", button === view)); $("[data-place-list]").hidden = view.dataset.view !== "list"; $("[data-map-panel]").hidden = view.dataset.view !== "map"; if (view.dataset.view === "map" && liveMap) window.setTimeout(() => liveMap.resize(), 0); return; }
+      if (view) {
+        $$('[data-view]').forEach((button) => button.classList.toggle("is-active", button === view));
+        $("[data-place-list]").hidden = view.dataset.view !== "list";
+        $("[data-map-panel]").hidden = view.dataset.view !== "map";
+        if (view.dataset.view === "map") resumeMap(liveMap);
+        else pauseMap(liveMap);
+        return;
+      }
       if (event.target.closest("[data-saved-button]")) { if (!state.saved.size) { announce("Save a place to build your personal edit."); return; } state.savedOnly = true; state.activeCategory = "all"; state.mapCategory = "all"; renderApp(); return; }
       if (event.target.closest("[data-location-button]")) { requestLocation(); return; }
       if (event.target.closest("[data-map-refresh]")) { loadNearbyPlaces(); return; }

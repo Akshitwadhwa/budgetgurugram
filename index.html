@@ -154,7 +154,7 @@
             <div class="discovery-grid">
               <div class="place-list" data-place-list hidden></div>
               <div class="map-panel" data-map-panel>
-                <div class="map-panel__topline"><span><i class="map-legend-dot"></i> Places near you</span><span data-map-source-status>Loading public nearby map data…</span></div>
+                <div class="map-panel__topline"><span><i class="map-legend-dot"></i> Places near you</span><span data-map-source-status>Loading nearby places from Geoapify…</span></div>
                 <div class="map-canvas" data-map-canvas>
                   <p class="map-loading-note" data-map-loading-note>Give us up to 10 seconds for the map to load</p>
                   <div id="real-map" aria-label="Interactive map of Gurugram"></div>
@@ -190,7 +190,7 @@
               <div>
                 <p class="eyebrow">Live from public calendars</p>
                 <h2 id="events-title">Tech events<br><em>near you.</em></h2>
-                <p>Upcoming meetups, workshops and founder rooms surfaced from approved public event pages. Registration always happens on the original source.</p>
+                <p>Upcoming meetups, workshops and founder rooms in Gurugram only. Registration always happens on the original source.</p>
               </div>
               <div class="events-heading__aside">
                 <span class="events-status" data-events-status>Checking public event sources…</span>
@@ -198,10 +198,24 @@
               </div>
             </div>
             <div class="event-filters" role="group" aria-label="Filter events">
-              <button class="event-filter is-active" type="button" data-event-filter="all">All upcoming</button>
+              <button class="event-filter is-active" type="button" data-event-filter="best">Best for you</button>
+              <button class="event-filter" type="button" data-event-filter="all">All upcoming</button>
               <button class="event-filter" type="button" data-event-filter="today">Today</button>
               <button class="event-filter" type="button" data-event-filter="week">This week</button>
               <button class="event-filter" type="button" data-event-filter="free">Free</button>
+            </div>
+            <div class="events-map-panel" data-events-map-panel>
+              <div class="events-map-panel__top">
+                <span><i class="map-legend-dot map-legend-dot--event"></i> Upcoming tech events</span>
+                <span data-events-map-status>Loading event map…</span>
+              </div>
+              <div class="events-map-canvas" data-events-map-canvas>
+                <div id="events-map" aria-label="Map of upcoming events in Gurugram"></div>
+                <div class="events-map-empty" data-events-map-empty hidden>
+                  <strong>No mapped events yet</strong>
+                  <span>Events without a location will still appear in the list below.</span>
+                </div>
+              </div>
             </div>
             <div class="events-grid" data-events-grid></div>
           </div>

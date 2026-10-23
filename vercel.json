@@ -1,3 +1,17 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json"
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/nearby-places.js": {
+      "maxDuration": 15
+    },
+    "api/luma-events.js": {
+      "maxDuration": 30
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/luma-events",
+      "schedule": "17 */3 * * *"
+    }
+  ]
 }
