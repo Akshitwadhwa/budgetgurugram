@@ -1,68 +1,11 @@
 {
-  "generatedAt": "2026-10-24T11:08:18.093Z",
+  "generatedAt": "2026-10-24T16:00:33.550Z",
   "sourceCount": 3,
-  "eventCount": 41,
+  "eventCount": 38,
   "nextWindowDays": 31,
   "live": true,
   "errors": [],
   "events": [
-    {
-      "id": "luma-aHR0cHM6Ly9sdS5tYS",
-      "title": "Fish-A-Thon",
-      "description": "",
-      "start": "2026-10-24T03:30:00.000Z",
-      "end": "2026-10-24T11:30:00.000Z",
-      "location": "Gurugram",
-      "city": "Gurugram",
-      "lat": 28.4808629,
-      "lng": 77.0848883,
-      "price": "See source",
-      "url": "https://lu.ma/nkuun44n",
-      "source": "Luma",
-      "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
-      "geocoded": "nominatim",
-      "geocodeQuery": "Gurugram, Gurugram, Haryana, India",
-      "enriched": false
-    },
-    {
-      "id": "luma-aHR0cHM6Ly9sdS5tYS",
-      "title": "Executives Distribution <> GeniOS",
-      "description": "",
-      "start": "2026-10-24T08:30:00.000Z",
-      "end": "2026-10-24T11:30:00.000Z",
-      "location": "Gurugram",
-      "city": "Gurugram",
-      "lat": 28.4808629,
-      "lng": 77.0848883,
-      "price": "See source",
-      "url": "https://lu.ma/u0wcv1lz",
-      "source": "Luma",
-      "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
-      "geocoded": "nominatim",
-      "geocodeQuery": "Gurugram, Gurugram, Haryana, India",
-      "enriched": false
-    },
-    {
-      "id": "luma-aHR0cHM6Ly9sdS5tYS",
-      "title": "Local Startups Meet '26 Gurugram",
-      "description": "",
-      "start": "2026-10-24T08:30:00.000Z",
-      "end": "2026-10-24T12:30:00.000Z",
-      "location": "iWORKK COWORKING OFFICE SPACE, 90, Mehrauli-Gurgaon Rd, Industrial Development Area, Sector 16, Gurugram, Haryana 122007, India",
-      "city": "Gurugram",
-      "lat": 28.4595,
-      "lng": 77.0266,
-      "price": "See source",
-      "url": "https://lu.ma/z3btu7dq",
-      "source": "Luma",
-      "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
-      "geocoded": "area-fallback",
-      "geocodeQuery": "gurugram",
-      "enriched": false
-    },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
       "title": "OPEN MIC - Beyond The Title, Behind The Person",
@@ -77,28 +20,9 @@
       "url": "https://lu.ma/gyshyfnj",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "nominatim",
       "geocodeQuery": "Gurugram, Gurugram, Haryana, India",
-      "enriched": false
-    },
-    {
-      "id": "meetup-aHR0cHM6Ly93d3cubW",
-      "title": "BHASMA ft. TECHNAARI - 24th Oct Saturday",
-      "description": "",
-      "start": "2026-10-24T16:30:00.000Z",
-      "end": "2026-10-24T23:30:00.000Z",
-      "location": "airbar rooftop",
-      "city": "Gurugram",
-      "lat": 28.4595,
-      "lng": 77.0266,
-      "price": "See source",
-      "url": "https://www.meetup.com/pfo-nights-gurgaon-techno-party-crew/events/317031434/",
-      "source": "Meetup",
-      "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
-      "geocoded": "area-fallback",
-      "geocodeQuery": "gurugram",
       "enriched": false
     },
     {
@@ -115,7 +39,7 @@
       "url": "https://lu.ma/s7bw7dwp",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "dlf phase",
       "enriched": false
@@ -134,7 +58,7 @@
       "url": "https://lu.ma/8pip11a9",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "gurugram",
       "enriched": false
@@ -153,7 +77,7 @@
       "url": "https://lu.ma/lwi2fevy",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "dlf phase",
       "enriched": false
@@ -172,7 +96,7 @@
       "url": "https://lu.ma/0xqilo4k",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "gurugram",
       "enriched": false
@@ -191,7 +115,7 @@
       "url": "https://lu.ma/v0457kb0",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "gurugram",
       "enriched": false
@@ -210,7 +134,7 @@
       "url": "https://www.meetup.com/dine-dialog/events/316976208/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "cyber hub",
       "enriched": false
@@ -229,7 +153,7 @@
       "url": "https://www.meetup.com/strangers-ncr-party-club/events/317065877/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "sector 29",
       "enriched": false
@@ -248,7 +172,7 @@
       "url": "https://www.meetup.com/aws-sbg-at-dpg-degree-college/events/317069679/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "nominatim",
       "geocodeQuery": "DPG DEGREE COLLEGE, Gurugram, Haryana, India",
       "enriched": false
@@ -267,17 +191,17 @@
       "url": "https://lu.ma/cl8aozdk",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "gurugram",
       "enriched": false
     },
     {
       "id": "luma-aHR0cHM6Ly9sdS5tYS",
-      "title": "Design Thinking",
+      "title": "Design Thinking & Innovation workshop",
       "description": "",
-      "start": "2026-10-26T09:30:00.000Z",
-      "end": "2026-10-26T11:30:00.000Z",
+      "start": "2026-10-26T11:30:00.000Z",
+      "end": "2026-10-26T13:30:00.000Z",
       "location": "Indian Startup School, 5th Floor Wework, Two Horizon Centre, Golf Course Rd, Horizon Colony, DLF Phase 5, Sector 43, Gurugram, Haryana 122002, India",
       "city": "Gurugram",
       "lat": 28.4952,
@@ -286,7 +210,7 @@
       "url": "https://lu.ma/wzyoy1hj",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "dlf phase",
       "enriched": false
@@ -305,7 +229,7 @@
       "url": "https://www.meetup.com/meetup-group-mkjznfhm/events/317056954/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "udyog vihar",
       "enriched": false
@@ -324,28 +248,9 @@
       "url": "https://lu.ma/7exh6q0s",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "dlf phase",
-      "enriched": false
-    },
-    {
-      "id": "luma-aHR0cHM6Ly9sdS5tYS",
-      "title": "Decoding D2C With Sambit Dash",
-      "description": "",
-      "start": "2026-10-30T05:00:00.000Z",
-      "end": "2026-10-30T07:00:00.000Z",
-      "location": "Gurugram, Haryana, India",
-      "city": "Gurugram",
-      "lat": 28.4595,
-      "lng": 77.0266,
-      "price": "See source",
-      "url": "https://lu.ma/h4nov8du",
-      "source": "Luma",
-      "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
-      "geocoded": "area-fallback",
-      "geocodeQuery": "gurugram",
       "enriched": false
     },
     {
@@ -362,7 +267,7 @@
       "url": "https://lu.ma/w06bxkwq",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "nominatim",
       "geocodeQuery": "Gurugram, Gurugram, Haryana, India",
       "enriched": false
@@ -381,7 +286,7 @@
       "url": "https://lu.ma/sot",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "udyog vihar",
       "enriched": false
@@ -400,8 +305,27 @@
       "url": "https://lu.ma/3a6pe067",
       "source": "CommunityMeetups India",
       "sourceName": "CommunityMeetups India",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "source",
+      "enriched": false
+    },
+    {
+      "id": "luma-aHR0cHM6Ly9sdS5tYS",
+      "title": "Decoding D2C With Sambit Dash",
+      "description": "",
+      "start": "2026-10-31T05:00:00.000Z",
+      "end": "2026-10-31T07:00:00.000Z",
+      "location": "Gurugram, Haryana, India",
+      "city": "Gurugram",
+      "lat": 28.4595,
+      "lng": 77.0266,
+      "price": "See source",
+      "url": "https://lu.ma/h4nov8du",
+      "source": "Luma",
+      "sourceName": "Luma Gurugram",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
+      "geocoded": "area-fallback",
+      "geocodeQuery": "gurugram",
       "enriched": false
     },
     {
@@ -418,7 +342,7 @@
       "url": "https://lu.ma/34ouow3s",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "gurugram",
       "enriched": false
@@ -437,7 +361,7 @@
       "url": "https://www.meetup.com/founders-club-gurgaon/events/317044372/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "nominatim",
       "geocodeQuery": "Gurgaon, Gurugram, Haryana, India",
       "enriched": false
@@ -456,7 +380,7 @@
       "url": "https://lu.ma/rav78ayt",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "nominatim",
       "geocodeQuery": "Gurugram, Gurugram, Haryana, India",
       "enriched": false
@@ -475,7 +399,7 @@
       "url": "https://lu.ma/6za9mnzt",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "gurugram",
       "enriched": false
@@ -494,7 +418,7 @@
       "url": "https://lu.ma/033lrvgu",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "gurugram",
       "enriched": false
@@ -513,7 +437,7 @@
       "url": "https://lu.ma/x974l96c",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "udyog vihar",
       "enriched": false
@@ -532,7 +456,7 @@
       "url": "https://lu.ma/b88ph63w",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "nominatim",
       "geocodeQuery": "Gurugram, Gurugram, Haryana, India",
       "enriched": false
@@ -551,7 +475,7 @@
       "url": "https://www.meetup.com/dine-dialog/events/317050027/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "nominatim",
       "geocodeQuery": "Sector 45, Gurugram, Haryana, India",
       "enriched": false
@@ -570,7 +494,7 @@
       "url": "https://lu.ma/hk6bx8si",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "nominatim",
       "geocodeQuery": "Gurugram, Gurugram, Haryana, India",
       "enriched": false
@@ -589,7 +513,7 @@
       "url": "https://lu.ma/cnlehsw4",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "gurugram",
       "enriched": false
@@ -608,7 +532,7 @@
       "url": "https://www.meetup.com/chai-pe-charchaa/events/317007493/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "gurugram",
       "enriched": false
@@ -627,9 +551,28 @@
       "url": "https://lu.ma/jszcq6kg",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "nominatim",
       "geocodeQuery": "Gurugram, Gurugram, Haryana, India",
+      "enriched": false
+    },
+    {
+      "id": "luma-aHR0cHM6Ly9sdS5tYS",
+      "title": "Scalable Acquisition Funnel: Performance Marketing, Strategy, Metrics",
+      "description": "",
+      "start": "2026-11-04T11:30:00.000Z",
+      "end": "2026-11-04T13:30:00.000Z",
+      "location": "Indian Startup School, 5th Floor Wework, Two Horizon Centre, Golf Course Rd, Horizon Colony, DLF Phase 5, Sector 43, Gurugram, Haryana 122009, India",
+      "city": "Gurugram",
+      "lat": 28.4952,
+      "lng": 77.0894,
+      "price": "See source",
+      "url": "https://lu.ma/j6y46a1j",
+      "source": "Luma",
+      "sourceName": "Luma Gurugram",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
+      "geocoded": "area-fallback",
+      "geocodeQuery": "dlf phase",
       "enriched": false
     },
     {
@@ -646,7 +589,7 @@
       "url": "https://www.meetup.com/aws-sbg-at-gurugram-university/events/317107780/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "gurugram",
       "enriched": false
@@ -665,7 +608,7 @@
       "url": "https://lu.ma/thtn4hbw",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "gurugram",
       "enriched": false
@@ -684,7 +627,7 @@
       "url": "https://www.meetup.com/techfoundry/events/316934749/",
       "source": "Meetup",
       "sourceName": "Meetup Gurgaon public listings",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "nominatim",
       "geocodeQuery": "91Springboard Sector-44, Gurugram, Gurugram, Haryana, India",
       "enriched": false
@@ -703,7 +646,7 @@
       "url": "https://lu.ma/9w4x2s4m",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "dlf phase",
       "enriched": false
@@ -722,7 +665,7 @@
       "url": "https://lu.ma/odscai-dwpv",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "gurugram",
       "enriched": false
@@ -741,7 +684,7 @@
       "url": "https://lu.ma/ziyz7da7",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "nominatim",
       "geocodeQuery": "Gurugram, Gurugram, Haryana, India",
       "enriched": false
@@ -760,7 +703,7 @@
       "url": "https://lu.ma/1bqbfhzc",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "nominatim",
       "geocodeQuery": "Gurugram, Gurugram, Haryana, India",
       "enriched": false
@@ -779,12 +722,12 @@
       "url": "https://lu.ma/2rebtm7q",
       "source": "Luma",
       "sourceName": "Luma Gurugram",
-      "verifiedAt": "2026-10-24T11:08:18.093Z",
+      "verifiedAt": "2026-10-24T16:00:33.550Z",
       "geocoded": "area-fallback",
       "geocodeQuery": "gurugram",
       "enriched": false
     }
   ],
   "enriched": false,
-  "geocodedCount": 41
+  "geocodedCount": 38
 }
